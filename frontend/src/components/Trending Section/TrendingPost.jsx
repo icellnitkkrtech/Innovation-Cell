@@ -1,6 +1,6 @@
 import React from "react";
 import "./trendingpost.css";
-function TrendingPost() {
+function TrendingPost(props) {
 
   var i=0;
 
@@ -18,17 +18,16 @@ function TrendingPost() {
           />
           <div class="tokenInfo">
             <div class="price">
-              <p>April 04, 2024</p>
+              <p>{props.date}</p>
             </div>
           </div>
-          <h2>Title title title</h2>
+          <h2>{props.title}</h2>
           <p class="description">
-            description description description description description
-            description
+            {props.description}
           </p>
 
-          <hr />
-          <div class="creator">
+          {/* <hr /> */}
+          {/* <div class="creator">
             <button class="btn" type="button">
               <p className="p1">Read More</p>
               <div id="container-stars">
@@ -40,7 +39,7 @@ function TrendingPost() {
                 <div class="circle"></div>
               </div>
             </button>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

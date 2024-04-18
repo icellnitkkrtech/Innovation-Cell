@@ -1,0 +1,337 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+      "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: rgb(22, 20, 24);
+    color: #eee;
+    user-select: none;
+  }
+  
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+      monospace;
+  }
+  
+  .posts{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+  }
+  
+  
+  .nft {
+    user-select: none;
+    max-width: 300px;
+    margin: 0 3rem 3rem 0;
+    border: 1px solid #ffffff22;
+    background-color: #282c34;
+    background: linear-gradient(
+      0deg,
+      rgba(40, 44, 52, 1) 0%,
+      rgba(17, 0, 32, 0.5) 100%
+    );
+    box-shadow: 0 7px 20px 5px #00000088;
+    border-radius: 0.7rem;
+    overflow: hidden;
+    transition: 0.5s all;
+    
+    h2 {
+      margin: 0.5rem 0; /* Reduced top and bottom margin */
+      font-size: 1.5rem; /* Adjust font size as needed */
+    }
+    .description {
+      margin: 0.5rem 0; /* Reduced top and bottom margin */
+    }
+    hr {
+      width: 100%;
+      border: none;
+      border-bottom: 1px solid #88888855;
+      margin-top: 0;
+    }
+    ins {
+      text-decoration: none;
+    }
+    .main {
+      display: flex;
+      flex-direction: column;
+      /* width: 90%; */
+      padding: 1rem;
+      .tokenImage {
+        border-radius: 0.5rem;
+        max-width: 100%;
+        height: 250px;
+        object-fit: cover;
+      }
+      .description {
+        margin: 0.5rem 0;
+        color: #a89ec9;
+      }
+      .tokenInfo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .price {
+          display: flex;
+          align-items: center;
+          color: #ee83e5;
+          font-weight: 700;
+        }
+        .duration {
+          display: flex;
+          align-items: center;
+          color: #a89ec9;
+          margin-right: 0.2rem;
+          ins {
+            margin: 0.5rem;
+            margin-bottom: 0.4rem;
+          }
+        }
+      }
+      .creator {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0.2rem;
+        margin-bottom: -0.3rem;
+        ins {
+          color: #a89ec9;
+          text-decoration: none;
+        }
+        .wrapper {
+          display: flex;
+          align-items: center;
+          border: 1px solid #ffffff22;
+          padding: 0.3rem;
+          margin: 0;
+          margin-right: 0.5rem;
+          border-radius: 100%;
+          box-shadow: inset 0 0 0 4px #000000aa;
+          img {
+            border-radius: 100%;
+            border: 1px solid #ffffff22;
+            width: 2rem;
+            height: 2rem;
+            object-fit: cover;
+            margin: 0;
+          }
+        }
+      }
+    }
+    ::before {
+      position: fixed;
+      content: "";
+      box-shadow: 0 0 100px 40px #ffffff08;
+      top: -10%;
+      left: -100%;
+      transform: rotate(-45deg);
+      height: 60rem;
+      transition: 0.7s all;
+    }
+    &:hover {
+      border: 1px solid #ffffff44;
+      /* box-shadow: 0 7px 20px 5px #ffffffaa; */
+      background-color: rgb(255, 255, 255);
+      transform: scale(1.015);
+      
+      ::before {
+        filter: brightness(0.5);
+        top: -100%;
+        left: 200%;
+      }
+    }
+    &:hover ~ #nftid {
+      background-color: white;
+    }
+  }
+  
+  .bg {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    h1 {
+      font-size: 20rem;
+      filter: opacity(0.5);
+    }
+  }
+  
+  .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 9rem;
+    overflow: hidden;
+    height: 3rem;
+    background-size: 300% 300%;
+    backdrop-filter: blur(1rem);
+    border-radius: 5rem;
+    transition: 0.5s;
+    animation: gradient_301 5s ease infinite;
+    border: double 4px transparent;
+    background-image: linear-gradient(#212121, #212121),
+      linear-gradient(
+        137.48deg,
+        #ffdb3b 10%,
+        #fe53bb 45%,
+        #8f51ea 67%,
+        #0044ff 87%
+      );
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    transform: translate(50, 50);
+  }
+  
+  #container-stars {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    transition: 0.5s;
+    backdrop-filter: blur(1rem);
+    border-radius: 5rem;
+  }
+  
+  .p1 {
+    z-index: 2;
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: #ffffff;
+    /* text-shadow: 0 0 4px white; */
+  }
+  
+  #glow {
+    position: absolute;
+    display: flex;
+    width: 12rem;
+  }
+  
+  .circle {
+    width: 100%;
+    height: 30px;
+    filter: blur(2rem);
+    animation: pulse_3011 4s infinite;
+    z-index: -1;
+  }
+  
+  .circle:nth-of-type(1) {
+    background: rgba(254, 83, 186, 0.636);
+  }
+  
+  .circle:nth-of-type(2) {
+    background: rgba(142, 81, 234, 0.704);
+  }
+  
+  .btn:hover #container-stars {
+    z-index: 1;
+    background-color: #212121;
+  }
+  
+  .btn:hover {
+    transform: scale(1.1);
+  }
+  
+  .btn:active {
+    border: double 4px #fe53bb;
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    animation: none;
+  }
+  
+  .btn:active .circle {
+    background: #fe53bb;
+  }
+  
+  #stars {
+    position: relative;
+    background: transparent;
+    width: 200rem;
+    height: 200rem;
+  }
+  
+  #stars::after {
+    content: "";
+    position: absolute;
+    top: -10rem;
+    left: -100rem;
+    width: 100%;
+    height: 100%;
+    animation: animStarRotate 90s linear infinite;
+  }
+  
+  #stars::after {
+    background-image: radial-gradient(#ffffff 1px, transparent 1%);
+    background-size: 50px 50px;
+  }
+  
+  #stars::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 170%;
+    height: 500%;
+    animation: animStar 60s linear infinite;
+  }
+  
+  #stars::before {
+    background-image: radial-gradient(#ffffff 1px, transparent 1%);
+    background-size: 50px 50px;
+    opacity: 0.5;
+  }
+  
+  @keyframes animStar {
+    from {
+      transform: translateY(0);
+    }
+  
+    to {
+      transform: translateY(-135rem);
+    }
+  }
+  
+  @keyframes animStarRotate {
+    from {
+      transform: rotate(360deg);
+    }
+  
+    to {
+      transform: rotate(0);
+    }
+  }
+  
+  @keyframes gradient_301 {
+    0% {
+      background-position: 0% 50%;
+    }
+  
+    50% {
+      background-position: 100% 50%;
+    }
+  
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  @keyframes pulse_3011 {
+    0% {
+      transform: scale(0.75);
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+    }
+  
+    70% {
+      transform: scale(1);
+      box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+    }
+  
+    100% {
+      transform: scale(0.75);
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+  }
+  

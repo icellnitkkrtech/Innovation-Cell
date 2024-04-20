@@ -37,7 +37,7 @@ const Navbar = () => {
         {navItems.map(item => (
           <li
             key={item.id}
-            className='p-4 hover:bg-[#00df9a] rounded-3xl cursor-pointer duration-300 hover:text-black'
+            className='p-4'
           >
             {item.text}
           </li>
@@ -49,7 +49,7 @@ const Navbar = () => {
         {socialIcons.map(icon => (
           <li
             key={icon.id}
-            className='p-4 hover:bg-[#00df9a] rounded-xl cursor-pointer duration-300 hover:text-black'
+            className='p-4 '
           >
             <a href={icon.link}>
               <img className='h-8 w-8' src={icon.icon} alt={icon.link}/>

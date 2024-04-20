@@ -23,7 +23,7 @@ function About() {
 
     return (
         <>
-            <section className='bg-black'>
+            <section className='bg-black p-28'>
                 <div className='p-4 pb-0'>
                     <a className='font-extrabold text-orange-500 lg:text-5xl md:text-4xl sm:text-3xl text-2xl hover:text-orange-400'
                         href="#paragraph" >About Us</a>
@@ -34,9 +34,9 @@ function About() {
                         <h1 className='text-white mb-4 font-extrabold lg:text-5xl md:text-4xl sm:text-3xl text-2xl'>
                             <a href="#">Innovation Cell</a>
                         </h1>
-                        <img
+                        <img 
                             src='https://cdn.mos.cms.futurecdn.net/nWiuSCNGSL8rfrBgE5PMcJ.jpg'
-                            className='shadow-lg w-full border-zinc-300 border-3 hover:rounded-xl hover:opacity-70 transition duration-300 ease-out-in transform hover:scale-95'
+                            className='shadow-lg w-full border-zinc-300 border-3 rounded-md hover:rounded-xl hover:opacity-70 transition duration-300 ease-out-in transform hover:scale-95'
                             style={{ height: 'auto', aspectRatio: '1 / 1' }}
                             alt='About Image'
                         />

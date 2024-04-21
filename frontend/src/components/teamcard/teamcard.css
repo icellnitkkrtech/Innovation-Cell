@@ -106,10 +106,10 @@
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
-  body{
+  /* body{
     background: url(https://dl.dropbox.com/s/mpmu0gjtxv2x3fs/Webp.net-resizeimage%20%281%29.jpg?raw=1) no-repeat center center fixed; 
     background-size: cover;
-  }
+  } */
   
   .card{
     height: 400px;

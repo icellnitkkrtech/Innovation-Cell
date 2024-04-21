@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import TrendingPost from './TrendingPost'
 import  "./trendingpost.css";
+import SmallerHeading from '../SmallerHeading';
 
 const TrendingSection = () => {
 
@@ -21,7 +22,17 @@ const TrendingSection = () => {
         <div>
             
             <div className="App">
-                <h1 className="heading1">OUR TRENDING POST</h1>
+            <div className='p-4 pb-0'>
+                    <a className='font-extrabold text-orange-500 lg:text-5xl md:text-4xl sm:text-3xl text-2xl hover:text-orange-400'
+                        href="#paragraph" >Our Trending</a>
+                    <hr className='sm:border-t-2 ml-48 md:ml-72 lg:ml-96 sm:ml-64 md:border-t-3 border-orange-500 ' />
+                </div>
+                <div className='m-2 md:w-2/5 lg:w-2/5 sm:w-2/5'>
+                        <h1 className='text-white mb-4 font-extrabold lg:text-5xl md:text-4xl sm:text-3xl text-2xl'>
+                            <SmallerHeading title="Posts" />
+                        </h1>
+                        
+                    </div>
                 <div className="posts ">
                    {/* This Function will call the divs */}
                    {

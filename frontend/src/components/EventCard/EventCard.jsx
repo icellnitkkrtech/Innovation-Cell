@@ -1,12 +1,13 @@
 import React from 'react' ; 
 import './EventCard.css' ; 
+import Heading from '../Heading';
 const EventCard = () => {
     return (
         <div className="horizontal_slider">
             <p className='title_text'>where ideas meet action </p>
             <div className="heading_container">
             <hr />
-            <h1 className='main_heading'>Our Events</h1>
+            <Heading title="Our Events" />
             </div>
             <div className='slider_container'>
                 <div className="card-container">

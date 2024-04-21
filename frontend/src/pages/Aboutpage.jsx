@@ -1,4 +1,6 @@
 import React from "react";
+import Heading from "../components/Heading";
+import SmallerHeading from "../components/SmallerHeading";
 
 function About() {
 
@@ -25,15 +27,12 @@ function About() {
         <>
             <section className='bg-black p-28'>
                 <div className='p-4 pb-0'>
-                    <a className='font-extrabold text-orange-500 lg:text-5xl md:text-4xl sm:text-3xl text-2xl hover:text-orange-400'
-                        href="#paragraph" >About Us</a>
+                    <Heading title="About Us" />
                     <hr className='sm:border-t-2 ml-48 md:ml-72 lg:ml-96 sm:ml-64 md:border-t-3 border-orange-500 ' />
                 </div>
                 <section className=' m-2 mt-0  justify-evenly md:flex sm:flex lg:flex'>
                     <div className='m-2 md:w-2/5 lg:w-2/5 sm:w-2/5'>
-                        <h1 className='text-white mb-4 font-extrabold lg:text-5xl md:text-4xl sm:text-3xl text-2xl'>
-                            <a href="#">Innovation Cell</a>
-                        </h1>
+                        <SmallerHeading title="Innovation Cell" />
                         <img 
                             src='https://cdn.mos.cms.futurecdn.net/nWiuSCNGSL8rfrBgE5PMcJ.jpg'
                             className='shadow-lg w-full border-zinc-300 border-3 rounded-md hover:rounded-xl hover:opacity-70 transition duration-300 ease-out-in transform hover:scale-95'

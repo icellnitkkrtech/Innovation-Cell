@@ -1,9 +1,9 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
-import "/teamcard.css"; 
+import "./teamcard.css"; 
 
-function App() {
+function TeamCard() {
   const settings = {
     dots: true,
     infinite: true,
@@ -110,4 +110,4 @@ const data = [
   },
 ];
 
-export default App;
+export default TeamCard;

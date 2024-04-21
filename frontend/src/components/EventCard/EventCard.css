@@ -73,7 +73,7 @@ div.card-container {
         position: absolute;
         overflow: hidden;
         height: 100%;
-        /* width: 100%; */
+        width: 100%;
         object-fit: cover;
         border-radius: 15px;
         backface-visibility: hidden;
@@ -110,19 +110,19 @@ div.card-container:hover div.card-content {
 }
 
 .card-container .card-content .card2 {
-    background-image: url("../assets/EventCard/event-2.jpg");
+    background-image: url("../../assets/EventCard/event-2.jpg");
     background-size: cover;
     background-position: center;
 }
 
 .card-container .card-content .card3 {
-    background-image: url("../assets/EventCard/event-3.jpg");
+    background-image: url("../../assets/EventCard/event-3.jpg");
     background-size: cover;
     background-position: center;
 }
 
 .card-container .card-content .card4 {
-    background-image: url("../assets/EventCard/event-4.jpg");
+    background-image: url("../../assets/EventCard/event-4.jpg");
     background-size: cover;
     background-position: center;
 }

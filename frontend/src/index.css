@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base{
+    body {
+      background-color: #080808;
+    }
+  }
+  
+  .slick-slide > div {
+    margin:  10px;
+  }
+  
+  .slick-dots li.slick-active button:before {
+    color:orange !important;
+  }
+  

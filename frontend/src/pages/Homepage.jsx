@@ -6,7 +6,7 @@ import Navbar from '../components/Header'
 
 const Homepage = () => {
   return (
-    <div className='bg-black'>Homepage
+    <div className='bg-black'>
       <Navbar />  
       <EventCard/>
       <About/>

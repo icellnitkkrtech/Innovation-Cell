@@ -3,7 +3,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./teamcard.css"; 
 
-function TeamCard() {
+function Teamcard1() {
   const settings = {
     dots: true,
     infinite: true,
@@ -110,4 +110,4 @@ const data = [
   },
 ];
 
-export default TeamCard;
+export default Teamcard1;

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import TrendingPost from './TrendingPost'
 import  "./trendingpost.css";
+import SmallerHeading from '../SmallerHeading';
 
 const TrendingSection = () => {
 
@@ -28,7 +29,7 @@ const TrendingSection = () => {
                 </div>
                 <div className='m-2 md:w-2/5 lg:w-2/5 sm:w-2/5'>
                         <h1 className='text-white mb-4 font-extrabold lg:text-5xl md:text-4xl sm:text-3xl text-2xl'>
-                            <a href="#">Posts</a>
+                            <SmallerHeading title="Posts" />
                         </h1>
                         
                     </div>

@@ -13,9 +13,9 @@ const Navbar = () => {
 
   const navItems = [
     { id: 1, text: 'Home' },
-    { id: 2, text: 'Company' },
-    { id: 3, text: 'Resources' },
-    { id: 4, text: 'About' },
+    { id: 2, text: 'About Us' },
+    { id: 3, text: 'Team' },
+    { id: 4, text: 'Resources' },
     { id: 5, text: 'Contact' },
   ];
 

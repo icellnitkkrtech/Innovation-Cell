@@ -4,7 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Homepage from './pages/Homepage'
 import TrendingPost from './components/Trending Section/TrendingPost';
-import Hero from './components/Hero'
+
 // import Hero from './components/Hero/Hero'
 
 function App() {

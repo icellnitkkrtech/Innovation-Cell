@@ -27,12 +27,13 @@ p.title_text {
     align-items: center;
     justify-content: space-evenly;
     margin : 30px ;
-    gap: 20px;
-     
+    gap: 40px;
+
+    overflow-x: scroll; 
+    scrollbar-width: none;
+
     @media only screen and (max-width : 768px){
         gap : 30px ;
-        overflow-x: scroll; 
-        scrollbar-width: none;
     } 
 }
 
@@ -174,28 +175,11 @@ div.card-container:hover div.card-content {
     transform: translateY(0px);
     opacity: 1;
 }
-/* 
 
- .card-container .card-content .card-back .content h2 {
-    position: absolute;
-    top: -35px;
-    right : 0px ; 
-    font-weight: 700;
-    font-size: 6rem ;
-    color: rgba(0, 0, 0, 0.1);
-
-    @media only screen and (max-width: 768px) {
-        font-size: 5rem;
-    }
-}  */
 .card-container .card-content .card-back .content h3 {
     font-size: 3rem;
     z-index: 10000;
     color : black ; 
-
-    /* @media only screen and (max-width: 768px) {
-        font-size: 2rem;
-    } */
 
     @media only screen and (max-width: 768px) {
         font-size: 1.4rem ; 
@@ -208,10 +192,6 @@ div.card-container:hover div.card-content {
     z-index: 1;
     font-weight: 300;
     color : black ; 
-
-    /* @media only screen and (max-width: 768px) {
-        font-size: 0.8rem;
-    } */
 
     @media only screen and (max-width: 768px) {
         font-size: 0.6rem ; 
@@ -233,11 +213,6 @@ div.card-container:hover div.card-content {
     text-decoration: none;
     font-weight: 500;
     box-shadow: 0 5px 15px rgb(0, 0, 0, 0.5);
-
-    /* @media only screen and (max-width: 768px) {
-        font-size: 0.8rem;
-        width: 70%;
-    } */
 
     @media only screen and (max-width: 768px) {
         width: 80%;

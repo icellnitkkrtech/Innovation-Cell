@@ -91,7 +91,7 @@ function About() {
                     <div className='m-2 md:w-2/5 lg:w-2/5 sm:w-2/5'>
                         <div className='shadow-lg w-full p-2 border-zinc-300 hover:opacity-95 transition duration-300 ease-out-in transform hover:scale-100' ref={imageRef}>
                             <img className="rounded-lg hover:border-white"
-                                src="../../../public/AboutUs.png"
+                                src="/AboutUs.png"
                                 alt='About Image'
                                 style={{
                                     width: '100%',

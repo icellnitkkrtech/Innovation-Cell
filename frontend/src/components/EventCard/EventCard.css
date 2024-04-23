@@ -10,11 +10,30 @@ h1.main_heading {
     }
 }
 
+p.title_text {
+    color: white;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    margin-right: 10px;
+    text-align: right;
+
+    @media only screen and (max-width: 768px) {
+        font-size: 0.8rem;
+    }
+}
+
 .slider_container {
     display : flex ; 
     align-items: center;
     justify-content: space-evenly;
-    margin : 30px ; 
+    margin : 30px ;
+    gap: 20px;
+     
+    @media only screen and (max-width : 768px){
+        gap : 30px ;
+        overflow-x: scroll; 
+        scrollbar-width: none;
+    } 
 }
 
 .heading_container {
@@ -37,27 +56,6 @@ h1.main_heading {
     }
 }
 
-p.title_text {
-    color: white;
-    font-size: 1.2rem;
-    margin-top: 10px;
-    margin-right: 10px;
-    text-align: right;
-
-    @media only screen and (max-width: 768px) {
-        font-size: 0.8rem;
-    }
-}
-
-
-div.slider_container {
-    display: flex;
-    gap: 10px;
-
-    @media only screen and (max-width : 768px){
-        overflow-x: scroll;
-    } 
-}
 
 div.card-container {
     height: 400px;
@@ -68,27 +66,37 @@ div.card-container {
     /* margin: 0 25px; */
 
     @media only screen and (max-width: 768px) {
-        height: 300px;
-        width: 240px;
+        height: 218.75px;
+        width: 175px;
     }
+    
 
     & div.card-content {
         position: relative;
         transform-style: preserve-3d;
         transition: transform 0.75s linear 1ms;
+        @media only screen and (max-width: 768px) {
+            height: 218.75px;
+            width: 175px;
+        }
     }
 
     & div.card-front,
     div.card-back {
         position: absolute;
         overflow: hidden;
-        height: 375px ;
-        width: 300px ; 
+        height: 400px ;
+        width: 320px ; 
         object-fit: cover;
         border-radius: 15px;
         backface-visibility: hidden;
         -moz-backface-visibility: hidden;
         -webkit-backface-visibility: hidden;
+
+        @media only screen and (max-width: 768px) {
+            height: 218.75px;
+            width: 175px;
+        }
     }
 
     & div.card-back {
@@ -166,7 +174,7 @@ div.card-container:hover div.card-content {
     transform: translateY(0px);
     opacity: 1;
 }
-
+/* 
 
  .card-container .card-content .card-back .content h2 {
     position: absolute;
@@ -179,14 +187,19 @@ div.card-container:hover div.card-content {
     @media only screen and (max-width: 768px) {
         font-size: 5rem;
     }
-} 
+}  */
 .card-container .card-content .card-back .content h3 {
     font-size: 3rem;
     z-index: 10000;
     color : black ; 
 
-    @media only screen and (max-width: 768px) {
+    /* @media only screen and (max-width: 768px) {
         font-size: 2rem;
+    } */
+
+    @media only screen and (max-width: 768px) {
+        font-size: 1.4rem ; 
+        font-weight: 600;
     }
 }
 
@@ -196,8 +209,12 @@ div.card-container:hover div.card-content {
     font-weight: 300;
     color : black ; 
 
-    @media only screen and (max-width: 768px) {
+    /* @media only screen and (max-width: 768px) {
         font-size: 0.8rem;
+    } */
+
+    @media only screen and (max-width: 768px) {
+        font-size: 0.6rem ; 
     }
 }
 
@@ -217,8 +234,19 @@ div.card-container:hover div.card-content {
     font-weight: 500;
     box-shadow: 0 5px 15px rgb(0, 0, 0, 0.5);
 
-    @media only screen and (max-width: 768px) {
+    /* @media only screen and (max-width: 768px) {
         font-size: 0.8rem;
         width: 70%;
+    } */
+
+    @media only screen and (max-width: 768px) {
+        width: 80%;
+        padding: 5px 10px;
+        margin-top: 10px;
+        font-size : 0.8rem ; 
     }
 } 
+
+    
+
+  

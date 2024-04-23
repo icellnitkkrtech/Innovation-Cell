@@ -14,6 +14,7 @@ const Homepage = () => {
       <About/>
       <TrendingSection />
       <Teamcard1 />
+      <Contact />
     </div>
   )
 }

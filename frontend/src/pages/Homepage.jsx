@@ -4,6 +4,7 @@ import EventCard from '../components/EventCard/EventCard.jsx'
 import TrendingSection from '../components/Trending Section/TrendingSection'
 import Navbar from '../components/Header'
 import Teamcard1 from '../components/teamcard/Teamcard1.jsx'
+import Contact from '../components/contact.jsx'
 
 const Homepage = () => {
   return (
@@ -13,6 +14,7 @@ const Homepage = () => {
       <About/>
       <TrendingSection />
       <Teamcard1 />
+      <Contact />
     </div>
   )
 }

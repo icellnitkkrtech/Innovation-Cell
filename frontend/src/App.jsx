@@ -13,11 +13,7 @@ function App() {
   return (
     <>
       
-      <Homepage />
-      
-      {/* <Hero /> */}
-
-      
+      <Homepage />      
    
     </>
   )

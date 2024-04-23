@@ -86,7 +86,7 @@ const Navbar = () => {
       </ul>
 
       {/* Social Icons */}
-      <ul className='hidden bg-black  md:flex border-white rounded-lg border-2 p-0 social-icons'>
+      <ul className='hidden bg-black  md:flex border-white rounded-lg  p-0 social-icons'>
   {socialIcons.map(iconObj => (
     <li
       key={iconObj.id}

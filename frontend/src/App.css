@@ -20,4 +20,8 @@
     margin-top: -2px;
     margin-left: 10px;
   }
-  
+
+  .slick-slide > div {
+    margin:0 10px
+}
+

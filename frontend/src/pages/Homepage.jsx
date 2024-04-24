@@ -8,11 +8,13 @@ import Contact from '../components/contact.jsx'
 import AKTeamCard from '../components/teamcard/AKTeamCard.jsx'
 import AKTrendingSection from '../components/Trending Section/AKTrendingSection.jsx'
 import Footer from '../components/Footer.jsx'
+import Hero from '../components/Hero.jsx'
 
 const Homepage = () => {
   return (
     <div className='bg-black'>
       <Navbar />
+      <Hero />
       <EventCard/>
       <About/>
       {/* <AKTrendingSection /> */}

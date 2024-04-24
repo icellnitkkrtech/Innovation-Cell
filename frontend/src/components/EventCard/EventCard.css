@@ -169,6 +169,10 @@ div.card-container:hover div.card-content {
     flex-direction: column;
     justify-content: center;
     gap: 20px;
+    @media only screen and (max-width: 768px) {
+        opacity : 1 ; 
+        transform: translateY(0px);
+    }
 }
 
 .card-container .card-content .card-back .content:hover {

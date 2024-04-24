@@ -71,8 +71,7 @@ function ContactSection() {
             className="text-white bg-[orange] border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg mt-4"
           />
           <p className="text-xs text-gray-500 mt-3">
-            Chicharrones blog helvetica normcore iceland tousled brook viral
-            artisan.
+            
           </p>
         </form>
       </div>

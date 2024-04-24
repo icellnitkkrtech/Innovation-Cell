@@ -5,6 +5,9 @@ import TrendingSection from '../components/Trending Section/TrendingSection'
 import Navbar from '../components/Header'
 import Teamcard1 from '../components/teamcard/Teamcard1.jsx'
 import Contact from '../components/contact.jsx'
+import AKTeamCard from '../components/teamcard/AKTeamCard.jsx'
+import AKTrendingSection from '../components/Trending Section/AKTrendingSection.jsx'
+import Footer from '../components/Footer.jsx'
 
 const Homepage = () => {
   return (
@@ -12,9 +15,12 @@ const Homepage = () => {
       <Navbar />
       <EventCard/>
       <About/>
-      <TrendingSection />
+      {/* <AKTrendingSection /> */}
+      {/* <TrendingSection /> */}
       <Teamcard1 />
+      {/* <AKTeamCard /> */}
       <Contact />
+      <Footer />
     </div>
   )
 }

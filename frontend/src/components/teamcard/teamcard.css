@@ -266,6 +266,8 @@ App.css
   }
   
   .nft{
+
+    margin: auto;
     user-select:none;
     max-width: 300px;
   

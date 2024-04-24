@@ -14,7 +14,7 @@ function ContactSection() {
         console.error('Error getting user location:', error);
       }
     );
-  }, []);
+  }, [])
 
   return (
     <section className="text-gray-600 body-font relative">

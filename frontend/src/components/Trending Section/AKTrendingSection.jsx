@@ -2,8 +2,19 @@ import React, { useState } from 'react'
 import TrendingPost from './TrendingPost'
 import  "./trendingpost.css";
 import SmallerHeading from '../SmallerHeading';
+import Slider from 'react-slick';
 
-const TrendingSection = () => {
+const AKTrendingSection = () => {
+
+    const settings = {
+        dots: false,
+        infinite: false,
+        speed: 500,
+        slidesToShow: 3,
+        slidesToScroll: 1
+
+
+    };
 
     
 
@@ -15,6 +26,10 @@ const TrendingSection = () => {
         date : "April 18 , 2024" ,
         title : "Title 2" ,
         description : "Description 2"
+    } , {
+        date : "April 18 , 2024" ,
+        title : "Title 3" ,
+        description : "Description 3"
     } , {
         date : "April 18 , 2024" ,
         title : "Title 3" ,
@@ -35,8 +50,9 @@ const TrendingSection = () => {
                         </h1>
                         
                     </div>
-                <div className="posts ">
+                <div className="posts slider-container">
                    {/* This Function will call the divs */}
+                   <Slider {...settings}>
                    {
                     datas.map((data)=>{
                         return(
@@ -44,6 +60,7 @@ const TrendingSection = () => {
                         )
                     })
                    }
+                   </Slider>
                 </div>
             </div>
             
@@ -51,4 +68,4 @@ const TrendingSection = () => {
     )
 }
 
-export default TrendingSection
+export default AKTrendingSection

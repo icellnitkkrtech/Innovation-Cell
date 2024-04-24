@@ -1,11 +1,17 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import { toast } from "react-toastify";
 import styled from "styled-components";
 
 // npm i @emailjs/browser
 
 const Contact = () => {
   const form = useRef();
+  const [formData, setFormData] = useState({
+    user_name: "",
+    user_email: "",
+    message: ""
+  });
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -20,26 +26,45 @@ const Contact = () => {
       .then(
         (result) => {
           console.log(result.text);
-          console.log("message sent");
+          toast.success("Message delivered successfully"); // Show success notification
+          setFormData({ // Reset form data
+            user_name: "",
+            user_email: "",
+            message: ""
+          });
         },
         (error) => {
           console.log(error.text);
+          toast.error("Error sending message"); // Show error notification
         }
       );
   };
 
   return (
     <StyledContactForm>
-    <form ref={form} onSubmit={sendEmail}>
-      <label>Name</label>
-      <input type="text" name="user_name" />
-      <label>Email</label>
-      <input type="email" name="user_email" />
-      <label>Message</label>
-      <textarea name="message" />
-      <input type="submit" value="Send" />
-    </form>
-
+      <form ref={form} onSubmit={sendEmail}>
+        <label>Name</label>
+        <input 
+          type="text" 
+          name="user_name" 
+          value={formData.user_name} 
+          onChange={(e) => setFormData({ ...formData, user_name: e.target.value })} 
+        />
+        <label>Email</label>
+        <input 
+          type="email" 
+          name="user_email" 
+          value={formData.user_email} 
+          onChange={(e) => setFormData({ ...formData, user_email: e.target.value })} 
+        />
+        <label>Message</label>
+        <textarea 
+          name="message" 
+          value={formData.message} 
+          onChange={(e) => setFormData({ ...formData, message: e.target.value })} 
+        />
+        <input type="submit" value="Send" />
+      </form>
     </StyledContactForm>
   );
 };

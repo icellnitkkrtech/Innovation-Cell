@@ -13,9 +13,9 @@ function App() {
   return (
     <>
       
-      <Homepage />
+      {/* <Homepage /> */}
       
-      {/* <Hero /> */}
+      <Hero />
 
       
    

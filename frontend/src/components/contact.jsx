@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { toast } from "react-toastify";
 import styled from "styled-components";
-
+import 'react-toastify/dist/ReactToastify.min.css';
 // npm i @emailjs/browser
 
 const Contact = () => {

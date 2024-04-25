@@ -113,7 +113,7 @@ const data = [
   },
   {
     name: `Ritik Rai`,
-    img:  `Ritik Rai _ Additional Secretary.HEIC`,
+    img:  `Ritik Rai _ Additional Secretary.jpg`,
     post: 'Secretary',
     desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.`
   },

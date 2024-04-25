@@ -23,7 +23,7 @@ const Homepage = () => {
       <Teamcard1 />
       {/* <AKTeamCard /> */}
       {/* <Contact /> */}
-     
+     <ContactSection />
       <Footer />
     </div>
   )

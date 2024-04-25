@@ -68,7 +68,7 @@ const Navbar = () => {
   ];
 
   return (
-    <div className='navbar bg-black flex justify-between items-center h-20 mx-auto px-8 m text-white z-999'>
+    <div className='navbar bg-black flex justify-between items-center h-20 mx-auto px-8 m text-white z-999 '>
       <Logo />
       {/* { <h1 className='w-full text-3xl font-bold Capitalize'>Innovation Cell</h1> } */}
 

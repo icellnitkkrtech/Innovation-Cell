@@ -182,7 +182,7 @@ div.card-container:hover div.card-content {
 
 .card-container .card-content .card-back .content h3 {
     font-size: 3rem;
-    z-index: 10000;
+    z-index: 10;
     color : black ; 
 
     @media only screen and (max-width: 768px) {

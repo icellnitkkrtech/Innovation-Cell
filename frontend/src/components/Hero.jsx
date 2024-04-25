@@ -55,7 +55,7 @@ const Hero = () => {
             </div>
 
             <div>
-            <img src="\bulb.png" alt="bulb" />
+            <img  src="\bulb.png" alt="bulb" />
             </div>
         </div>
     )

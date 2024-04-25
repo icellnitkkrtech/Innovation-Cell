@@ -9,6 +9,7 @@ import AKTeamCard from '../components/teamcard/AKTeamCard.jsx'
 import AKTrendingSection from '../components/Trending Section/AKTrendingSection.jsx'
 import Footer from '../components/Footer.jsx'
 import Hero from '../components/Hero.jsx'
+import ContactSection from '../components/ContactSection.jsx'
 
 const Homepage = () => {
   return (
@@ -21,7 +22,8 @@ const Homepage = () => {
       {/* <TrendingSection /> */}
       <Teamcard1 />
       {/* <AKTeamCard /> */}
-      <Contact />
+      {/* <Contact /> */}
+     
       <Footer />
     </div>
   )

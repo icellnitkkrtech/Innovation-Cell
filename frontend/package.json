@@ -14,6 +14,7 @@
     "@emailjs/browser": "^4.3.3",
     "browser": "^0.2.6",
     "gsap": "^3.12.5",
+    "lottie-react": "^2.4.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^5.1.0",

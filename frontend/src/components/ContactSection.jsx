@@ -17,7 +17,7 @@ function ContactSection() {
   }, [])
 
   return (
-    <section className="text-gray-600 body-font relative">
+    <section className="text-gray-600 body-font relative m-8 border-zinc-800 rounded-lg">
        {userLocation && (
         <div 
         className="absolute inset-0 bg-gray-300"

@@ -44,12 +44,12 @@ function Teamcard1() {
   };
   
   return (
-    <div className='w-3/4 m-auto'>
+    <div className='w-3/4 m-auto mb-20'>
       <div className="mt-20">
       <div className="text-above-slider">
           
-          <p style={{ fontSize: '18px' }}> our team</p>
-          <h2 style={{ color: 'orange' }}>Meet our people</h2>
+          <p style={{ fontSize: '50px' }}> OUR TEAM</p>
+          <h2 style={{ color: 'orange' ,fontSize: '30px'}}>Meet our people</h2>
         </div>
       
        

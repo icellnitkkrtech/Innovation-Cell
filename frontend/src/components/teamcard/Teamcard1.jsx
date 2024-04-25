@@ -204,7 +204,7 @@ const data = [
   {
     name: `Raj Aryan`,
     img:  `Raj Aryan _ Member.jpg`,
-    post: 'Membert',
+    post: 'Member',
     desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, s`
   },
   {

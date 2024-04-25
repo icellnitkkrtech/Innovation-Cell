@@ -116,8 +116,8 @@ function About() {
                         ))}
                     </div>
                 </nav>
-                <section className="p-8">
-                    <div className="lg:w-2/3 md:w-3/5 sm:w-3/4 mx-auto">
+                <section className="p-8 py-3">
+                    <div className="lg:w-1/3 p-8 md:w-3/5 sm:w-3/4 mx-auto">
                         <Slider ref={sliderRef} {...settings} >
                             {features.map((feature, index) => (
                                 <div key={index} className="p-6 border border-opacity-25 border-blue-200 bg-gradient-to-b relative hover:shadow-sm hover:shadow-white z-0 rounded-lg border-orange-300 flex transition duration-300 ease-out-in transform hover:scale-95 border">

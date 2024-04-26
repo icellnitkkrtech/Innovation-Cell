@@ -33,6 +33,7 @@ App.css
   .carousel-item.hover-effect:hover {
     transform: scale(1.05); /* Example: Increase scale on hover */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Example: Add box shadow on hover */
+    border-radius: 1rem;
   }
   
   

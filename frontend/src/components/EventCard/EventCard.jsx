@@ -3,7 +3,7 @@ import './EventCard.css' ;
 import Heading from '../Heading';
 const EventCard = () => {
     return (
-        <div className="horizontal_slider">
+        <div className="horizontal_slider" id='event'>
             <p className='title_text'>where ideas meet action </p>
             <div className="heading_container">
             <hr />

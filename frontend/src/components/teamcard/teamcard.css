@@ -27,12 +27,15 @@ App.css
   
   .carousel-item:hover {
     animation: shimmer 1.5s infinite linear;
+    border-radius: 25px;
+    /* border-radius: 10px; */
   }
   
   /* App.css */
   .carousel-item.hover-effect:hover {
     transform: scale(1.05); /* Example: Increase scale on hover */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Example: Add box shadow on hover */
+    border-radius: 25px;
   }
   
   
@@ -270,6 +273,8 @@ App.css
   
   .nft{
 
+    /* max-height: 388.33px; */
+
     margin: auto;
     user-select:none;
     max-width: 300px;
@@ -348,6 +353,7 @@ App.css
     }
     &:hover{
       border: 1px solid #ffffff44;
+      border-radius: 15px;
       box-shadow: 0 7px 50px 10px #000000aa;
       transform: scale(1.015);
       filter: brightness(1.3);
@@ -394,6 +400,7 @@ App.css
     -o-transition: all .4s ease-in-out;
     -webkit-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
+    
   }
   
   .bn632-hover:focus {

@@ -9,13 +9,13 @@ import Loader from './components/Loader'
 // import Hero from './components/Hero/Hero'
 
 function App() {
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(true)
 
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setLoading(false)
-  //   }, 4500);
-  // }, [])
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false)
+    }, 4500);
+  }, [])
 
   if (loading) {
     return (

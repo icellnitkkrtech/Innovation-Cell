@@ -1,10 +1,12 @@
 import React from 'react' ; 
 import './EventCard.css' ; 
 import Heading from '../Heading';
+import SmallerHeading from '../SmallerHeading';
 const EventCard = () => {
     return (
-        <div className="horizontal_slider">
-            <p className='title_text'>where ideas meet action </p>
+        <div className="horizontal_slider p-4 lg:px-12">
+            {/* <p className='title_text'>where ideas meet action </p> */}
+            <p className='eventTitle ' > <SmallerHeading title="where ideas meet action" /> </p>
             <div className="heading_container">
             <hr />
             <Heading title="Our Events" />

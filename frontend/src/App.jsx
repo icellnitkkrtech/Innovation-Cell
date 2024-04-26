@@ -9,23 +9,23 @@ import Loader from './components/Loader'
 // import Hero from './components/Hero/Hero'
 
 function App() {
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(false)
 
-  useEffect(()=>{
-    setTimeout(() => {
-      setLoading(false)
-    }, 4500);
-  } , [])
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setLoading(false)
+  //   }, 4500);
+  // }, [])
 
- if(loading){
-  return(
-    <Loader />
-  )
- } else{
-  return(
-    <Homepage />
-  )
- }
+  if (loading) {
+    return (
+      <Loader />
+    )
+  } else {
+    return (
+      <Homepage />
+    )
+  }
 }
 
 export default App

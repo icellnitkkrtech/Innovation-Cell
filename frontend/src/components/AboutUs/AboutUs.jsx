@@ -81,7 +81,7 @@ function About() {
 
     return (
         <>
-            <section className='md:mt-42 mt-48'>
+            <section className='md:mt-42  lg:px-12 lg:py-16 lg:pb-4 '>
                 <div className='p-4 pb-0'>
                     <a className='font-extrabold text-orange-500 lg:text-5xl md:text-4xl sm:text-3xl text-2xl hover:cursor-pointer hover:text-orange-400' onClick={scrollToParagraph}>About Us</a>
                     <hr className='sm:border-t-2 ml-48 md:ml-72 lg:ml-96 sm:ml-64 md:border-t-3 border-orange-500 ' />
@@ -117,7 +117,7 @@ function About() {
                     </div>
                 </nav>
                 <section className="p-8 py-3">
-                    <div className="lg:w-1/3 p-8 md:w-3/5 sm:w-3/4 mx-auto">
+                    <div className="lg:w-1/2 p-8 md:w-3/5 sm:w-3/4 mx-auto">
                         <Slider ref={sliderRef} {...settings} >
                             {features.map((feature, index) => (
                                 <div key={index} className="p-6 border border-opacity-25 border-blue-200 bg-gradient-to-b relative hover:shadow-sm hover:shadow-white z-0 rounded-lg border-orange-300 flex transition duration-300 ease-out-in transform hover:scale-95 border">

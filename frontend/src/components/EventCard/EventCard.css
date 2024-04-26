@@ -226,6 +226,17 @@ div.card-container:hover div.card-content {
     }
 } 
 
+.eventTitle{
+    margin-left: 57%;
+}
+
+
+@media (max-width:600px){
+    .eventTitle{
+        margin-left: 5%;
+    }
+}
+
     
 
   

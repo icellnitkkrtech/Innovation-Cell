@@ -16,14 +16,10 @@ const Homepage = () => {
     <div className='bg-black'>
       <Navbar />
       <Hero />
-      <EventCard/>
-      <About/>
-      {/* <AKTrendingSection /> */}
-      {/* <TrendingSection /> */}
+      <EventCard />
       <Teamcard1 />
-      {/* <AKTeamCard /> */}
-      {/* <Contact /> */}
-     <ContactSection />
+      <About />
+      <ContactSection />
       <Footer />
     </div>
   )

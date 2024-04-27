@@ -10,13 +10,19 @@ const Navbar = () => {
   const handleNav = () => {
     setNav(!nav);
   };
-
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+      handleNav(); // Close the mobile menu after scrolling
+    }
+  };
   const navItems = [
-    { id: 1, text: 'Home' },
-    { id: 2, text: 'About Us' },
-    { id: 3, text: 'Team' },
-    { id: 4, text: 'Resources' },
-    { id: 5, text: 'Contact' },
+    { id: 1, text: 'Home', sectionId: 'home' },
+    { id: 2, text: 'About Us', sectionId: 'about' },
+    { id: 3, text: 'Team', sectionId: 'team' },
+    { id: 4, text: 'Events', sectionId: 'event' },
+    { id: 5, text: 'Contact', sectionId: 'contact' },
   ];
 
   const socialIcons = [
@@ -68,23 +74,16 @@ const Navbar = () => {
   ];
 
   return (
-    <div className='navbar bg-black flex justify-between items-center h-20 mx-auto px-8 m text-white z-999 '>
+    <div className='  w-full navbar bg-black flex justify-between items-center h-20 mx-auto px-8 m text-white z-999 '>
       <Logo />
       {/* { <h1 className='w-full text-3xl font-bold Capitalize'>Innovation Cell</h1> } */}
 
       {/* Desktop Navigation */}
-      <ul className='hidden md:flex gap-2  px-2'>
+      <ul className='hidden md:flex gap-2'>
         {navItems.map(item => (
-        <li
-        key={item.id}
-        className='p-4 cursor-pointer hover:text-lg transition-transform duration-300 transform hover:scale-110 transition-all duration-300'
-      >
-       
-          {item.text}
-        
-      </li>
-      
-       
+          <li key={item.id} className='p-4 cursor-pointer hover:text-lg transition-transform duration-300 transform hover:scale-110 transition-all duration-300'>
+            <span onClick={() => scrollToSection(item.sectionId)}>{item.text}</span>
+          </li>
         ))}
       </ul>
 
@@ -104,7 +103,7 @@ const Navbar = () => {
 
       {/* Mobile Navigation Icon */}
       <div onClick={handleNav} className='block md:hidden mobile-nav'>
-        {nav? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
+        {nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
       </div>
 
       {/* Mobile Navigation Menu */}

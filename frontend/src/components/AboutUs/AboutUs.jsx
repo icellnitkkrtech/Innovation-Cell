@@ -81,7 +81,7 @@ function About() {
 
     return (
         <>
-            <section className='md:mt-42  lg:px-12 lg:py-16 lg:pb-4 '>
+            <section id="about" className='md:mt-42  lg:px-12 lg:py-16 lg:pb-4 '>
                 <div className='p-4 pb-0'>
                     <a className='font-extrabold text-orange-500 lg:text-5xl md:text-4xl sm:text-3xl text-2xl hover:cursor-pointer hover:text-orange-400' onClick={scrollToParagraph}>About Us</a>
                     <hr className='sm:border-t-2 ml-48 md:ml-72 lg:ml-96 sm:ml-64 md:border-t-3 border-orange-500 ' />

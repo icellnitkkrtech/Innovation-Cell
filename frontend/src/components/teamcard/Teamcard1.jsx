@@ -46,7 +46,7 @@ function Teamcard1() {
   };
   
   return (
-    <div className='w-3/4 m-auto'>
+    <div id="team" className='w-3/4 m-auto'>
       <div className="">
       
     

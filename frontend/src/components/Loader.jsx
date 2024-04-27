@@ -8,7 +8,7 @@ const Loader = () => {
     useState(()=>{
         setTimeout(() => {
             setIsOff(false)
-        }, 2658);
+        }, 2638);
     } , [])
 
 

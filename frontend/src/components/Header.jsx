@@ -124,7 +124,8 @@ const Navbar = () => {
             className='bg-black p-4 border-b rounded-xl hover:bg-[#c5973c] duration-300 hover:text-black cursor-pointer border-gray-600'
           >
            
-            {item.text}
+          <span onClick={() => scrollToSection(item.sectionId)}>{item.text}</span>
+          </li>
           </li>
         ))}
       </ul>

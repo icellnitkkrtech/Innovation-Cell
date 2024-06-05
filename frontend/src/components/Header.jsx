@@ -118,15 +118,15 @@ const Navbar = () => {
         <h1 className='w-full text-2xl font-bold text-[#c5973cb8] m-4'>Innovation Cell</h1>
 
         {/* Mobile Navigation Items */}
-        {navItems.map(item => (
-          <li
-            key={item.id}
-            className='bg-black p-4 border-b rounded-xl hover:bg-[#c5973c] duration-300 hover:text-black cursor-pointer border-gray-600'
-          >
-           
-           <span onClick={() => scrollToSection(item.sectionId)}>{item.text}</span>
-          </li>
-        ))}
+            {navItems.map(item => (
+        <li
+          key={item.id}
+          className='bg-black p-4 border-b rounded-xl hover:bg-[#c5973c] duration-300 hover:text-black cursor-pointer border-gray-600'
+          onClick={() => scrollToSection(item.sectionId)}
+        >
+          <span>{item.text}</span>
+        </li>
+      ))}
       </ul>
     </div>
   );

@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "react-slick": "^0.30.2"
+    "react-slick": "^0.30.2",
+    "vite": "^5.2.12"
   }
 }

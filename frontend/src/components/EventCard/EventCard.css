@@ -162,9 +162,9 @@ div.card-container:hover div.card-content {
     width: 100%;
     padding: 20px;
     text-align: center;
-    transform: translateY(50px);
+    transform: translateY(-90px);
     opacity: 0;
-    transition: 1s;
+    transition: 0.9s;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -175,7 +175,7 @@ div.card-container:hover div.card-content {
     }
 }
 
-.card-container .card-content .card-back .content:hover {
+.card-container:hover .card-content .card-back .content {
     transform: translateY(0px);
     opacity: 1;
 }

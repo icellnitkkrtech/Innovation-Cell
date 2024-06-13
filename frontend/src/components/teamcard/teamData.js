@@ -1,130 +1,130 @@
 const data = [
-    {
-      name: `Abhishek Kumar`,
-      img: `Abhishek Kumar _ President.jpg`,
-      post: 'President',
-      desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit`
-    },
-    {
-      name: `Chirag Moond`,
-      img:  `Chirag Moond _ Vice President.jpeg`,
-      post: 'Vice-president',
-      desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit,.`
-    },
-    {
-      name: `Shivam Vekhande`,
-      img:  `Shivam Vekhande _ Secretary.jpg`,
-      post: 'Secretary',
-      desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit,a.`
-    },
-    {
-      name: `Ritik Rai`,
-      img:  `Ritik Rai _ Additional Secretary.jpg`,
-      post: 'Secretary',
-      desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.`
-    },
-    {
-      name: `Komal Gupta`,
-      img:  `Komal Gupta _ Joint Secretary.jpg`,
-      post: 'Joint Secretary',
-      desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, s`
-    },
-    {
-      name: `Akash Deshmukh`,
-      img:  `Akash Deshmukh _ Member.jpg`,
-      post: 'Member',
-      desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, s`
-    },
-    {
-      name: `Deepanshu Vishwakarma`,
-      img:  `Deepanshu Vishwakarma _ Member.jpg`,
-      post: 'Member',
-      desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, s`
-    },
-    {
-      name: `Aneesh Mohanty`,
-      img:  `Aneesh Mohanty _ Member.JPG`,
-      post: 'Member',
-      desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, s`
-    },
-    {
-      name: `Dheeraj`,
-      img:  `Dheeraj _ Member.jpeg`,
-      post: 'Member',
-      desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, s`
-    },
-    {
-      name: `Jassica`,
-      img:  `Jassica _ Member.jpg`,
-      post: 'Member',
-      desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, s`
-    },
-    {
-      name: `Mukesh Goswami`,
-      img:  `Mukesh Goswami _ Member.jpg`,
-      post: 'Member',
-      desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, s`
-    },
-    {
-      name: `Harshvardhan`,
-      img:  `Harshvardhan _ Member.JPG`,
-      post: 'Member',
-      desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, s`
-    },
-    {
-      name: `Navjtot Singh`,
-      img:  `Navjtot Singh _ Member.jpg`,
-      post: 'Member',
-      desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, s`
-    },
-    {
-      name: `Neha Verma`,
-      img:  `Neha Verma _ Member.webp`,
-      post: 'Member',
-      desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, s`
-    },
-    {
-      name: `Nikhil Bhardwaj`,
-      img:  `Nikhil Bhardwaj _ Member.jpg`,
-      post: 'Member',
-      desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, s`
-    },
-    {
-      name: `Nikunj Garg`,
-      img:  `Nikunj Garg _ Member.jpeg`,
-      post: 'Member',
-      desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, s`
-    },
-    {
-      name: `Punit Garg`,
-      img:  `Punit Garg _ Member.jpg`,
-      post: 'Member',
-      desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, s`
-    },
-    {
-      name: `Rahul`,
-      img:  `Rahul _ Member.jpg`,
-      post: 'Member',
-      desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, s`
-    },
-    {
-      name: `Raj Aryan`,
-      img:  `Raj Aryan _ Member.jpg`,
-      post: 'Membert',
-      desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, s`
-    },
-    {
-      name: `Sunil Vishnoi`,
-      img:  `Sunil Vishnoi _ Member.jpg`,
-      post: 'Member',
-      desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, s`
-    },
-    {
-      name: `Harsh Kumar`,
-      img:  `Harsh Kumar _ Member.jpg`,
-      post: 'Member',
-      desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, s`
-    },
-  
-  ];
+  {
+    name: `Deepanshu Chauhan`,
+    img: `Deepanshu Chauhan _ President.jpg`,
+    post: 'President',
+    desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit`
+  },
+  {
+    name: `Alok Mishra`,
+    img:  `Alok Mishra _ Vice President.jpg`,
+    post: 'Vice-president',
+    desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit,.`
+  },
+  {
+    name: `Tanmay Mathur`,
+    img:  `Tanmay Mathur _ Secretary.jpg`,
+    post: 'Secretary',
+    desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit,a.`
+  },
+  {
+    name: `Saket Jethwani`,
+    img:  `Saket Jethwani _ Additional Secretary.jpg`,
+    post: 'Additional Secretary',
+    desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.`
+  },
+  {
+    name: `Suryansh Singh`,
+    img:  `Suryansh Singh _ Treasurer.jpg`,
+    post: 'Treasurer',
+    desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, s`
+  },
+  {
+    name: `Prashant Gautam`,
+    img:  `Prashant Gautam _ Ideation Team Head.jpg`,
+    post: 'Ideation Team Head',
+    desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, s`
+  },
+  {
+    name: `Anubhav Goel`,
+    img:  `Anubhav Goel _ Ideation Team Co-Head.jpg`,
+    post: 'Ideation Team Co-Head',
+    desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, s`
+  },
+  {
+    name: `Divyanshu Yadav`,
+    img:  `Divyanshu Yadav _ Finance Team Head.jpg`,
+    post: 'Finance Team Head',
+    desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, s`
+  },
+  {
+    name: `Dhruv Dhankhar`,
+    img:  `Dhruv Dhankhar _ Finance Team Co-Head.jpg`,
+    post: 'Finance Team Co-Head',
+    desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, s`
+  },
+  {
+    name: `Dhriti`,
+    img:  `Dhriti _ Outreach Team Head.jpg`,
+    post: 'Outreach Team Head',
+    desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, s`
+  },
+  {
+    name: `Shobhit Sharma`,
+    img:  `Shobhit Sharma _ Outreach Team Co-Head.jpg`,
+    post: 'Outreach Team Co-Head',
+    desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, s`
+  },
+  {
+    name: `Akarshit`,
+    img:  `Akarshit _ Tech Team Head.jpg`,
+    post: 'Tech Team Head',
+    desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, s`
+  },
+  {
+    name: `Dev varshaney`,
+    img:  `Dev varshaney _ Tech Team Co-Head.jpg`,
+    post: 'Tech Team Co-Head',
+    desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, s`
+  },
+  {
+    name: `Sarthak`,
+    img:  `Sarthak _ Management Head.jpg`,
+    post: 'Management Head',
+    desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, s`
+  },
+  {
+    name: `Deepanshu Bhardwaj`,
+    img:  `Deepanshu Bhardwaj _ Management Co-Head.jpg`,
+    post: 'Management Co-Head',
+    desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, s`
+  },
+  {
+    name: `Vivek`,
+    img:  `Vivek _ D&C Team Head.jpg`,
+    post: 'D&C Team Head',
+    desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, s`
+  },
+  {
+    name: `Vishesh`,
+    img:  `Vishesh _ D&C Team Co-Head.jpg`,
+    post: 'D&C Team Co-Head',
+    desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, s`
+  },
+  // {
+  //   name: `Rahul`,
+  //   img:  `Rahul _ Member.jpg`,
+  //   post: 'Member',
+  //   desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, s`
+  // },
+  // {
+  //   name: `Raj Aryan`,
+  //   img:  `Raj Aryan _ Member.jpg`,
+  //   post: 'Membert',
+  //   desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, s`
+  // },
+  // {
+  //   name: `Sunil Vishnoi`,
+  //   img:  `Sunil Vishnoi _ Member.jpg`,
+  //   post: 'Member',
+  //   desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, s`
+  // },
+  // {
+  //   name: `Harsh Kumar`,
+  //   img:  `Harsh Kumar _ Member.jpg`,
+  //   post: 'Member',
+  //   desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, s`
+  // },
+
+];
 

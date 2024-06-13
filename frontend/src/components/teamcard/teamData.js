@@ -101,30 +101,6 @@ const data = [
     post: 'D&C Team Co-Head',
     desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, s`
   },
-  // {
-  //   name: `Rahul`,
-  //   img:  `Rahul _ Member.jpg`,
-  //   post: 'Member',
-  //   desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, s`
-  // },
-  // {
-  //   name: `Raj Aryan`,
-  //   img:  `Raj Aryan _ Member.jpg`,
-  //   post: 'Membert',
-  //   desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, s`
-  // },
-  // {
-  //   name: `Sunil Vishnoi`,
-  //   img:  `Sunil Vishnoi _ Member.jpg`,
-  //   post: 'Member',
-  //   desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, s`
-  // },
-  // {
-  //   name: `Harsh Kumar`,
-  //   img:  `Harsh Kumar _ Member.jpg`,
-  //   post: 'Member',
-  //   desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, s`
-  // },
-
+ 
 ];
 

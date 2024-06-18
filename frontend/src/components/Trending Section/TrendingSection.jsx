@@ -5,6 +5,8 @@ import SmallerHeading from '../SmallerHeading';
 
 const TrendingSection = () => {
 
+    
+
     const [datas , setDatas] = useState([{
         date : "April 18 , 2024" ,
         title : "Title 1" ,

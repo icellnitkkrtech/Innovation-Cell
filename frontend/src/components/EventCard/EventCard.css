@@ -10,6 +10,33 @@ h1.main_heading {
     }
 }
 
+p.title_text {
+    color: white;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    margin-right: 10px;
+    text-align: right;
+
+    @media only screen and (max-width: 768px) {
+        font-size: 0.8rem;
+    }
+}
+
+.slider_container {
+    display : flex ; 
+    align-items: center;
+    justify-content: space-evenly;
+    margin : 30px ;
+    gap: 40px;
+
+    overflow-x: scroll; 
+    scrollbar-width: none;
+
+    @media only screen and (max-width : 768px){
+        gap : 30px ;
+    } 
+}
+
 .heading_container {
     display: flex;
     justify-content: flex-end;
@@ -30,24 +57,6 @@ h1.main_heading {
     }
 }
 
-p.title_text {
-    color: white;
-    font-size: 1.2rem;
-    margin-top: 10px;
-    margin-right: 10px;
-    text-align: right;
-
-    @media only screen and (max-width: 768px) {
-        font-size: 0.8rem;
-    }
-}
-
-
-div.slider_container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
 
 div.card-container {
     height: 400px;
@@ -58,27 +67,37 @@ div.card-container {
     /* margin: 0 25px; */
 
     @media only screen and (max-width: 768px) {
-        height: 300px;
-        width: 240px;
+        height: 218.75px;
+        width: 175px;
     }
+    
 
     & div.card-content {
         position: relative;
         transform-style: preserve-3d;
         transition: transform 0.75s linear 1ms;
+        @media only screen and (max-width: 768px) {
+            height: 218.75px;
+            width: 175px;
+        }
     }
 
     & div.card-front,
     div.card-back {
         position: absolute;
         overflow: hidden;
-        height: 100%;
-        width: 100%;
+        height: 400px ;
+        width: 320px ; 
         object-fit: cover;
         border-radius: 15px;
         backface-visibility: hidden;
         -moz-backface-visibility: hidden;
         -webkit-backface-visibility: hidden;
+
+        @media only screen and (max-width: 768px) {
+            height: 218.75px;
+            width: 175px;
+        }
     }
 
     & div.card-back {
@@ -143,40 +162,32 @@ div.card-container:hover div.card-content {
     width: 100%;
     padding: 20px;
     text-align: center;
-    transform: translateY(50px);
+    transform: translateY(-90px);
     opacity: 0;
-    transition: 1s;
+    transition: 0.9s;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 20px;
+    @media only screen and (max-width: 768px) {
+        opacity : 1 ; 
+        transform: translateY(0px);
+    }
 }
 
-.card-container .card-content .card-back .content:hover {
+.card-container:hover .card-content .card-back .content {
     transform: translateY(0px);
     opacity: 1;
 }
 
-
-
-.card-container .card-content .card-back .content h2 {
-    position: absolute;
-    top: -10px;
-    right: 15px;
-    font-size: 8rem;
-    color: rgba(0, 0, 0, 0.05);
-
-    @media only screen and (max-width: 768px) {
-        font-size: 5rem;
-    }
-}
-
 .card-container .card-content .card-back .content h3 {
     font-size: 3rem;
-    z-index: 1;
+    z-index: 10;
+    color : black ; 
 
     @media only screen and (max-width: 768px) {
-        font-size: 2rem;
+        font-size: 1.4rem ; 
+        font-weight: 600;
     }
 }
 
@@ -184,13 +195,15 @@ div.card-container:hover div.card-content {
     font-size: 1rem;
     z-index: 1;
     font-weight: 300;
+    color : black ; 
 
     @media only screen and (max-width: 768px) {
-        font-size: 0.8rem;
+        font-size: 0.6rem ; 
     }
 }
 
-.card-container .card-content .card-back .content a {
+
+ .card-container .card-content .card-back .content button {
     position: relative;
     display: inline-block;
     width: 50%;
@@ -206,7 +219,24 @@ div.card-container:hover div.card-content {
     box-shadow: 0 5px 15px rgb(0, 0, 0, 0.5);
 
     @media only screen and (max-width: 768px) {
-        font-size: 0.8rem;
-        width: 70%;
+        width: 80%;
+        padding: 5px 10px;
+        margin-top: 10px;
+        font-size : 0.8rem ; 
+    }
+} 
+
+.eventTitle{
+    margin-left: auto;
+}
+
+
+@media (max-width:600px){
+    .eventTitle{
+        margin-left: 5%;
     }
 }
+
+    
+
+  

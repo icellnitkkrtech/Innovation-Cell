@@ -1,30 +1,19 @@
-import { useEffect, useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Homepage from './pages/Homepage'
-import TrendingPost from './components/Trending Section/TrendingPost';
+import React, { useEffect, useState } from 'react'
 import Loader from './components/Loader'
 
-// import Hero from './components/Hero/Hero'
-
-function App() {
+function App({ children }) {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     setTimeout(() => {
       setLoading(false)
-    }, 4500);
+    }, 4500)
   }, [])
 
   if (loading) {
-    return (
-      <Loader />
-    )
+    return <Loader />
   } else {
-    return (
-      <Homepage />
-    )
+    return <div>{children}</div>
   }
 }
 

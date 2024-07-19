@@ -2,8 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 import Logo from './Logo';
 import { gsap } from 'gsap';
+import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
+  const navigate= useNavigate()
   const [nav, setNav] = useState(false);
   const [socialIconColor, setSocialIconColor] = useState('#fff');
 
@@ -85,6 +87,9 @@ const Navbar = () => {
             <span onClick={() => scrollToSection(item.sectionId)}>{item.text}</span>
           </li>
         ))}
+        <li className='p-4 cursor-pointer hover:text-lg transition-transform duration-300 transform hover:scale-110 transition-all duration-300'>
+          <span onClick={()=> navigate("/innokshetra")}>Innokshetra</span>
+        </li>
       </ul>
 
       {/* Social Icons */}

@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  /* font-style: normal; */
+}
+
+a{
+  display: contents;
+}
+
+/* @layer base{
+    body {
+      background-color: #080808;
+    }
+  }
+  
+  .slick-slide > div {
+    margin:  10px;
+  }
+  
+  .slick-dots li.slick-active button:before {
+    color:orange !important;
+  } */
+  

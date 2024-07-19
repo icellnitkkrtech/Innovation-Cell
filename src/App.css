@@ -1,0 +1,35 @@
+
+body{
+  
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  
+}
+
+.heading1 {
+    font-size: 20px;
+    font-family: Arial;
+    position: relative;
+    overflow: hidden;
+    margin-right: 10rem;
+    margin-left: 10rem;
+  }
+  
+  
+  .heading1:after {
+    display: inline-block;
+    content: "";
+    height: 4px;
+    background: rgb(253, 194, 0);
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    margin-top: -2px;
+    margin-left: 10px;
+  }
+
+  .slick-slide > div {
+    margin:0 10px
+}
+

@@ -64,7 +64,7 @@ function Innokshetra() {
           </button>
 
               {/* Visit Buttons */}
-          <button className='h-10 w-28 min-w-400:h-10 min-w-400:w-32 sm:h-11 sm:w-36 md:h-12 md:w-40 border-2
+          <button onClick={()=>navigate("/innokshetra")} className='h-10 w-28 min-w-400:h-10 min-w-400:w-32 sm:h-11 sm:w-36 md:h-12 md:w-40 border-2
                                border-pink-500 rounded-full bg-pink-600 bg-opacity-20 sm:text-lg text-sm'
             style={{
               backdropFilter: 'blur(5px)',

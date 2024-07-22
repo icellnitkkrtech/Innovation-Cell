@@ -19,9 +19,9 @@ function Innokshetra() {
 
         {/* Center Heading */}
         <div className='absolute top-6 sm:top-7 md:top-8 w-full flex flex-col items-center'>
-          <h1 className='text-md min-w-400:text-xl sm:text-2xl md:text-3xl tracking-wider'>
+          <h1 className='text-md text-xl sm:text-2xl md:text-3xl tracking-wider'>
             INNOVATION CELL</h1>
-          <h1 className='text-md min-w-400:text-xl sm:text-2xl md:text-3xl tracking-wider'>
+          <h1 className='text-md text-xl sm:text-2xl md:text-3xl tracking-wider'>
             PRESENTS</h1>
         </div>
 

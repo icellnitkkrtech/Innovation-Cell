@@ -1,0 +1,54 @@
+.hero-container{
+    z-index: 0;
+    background-image: url(https://images.hdqwalls.com/wallpapers/gta-6-palms-trees-5b.jpg);
+    background-repeat: no-repeat;
+    background-size:100% 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.hero-text{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    padding: 25px;
+    margin-top: 20px;
+}
+.small1{
+    margin: 2px;
+    font-size: 30px;
+    color: white;
+}
+.small2{
+    margin: 2px;
+    font-size: 30px;
+    color: white;
+
+}
+.big{
+    font-size: 110px;
+}
+.button{
+    margin-bottom: 20px;
+    padding-bottom:20px ;
+    color: white;
+   
+}
+.button button{
+    background-color: transparent;
+    color: white;
+    margin: 15px;
+    padding: 10px;
+    border: 5px solid white ;
+    cursor: pointer;
+    border-radius: 50px;
+    font-size: 0.7rem;
+}
+
+@media only screen and (max-width: 768px){
+    .big{
+        font-size: 40px;
+    }
+}

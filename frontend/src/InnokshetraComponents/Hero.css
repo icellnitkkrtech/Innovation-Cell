@@ -1,8 +1,10 @@
-.hero-container{
+.hero-container {
     z-index: 0;
     background-image: url(https://images.hdqwalls.com/wallpapers/gta-6-palms-trees-5b.jpg);
     background-repeat: no-repeat;
-    background-size:100% 100%;
+    background-size: cover; /* Cover ensures the image covers the full container */
+    width: 100vw; /* Full width of the viewport */
+    height: 100vh; /* Full height of the viewport */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -44,7 +46,7 @@
     border: 5px solid white ;
     cursor: pointer;
     border-radius: 50px;
-    font-size: 0.7rem;
+    font-size: 1.5rem;
 }
 
 @media only screen and (max-width: 768px){

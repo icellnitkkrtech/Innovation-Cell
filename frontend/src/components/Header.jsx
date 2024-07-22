@@ -131,7 +131,11 @@ const Navbar = () => {
         >
           <span>{item.text}</span>
         </li>
+        
       ))}
+      <li className='bg-black p-4 border-b rounded-xl hover:bg-[#c5973c] duration-300 hover:text-black cursor-pointer border-gray-600'>
+          <span onClick={()=> navigate("/innokshetra")}>Innokshetra</span>
+        </li>
       </ul>
     </div>
   );

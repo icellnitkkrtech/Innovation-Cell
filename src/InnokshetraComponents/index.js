@@ -8,6 +8,6 @@ import Rules from "./Rules"
 import Speakers from "./Speakers"
 import Sponsors from "./Sponsors"
 import Workshops from "./Worskshop"
+import EventTimeline from "./EventTimeline"
 
-
-export {About,Faq,Footer,Hero,Navbar,Rules,Speakers, Sponsors,Workshops,Glance}
+export {About,Faq,Footer,Hero,Navbar,Rules,Speakers, Sponsors,Workshops,Glance,EventTimeline}

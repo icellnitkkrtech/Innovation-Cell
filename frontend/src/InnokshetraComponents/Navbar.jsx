@@ -86,6 +86,10 @@ const Navbar = () => {
       {/* Desktop Navigation */}
       <ul className='hidden md:flex gap-9 items-center'>
       <li className=' cursor-pointer hover:text-lg transition-transform duration-300 transform hover:scale-110 transition-all duration-300 '>|</li>
+      <li  className=' cursor-pointer   transition-all duration-300 hover:p-2 hover:border-2 hover:border-white   rounded-full'>
+    
+    <span onClick={() => navigate("/")}>Home</span>
+  </li>
         {navItems.map(item => (
           <li key={item.id} className=' cursor-pointer   transition-all duration-300 hover:p-2 hover:border-2 hover:border-white   rounded-full'>
     

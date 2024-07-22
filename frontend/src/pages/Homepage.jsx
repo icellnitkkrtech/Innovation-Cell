@@ -10,12 +10,14 @@ import AKTrendingSection from '../components/Trending Section/AKTrendingSection.
 import Footer from '../components/Footer.jsx'
 import Hero from '../components/Hero.jsx'
 import ContactSection from '../components/ContactSection.jsx'
+import Innokshetra from '../components/Innokshetra.jsx'
 
 const Homepage = () => {
   return (
     <div className='bg-black'>
       <Navbar />
       <Hero />
+      <Innokshetra />
       <EventCard />
       <Teamcard1 />
       <About />

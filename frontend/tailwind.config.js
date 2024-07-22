@@ -5,11 +5,12 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {
-      backgroundImage: theme => ({
-        'innokshetra-background': "url('./public/INNOKSHETRA_BG.png')", // Update with your relative path
-      })
-    },
+
+    extend: {},
+    fontFamily:{
+      'balgin': ['Balgin', 'sans-serif'],
+    }
+
   },
   plugins: [
     function({ addUtilities }) {

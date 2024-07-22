@@ -1,6 +1,10 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function Innokshetra() {
+
+  
+  const navigate = useNavigate()
   return (
     <div className='h-[60vh] min-w-400:h-[65vh] sm:h-[85vh] md:h-screen w-full flex items-center justify-center'>
 

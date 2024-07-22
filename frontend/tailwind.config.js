@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       screens: {
-        'min-w-400': '400px',
+        'min-w-400': '440px',
       },
     },
     fontFamily:{

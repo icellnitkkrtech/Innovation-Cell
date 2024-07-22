@@ -21,6 +21,7 @@ export default {
       };
       addUtilities(newUtilities, ['responsive', 'hover']);
     },
+    require('daisyui'),
   ],
 }
 

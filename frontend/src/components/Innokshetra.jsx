@@ -2,7 +2,7 @@ import React from 'react';
 
 function Innokshetra() {
   return (
-    <div className='h-[60vh] min-w-400:h-[75vh] sm:h-[85vh] md:h-screen w-full flex items-center justify-center'>
+    <div className='h-[60vh] min-w-400:h-[65vh] sm:h-[85vh] md:h-screen w-full flex items-center justify-center'>
 
       <div className="relative w-[95vw] h-full bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: 'url("/website-icell.png")' }}>
@@ -27,7 +27,7 @@ function Innokshetra() {
 
 
         {/* Title */}
-        <div className='absolute top-24 sm:top-28 md:top-32 w-full flex items-center justify-center'>
+        <div className='absolute top-[6rem] min-w-400:top-24 sm:top-28 md:top-32 w-full flex items-center justify-center'>
           <h1 className='min-w-400:text-5xl text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold sm:font-bold md:font-extrabold transform scale-y-125'
          >
             INNOKSHETRA
@@ -35,7 +35,7 @@ function Innokshetra() {
         </div>
 
         {/* Date */}
-        <div className='absolute top-44 min-w-400:top-52 sm:top-64 md:top-72 w-full flex items-center justify-center'>
+        <div className='absolute top-[10rem] min-w-400:top-52 sm:top-64 md:top-72 w-full flex items-center justify-center'>
           <h1 className='min-w-400:text-3xl text-xl sm:text-4xl md:text-5xl lg:text-6xl font-medium sm:font-bold transform scale-y-125'>
           14 SEPTEMBER-16 SEPTEMBER
           </h1>

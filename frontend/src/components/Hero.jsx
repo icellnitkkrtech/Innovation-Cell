@@ -2,12 +2,12 @@ import React from 'react'
 
 const Hero = () => {
     return (
-        <div className='mb-16  grid px-8 mt-8 lg:px-20 lg:py-16  lg:grid-cols-2'>
-            <div className='w-100'>
+        <div className=' mb-16  grid px-8 mt-8 lg:px-20 lg:py-16  lg:grid-cols-2'>
+            <div className='w-100 mt-10'>
                 <h4 className='text-base'>NIT KURUKSHETRA</h4>
-                <h1 className='text-4xl lg:text-6xl  '>WELCOME TO </h1>
-                <h1 className='text-4xl text-orange-600 mb-6'>INNOVATION CELL</h1>
-                <p className='text-sm mb-12'>Innovation Cell is a student-driven official technical society of NIT Kurukshetra, affiliated with the Institute's Innovation Council (IIC), an initiative by the Ministry of Education (MoE) to foster a vibrant innovation ecosystem within our college.
+                <h1 className='text-5xl lg:text-7xl  '>WELCOME TO </h1>
+                <h1 className='text-5xl text-orange-600 mb-6'>INNOVATION CELL</h1>
+                <p className='text-md mb-12'>Innovation Cell is a student-driven official technical society of NIT Kurukshetra, affiliated with the Institute's Innovation Council (IIC), an initiative by the Ministry of Education (MoE) to foster a vibrant innovation ecosystem within our college.
                     We, at Innovation Cell aim to
                 </p>
 

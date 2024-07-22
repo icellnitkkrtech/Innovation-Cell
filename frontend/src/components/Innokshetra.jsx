@@ -1,6 +1,8 @@
 import React from 'react';
-
+import { useNavigate } from 'react-router-dom';
 function Innokshetra() {
+
+  const navigate = useNavigate()
   return (
     <div className='h-screen w-full flex items-center justify-center'>
 
@@ -51,7 +53,7 @@ function Innokshetra() {
           </button>
 
               {/* Visit Buttons */}
-          <button className='h-10 w-32 sm:h-11 sm:w-36 md:h-12 md:w-40 border-2 border-pink-500 rounded-full bg-pink-600 bg-opacity-20 text-white'
+          <button onClick={()=>navigate("/innokshetra")} className='h-10 w-32 sm:h-11 sm:w-36 md:h-12 md:w-40 border-2 border-pink-500 rounded-full bg-pink-600 bg-opacity-20 text-white'
             style={{
               backdropFilter: 'blur(5px)',
               transition: 'box-shadow 0.3s ease-in-out',

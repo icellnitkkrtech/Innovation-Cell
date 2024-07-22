@@ -5,11 +5,22 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+
     extend: {},
     fontFamily:{
       'balgin': ['Balgin', 'sans-serif'],
     }
+
   },
-  plugins: [],
+  plugins: [
+    function({ addUtilities }) {
+      const newUtilities = {
+        '.mix-blend-screen': {
+          'mix-blend-mode': 'screen',
+        },
+      };
+      addUtilities(newUtilities, ['responsive', 'hover']);
+    },
+  ],
 }
 

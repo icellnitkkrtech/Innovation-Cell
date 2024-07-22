@@ -9,11 +9,11 @@ import InnokshetraPage from './pages/InnokshetraPage.jsx'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
+      <App />
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/innokshetra" element={<InnokshetraPage />} />
       </Routes>
-      <App />
       <ToastContainer />
     </BrowserRouter>
   </React.StrictMode>

@@ -80,7 +80,7 @@ const Navbar = () => {
   ];
 
   return (
-    <div className='  w-full  navbar  flex justify-between items-center h-20 mx-auto  text-white z-999 '>
+    <div className=' absolute w-full  navbar  flex justify-between items-center h-20 mx-auto  text-white z-999 bg-transparent '>
    
       <Logo />
       {/* Desktop Navigation */}

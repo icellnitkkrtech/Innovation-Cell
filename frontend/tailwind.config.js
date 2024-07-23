@@ -6,7 +6,11 @@ export default {
   ],
   theme: {
 
-    extend: {},
+    extend: {
+      screens: {
+        'min-w-400': '440px',
+      },
+    },
     fontFamily:{
       'balgin': ['Balgin', 'sans-serif'],
     }

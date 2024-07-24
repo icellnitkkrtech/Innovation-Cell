@@ -30,7 +30,7 @@ const eventHeadingsandTime = [
     { heading: "SPEAKER SESSION 2", time: "11AM - 1PM", day: 3, addSpace: false },
     { heading: "VALEDICTORY", time: "3AM - 6PM", day: 3, addSpace: false },
 ];
-
+var i=1;
 const DaySection = ({ day }) => (
     <div>
         {day === 2 ? (
@@ -51,7 +51,7 @@ const DaySection = ({ day }) => (
                 </h1>
                 <img src={dayImage} alt={`Day ${day}`} />
                 <div className="flex flex-col items-center font-bold text-white">
-                    <h1 className="text-xl font-balgin text-center">10th</h1>
+                    <h1 className="text-xl font-balgin text-center">{day===1?'14':day===5?'15':'16'} th</h1>
                     <h1 className="text-xl font-balgin text-center">SEPTEMBER, 2024</h1>
                 </div>
             </div>)}
@@ -84,7 +84,7 @@ export default function EventTimeline() {
                     ))}
                 </div>
                 <div className="flex flex-col gap-[10em]">
-                    {[2, 5, 2].map(day => (
+                    {[2, 5, 2].map((day) => (
                         <DaySection key={day} day={day} />
                     ))}
                 </div>

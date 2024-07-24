@@ -9,7 +9,7 @@ function Workshop() {
     <div className='workshop'>
     <h1 className='heading'>WORKSHOPS</h1>
     <div className='card1'>
-      < Workshopcard name = 'FINANCE WORKSHOP' description = 'This workshop demystifies key   terms, exchange functions, & investment types. Explore financial and technical analysis using statements,   ratios, charts, & indicators. We will guide you on choosing a brokerage executing trades and building a   portfolio. Avoid common investment missteps for confident market navigation.' image = '\src\assets\image16.png' />
+      < Workshopcard name = 'FINANCE WORKSHOP' description = 'This workshop demystifies key   terms, exchange functions, & investment types. Explore financial and technical analysis using statements,   ratios, charts, & indicators. We will guide you on choosing a brokerage executing trades and building a   portfolio.' image = '\src\assets\image16.png' />
     </div>
     <br />
     <div className="card2">
@@ -19,4 +19,4 @@ function Workshop() {
   )
 }
 
-export default App
+export default Workshop

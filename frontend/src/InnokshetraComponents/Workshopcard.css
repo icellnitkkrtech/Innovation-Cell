@@ -5,16 +5,10 @@
     justify-content: center;
     color: green;
     height: 100%;
-    width: 350px;
+    width: 291px;
     margin: 0;
     gap: 0px;
     position: relative;
-}
-
-img{
-    height: 300px;
-    width: 200px;
-    border-radius: 80px;
 }
 
 .imgcard > img{
@@ -25,6 +19,7 @@ img{
     width: 40%;
     height: 70%;
     object-fit: cover;
+    border-radius: 80px;
 }
 
 .title{
@@ -35,7 +30,7 @@ img{
     bottom: 0;
     background-color: #F56E8F;
     color: white;
-    font-size: 20px;
+    font-size: 18px;
     height: 35%;
     width: 100%;
     font-weight: 900;
@@ -53,6 +48,7 @@ img{
     margin-right: 80px;
     box-sizing: border-box;
     padding: 20px;
+    padding-top: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -88,4 +84,5 @@ img{
 
 .design{
     height: 100%;
+    width: 200px;
 }

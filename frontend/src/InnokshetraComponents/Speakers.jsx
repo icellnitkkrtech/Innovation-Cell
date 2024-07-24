@@ -52,7 +52,7 @@ const Speaker = () => {
       <Slider {...settings}>
 
         {speakers.map(item=>{
-            return<div className='flex flex-col mx-2 px-2' id={item.id} key={item.id}>/
+            return<div className='flex flex-col mx-2 px-2' id={item.id} key={item.id}>
             <img src={item.image} className=" w-48 md:w-48 mx-auto" />
            <div className=" bg-gradient-to-r from-purple-500 to-pink-500 w-60 md:w-[18rem] lg:w-[280px] rounded-lg text-white flex-col mx-auto min-h-64 relative">
                <div className="text-left p-5">{item.date}</div>

@@ -1,23 +1,25 @@
-.eventPage1 {
+.eventPage1-glance {
     text-align: center;
     background-color: #000;
     color: #F56E8F;
-    height: 1100px;
+    height: 40rem;
     border-radius: 10px;
   }
   
-  .title1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+  .title1-glance {
+    font-size: 4.5rem;
+  margin-bottom: 20px;
+  line-height: 65px;
+  font-weight: lighter;
   }
   
-  .cards {
+  .cards-glance {
     display: flex;
     justify-content: center;
     gap: 110px;
   }
   
-  .card {
+  .card-glance {
     width: 260px;        /* Width of the rectangle */
     height: 280px;       /* Height of the rectangle */
     transform: skew(20deg); /* Skew to create the parallelogram effect */
@@ -25,7 +27,7 @@
     
   }
   
-  .data {
+  .data-glance {
     background-color: #F56E8F;
     text-align: center;
     border-radius: 10px;
@@ -34,14 +36,14 @@
     color: #000;
   } 
   
-  .card img {
+  .card-glance img {
     width: 100%;        /* Width of the rectangle */
     height: 100%;       /* Height of the rectangle */
     object-fit: cover;
     object-position: center;
   }
   
-  .card p {
+  .card-glance p {
     background-color: #F56E8F;
     color: #fff;
     padding: 10px;
@@ -49,10 +51,10 @@
     height: 120px;
   }
   
-  .folder {
+  .folder-glance {
     position: relative;
     color: #fff;
-    width: 150px; /* Adjust width as needed */
+    width: 300px; /* Adjust width as needed */
     height: 100px; /* Adjust height as needed */
     background-color: #F56E8F; /* Folder color */
     border: 2px solid #F56E8F; /* Folder border color */
@@ -60,7 +62,7 @@
     transform : skew(-20deg);
   }
   
-  .folder::before {
+  .folder-glance::before {
     content: '';
     position: absolute;
     top: -20px; /* Adjust to position the flap correctly */

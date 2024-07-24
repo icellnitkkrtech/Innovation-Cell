@@ -16,10 +16,10 @@ const About = () => {
     <div>
       <section className="about-section">
       <div className="content-container">
-        <h1 className="heading">
+        <h1 className="heading-about">
           <span className="highlight">ABOUT <br />INSTITUTE</span>
         </h1>
-        <div className="text-container">
+        <div className="text-container-about">
           <p>
           National Institute of Technology, Kurukshetra is a
           deemed university that was established in 1963 as
@@ -39,7 +39,7 @@ const About = () => {
           </p>
         </div>
       </div>
-      <div className="video-container">
+      <div className="video-container-about">
         <video
           ref={videoRef1}
           width="100%"
@@ -55,7 +55,7 @@ const About = () => {
       </div>
     </section>
     <section className="about-section">
-      <div className="video-container">
+      <div className="video-container-about">
         <video
           ref={videoRef2}
           width="100%"
@@ -70,10 +70,10 @@ const About = () => {
         </video>
       </div>
       <div className="content-container">
-        <h1 className="heading">
+        <h1 className="heading-about">
           <span className="highlight1">ABOUT <br />INNOKSHETRA</span>
         </h1>
-        <div className="text-container">
+        <div className="text-container-about">
           <p>
           NIT Kurukshetra ignites innovation with its 1st
           national event, InnoKshetra! This unique name

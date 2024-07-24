@@ -17,7 +17,7 @@
   max-width: 550px;
 }
 
-.heading {
+.heading-about {
   font-size: 4.5rem;
   margin-bottom: 20px;
   line-height: 65px;
@@ -33,14 +33,14 @@
   display: block;
 }
 
-.text-container {
+.text-container-about {
   font-size: 1.2rem;
   line-height: 1.8;
   text-align: left;
   word-spacing: 0.4em;
 }
 
-.video-container {
+.video-container-about {
   flex: 1;
   display: block;
 }
@@ -50,14 +50,14 @@
     flex-direction: column;
   }
   
-  .video-container {
+  .video-container-about {
     display: none;
   }
 
   .content-container {
     width: 100%;
   }
-  .heading{
+  .heading-footer{
     font-size: 3rem;
   }
 }

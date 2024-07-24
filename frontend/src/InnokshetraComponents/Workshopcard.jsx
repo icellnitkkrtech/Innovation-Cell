@@ -7,7 +7,7 @@ function Workshopcard(props){
         <div className='main'>
             <div className='imgcard'>
                 <img src={props.image} alt="no_image" />
-                <div className='title'> <p> {props.name} </p> </div>
+                <div className='title-workshopcard'> <p> {props.name} </p> </div>
             </div>
             <div className='description'>
                 <div>{props.description}</div>

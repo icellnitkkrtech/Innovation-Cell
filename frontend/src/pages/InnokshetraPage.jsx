@@ -12,7 +12,7 @@ function InnokshetraPage() {
       <Workshops />
       <EventTimeline />
       <Rules />
-      <Sponsors />
+      {/* <Sponsors /> */}
       <Faq />
       <Footer />
     </>

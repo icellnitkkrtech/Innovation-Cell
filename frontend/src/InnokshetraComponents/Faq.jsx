@@ -48,16 +48,16 @@ function Faq() {
   return (
     <div className="App">
       <style>{`
-        body, html {
-          margin: 0;
-          padding: 0;
-          width: 100%;
-          font-family: Arial, sans-serif;
-          background-color: black;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
+        // body, html {
+        //   margin: 0;
+        //   padding: 0;
+        //   width: 100%;
+        //   font-family: Arial, sans-serif;
+        //   background-color: black;
+        //   display: flex;
+        //   justify-content: center;
+        //   align-items: center;
+        // }
 
         .App {
           text-align: center;
@@ -66,7 +66,7 @@ function Faq() {
           width: 100%;
         }
 
-        h1 {
+        .heading-faq {
           color: #ff4081;
           margin-bottom: 40px;
           font-size: 2.5em;
@@ -137,7 +137,7 @@ function Faq() {
           z-index = 10;
         }
       `}</style>
-      <h1>FAQ</h1>
+      <h1 className='heading-faq'>FAQ</h1>
       <div className="faq-container">
         {FAQS.slice(0, visibleFAQs).map((faq, index) => (
           <div key={index} className="faq-item">

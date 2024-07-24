@@ -25,11 +25,11 @@ import React, { useState } from 'react';
     },
     {
       question:"Kyu nhi ho rhi padhai?",
-      answer:" Hello I am under the water."
+      answer:"hum pe to hai hi na boooks"
     },
     {
       question:"Elvish bhai ke aage koi bol sakta hai kya ",
-      answer:" Dhruv Rathi"
+      answer:"Salman bhai"
 
     }
   ];
@@ -41,7 +41,10 @@ function Faq() {
   const loadMore = () => {
     setVisibleFAQs(prevVisibleFAQs => prevVisibleFAQs + 2);
   };
-
+  
+  const showless =()=>{
+    setVisibleFAQs(prevVisibleFAQs=>prevVisibleFAQs-2)
+  };
   return (
     <div className="App">
       <style>{`
@@ -110,7 +113,7 @@ function Faq() {
           font-size: 1.1em;
         }
 
-        .load-more {
+        .load-more, .show-less {
           background: none;
           border: 1px solid  #ff4081;
            border-radius:20px;
@@ -120,13 +123,18 @@ function Faq() {
           cursor: pointer;
           transition: background-color 0.3s, color 0.3s;
           font-size: 1.2em;
-          margin-top: 20px;
+          margin: 20px ;
         }
 
         .load-more:hover {
           background-color: #ff4081;
           color: white;
-          
+          z-index = 10;
+        }
+           .show-less:hover {
+          background-color: #ff4081;
+          color: white;
+          z-index = 10;
         }
       `}</style>
       <h1>FAQ</h1>
@@ -144,8 +152,11 @@ function Faq() {
       {visibleFAQs < FAQS.length && (
         <button className="load-more" onClick={loadMore}>
           LOAD MORE
-        </button>
+        </button> 
       )}
+       {visibleFAQs > 4 && (
+        <button className="show-less" onClick={showless}>SHOW LESS</button>
+       )}
     </div>
   );
 }

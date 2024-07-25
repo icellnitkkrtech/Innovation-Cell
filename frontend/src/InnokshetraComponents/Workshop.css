@@ -31,3 +31,10 @@
   align-items: center;
   padding-bottom: 40px;
 }
+
+@media only screen and (orientation : portrait){
+
+  .heading-workshop{
+    font-size: 7vw;
+  }
+}

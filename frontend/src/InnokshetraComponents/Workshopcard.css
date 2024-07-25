@@ -5,7 +5,7 @@
     justify-content: center;
     color: green;
     height: 100%;
-    width: 291px;
+    width: 290px;
     margin: 0;
     gap: 0px;
     position: relative;
@@ -34,6 +34,7 @@
     height: 35%;
     width: 100%;
     font-weight: 900;
+    text-align: center;
 }
 
 .main{
@@ -85,4 +86,29 @@
 .design{
     height: 100%;
     width: 200px;
+}
+
+@media only screen and (orientation : portrait){
+
+    .design{
+        display: none;
+    }
+
+    .description{
+        font-size: 2vw;
+        margin-right: 0px;
+        width: fit-content;
+    }
+
+    .description_reverse{
+        font-size: 2vw;
+        margin-left: 0px;
+        width: fit-content;
+    }
+    
+    .title-workshopcard{
+        font-size: 4vw;
+        font-weight: 200;
+    }
+
 }

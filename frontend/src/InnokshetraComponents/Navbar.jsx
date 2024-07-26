@@ -80,7 +80,7 @@ const Navbar = () => {
   ];
 
   return (
-    <div className='  w-full  flex justify-between items-center h-20 mx-auto  text-white z-999 bg-transparent relative '>
+    <div className='  w-full  flex justify-between items-center h-20 mx-auto  text-white z-50 fixed bg-black'>
    
       <Logo />
       {/* Desktop Navigation */}
@@ -110,7 +110,7 @@ const Navbar = () => {
 </ul>
 
       {/* Mobile Navigation Icon */}
-      <div onClick={handleNav} className='block md:hidden mobile-nav'>
+      <div onClick={handleNav} className='mx-4 block md:hidden mobile-nav'>
         {nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
       </div>
 

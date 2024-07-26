@@ -1,4 +1,4 @@
-.eventPage1-glance {
+/* .eventPage1-glance {
     text-align: center;
     background-color: #000;
     color: #F56E8F;
@@ -20,9 +20,9 @@
   }
   
   .card-glance {
-    width: 260px;        /* Width of the rectangle */
-    height: 280px;       /* Height of the rectangle */
-    transform: skew(20deg); /* Skew to create the parallelogram effect */
+    width: 260px;        
+    height: 280px;       
+    transform: skew(20deg); 
     background-color: #000;
     
   }
@@ -37,8 +37,8 @@
   } 
   
   .card-glance img {
-    width: 100%;        /* Width of the rectangle */
-    height: 100%;       /* Height of the rectangle */
+    width: 100%;        
+    height: 100%;      
     object-fit: cover;
     object-position: center;
   }
@@ -54,10 +54,10 @@
   .folder-glance {
     position: relative;
     color: #fff;
-    width: 300px; /* Adjust width as needed */
-    height: 100px; /* Adjust height as needed */
-    background-color: #F56E8F; /* Folder color */
-    border: 2px solid #F56E8F; /* Folder border color */
+    width: 300px; 
+    height: 100px; 
+    background-color: #F56E8F; 
+    border: 2px solid #F56E8F; 
     border-radius: 10px;
     transform : skew(-20deg);
   }
@@ -65,14 +65,14 @@
   .folder-glance::before {
     content: '';
     position: absolute;
-    top: -20px; /* Adjust to position the flap correctly */
+    top: -20px; 
     left: 0;
     width: 60%;
-    height: 20px; /* Height of the flap */
-    background-color: #F56E8F; /* Same as folder color */
-    border-bottom: 2px solid #F56E8F; /* Border to match the folder */
-    border-radius: 5px 5px 0 0; /* Rounded corners for the flap */
-    transform: skew(-20deg); /* Skew the flap to match the folder shape */
-    transform-origin: left bottom; /* Ensure correct skew origin */
+    height: 20px;
+    background-color: #F56E8F; 
+    border-bottom: 2px solid #F56E8F;
+    border-radius: 5px 5px 0 0; 
+    transform: skew(-20deg); 
+    transform-origin: left bottom; 
   }
-  
+   */

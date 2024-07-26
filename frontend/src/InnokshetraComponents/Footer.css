@@ -64,3 +64,18 @@
    font-weight: 900;
    font-size: 50px;
  } */
+ @media (max-width: 768px) {
+  .h3-footer{
+    font-size: 15px;
+    
+ }
+ .logo-footer{
+ height: 50px;
+
+}
+.text-footer{
+  font-size: 20px;
+ 
+
+}
+  }

@@ -54,3 +54,7 @@
         font-size: 40px;
     }
 }
+.button button:hover{
+    font-size:30px;
+    transition: 0.5s;
+}

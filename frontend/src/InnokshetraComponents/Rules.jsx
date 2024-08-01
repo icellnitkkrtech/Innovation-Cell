@@ -1,6 +1,7 @@
 import React from "react";
 function Rules() {
   return (
+    <section id="rules">
     <div style={{backgroundColor:'black'}}>
       
      <div className=""
@@ -72,7 +73,7 @@ function Rules() {
       
     </div>
     </div>
-
+    </section>
   );
 }
 

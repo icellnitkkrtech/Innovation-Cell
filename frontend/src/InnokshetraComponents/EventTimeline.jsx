@@ -6,7 +6,7 @@ function EventHeading({ heading, time, addSpace }) {
     const marginClass = addSpace ? 'mb-14' : '';
 
     return (
-        <div
+        <div id="timeline"
             className={`flex flex-col items-center gap-2 p-1 mt-10 mb-14 ${marginClass} lg:ml-44`}
         >
             <h1 className="text-xl text-black font-bold font-balgin bg-[#F56E8F] rounded-lg">

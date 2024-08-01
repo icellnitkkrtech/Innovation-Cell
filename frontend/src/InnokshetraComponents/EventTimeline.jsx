@@ -6,9 +6,7 @@ function EventHeading({ heading, time, addSpace }) {
     const marginClass = addSpace ? 'mb-14' : '';
 
     return (
-        <div id="timeline"
-            className={`flex flex-col items-center gap-2 p-1 mt-10 mb-14 ${marginClass} lg:ml-44`}
-        >
+        <div className={`flex flex-col items-center gap-2 p-1 mt-10 mb-14 ${marginClass} lg:ml-44`}>
             <h1 className="text-xl text-black font-bold font-balgin bg-[#F56E8F] rounded-lg">
                 {heading}
             </h1>
@@ -90,7 +88,7 @@ const MobileDaySection = ({ day }) => (
 export default function EventTimeline() {
     const days = [1, 2, 3];
     return (
-        <div className="bg-black p-4 w-full">
+        <div className="bg-black p-4 w-full" id="timeline">
             <h1 className="text-4xl font-light font-balgin text-center text-[#F56E8F]">
                 EVENT TIMELINE
             </h1>

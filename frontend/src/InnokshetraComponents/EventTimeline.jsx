@@ -33,7 +33,7 @@ const eventHeadingsandTime = [
 
 const DaySection = ({ day }) => (
     <div className="flex flex-col items-center mb-10">
-        {day !== 2 ? (
+        {day !== 0 ? (
             <div className="flex flex-col items-center">
                 <h1 className="text-4xl md:text-6xl font-light font-balgin text-center text-[#F56E8F]">
                     DAY {day}
@@ -113,7 +113,7 @@ export default function EventTimeline() {
             <div className="hidden lg:flex justify-around mt-5">
             <div className="flex justify-around mt-5">
                 <div className="flex flex-col gap-[14em]">
-                    {[1, 2, 3].map(day => (
+                    {[1, 0, 3].map(day => (
                         <DaySection key={day} day={day} />
                     ))}
                 </div>
@@ -129,7 +129,7 @@ export default function EventTimeline() {
                     ))}
                 </div>
                 <div className="flex flex-col gap-[10em]">
-                    {[2,5,2].map((day) => (
+                    {[0,2,0].map((day) => (
                         <DaySection key={day} day={day} />
                     ))}
                 </div>

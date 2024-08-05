@@ -1,0 +1,40 @@
+.workshop{
+  background-color: black;
+}
+
+.heading-workshop{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  box-sizing: border-box;
+  font-style: normal;
+ 
+ 
+  color: #E79997;
+  font-size: 4.5rem;
+  margin-bottom: 20px;
+  line-height: 65px;
+  font-weight: lighter;
+}
+
+.card1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 40px;
+}
+
+@media only screen and (orientation : portrait){
+
+  .heading-workshop{
+    font-size: 7vw;
+  }
+}

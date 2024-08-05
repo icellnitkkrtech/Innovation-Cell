@@ -11,7 +11,7 @@ const Speaker = () => {
     
       var settings = {
         dots: true,
-        infinite: false,
+        infinite: true,
         speed: 500,
         slidesToShow: 3,
         slidesToScroll: 2,
@@ -20,7 +20,7 @@ const Speaker = () => {
           {
             breakpoint: 1024,
             settings: {
-              slidesToShow: 1,
+              slidesToShow: 2,
               slidesToScroll: 1,
               infinite: true,
               dots: true
@@ -29,16 +29,20 @@ const Speaker = () => {
           {
             breakpoint: 600,
             settings: {
-              slidesToShow: 1,
+              slidesToShow: 2,
               slidesToScroll: 1,
-              initialSlide: 2
+              initialSlide: 2,
+              infinite:true,
+              dots:true
             }
           },
           {
             breakpoint: 480,
             settings: {
               slidesToShow: 1,
-              slidesToScroll: 1
+              slidesToScroll: 1,
+              infinite:true,
+              dots:true
             }
           }
         ]
@@ -49,17 +53,17 @@ const Speaker = () => {
     <section id="speakers">
     <div className='bg-black min-h-screen w-full my-5 '>
       <div className='text-5xl md:text-7xl text-[#fe7189ea] text-center font-extralight leading-[65px]'>SPEAKERS</div>
-      <div className='slider-container'>
+      <div className='slider-container w-[280px] md:w-[650px] lg:w-full'>
       <Slider {...settings}>
 
         {speakers.map(item=>{
-            return<div className='flex flex-col mx-2 px-2' id={item.id} key={item.id}>
+            return<div className='flex flex-col mx-2 px-2 carousel-item' id={item.id} key={item.id}>
             <img src={item.image} className=" w-48 md:w-48 mx-auto" />
            <div className=" bg-gradient-to-r from-purple-500 to-pink-500 w-60 md:w-[18rem] lg:w-[280px] rounded-lg text-white flex-col mx-auto min-h-64 relative">
                <div className="text-left p-5">{item.date}</div>
                <div>
                  <div className="circles flex px-5">
-                   <div className="circle1 h-10 w-10 rounded-full bg-gradient-to-r from-pink-500 via-pink-500 to-orange-400 relative z-10"></div>
+                   <div className="circle1 h-10 w-10 rounded]-full bg-gradient-to-r from-pink-500 via-pink-500 to-orange-400 relative z-10"></div>
                    <div className="circle2 h-10 w-10 rounded-full bg-gradient-to-r from-purple-700 via-purple-700 to-pink-500 relative right-2 "></div>
                  </div>
                  <div>

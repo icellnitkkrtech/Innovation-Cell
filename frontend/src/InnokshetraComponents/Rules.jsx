@@ -10,7 +10,10 @@ function Rules() {
           textAlign: "center",
           color: "#FF69B4",
           fontWeight: "lighter",
-        }}
+        }
+        
+
+      }
       >
         RULES AND REGULATIONS
       </div>

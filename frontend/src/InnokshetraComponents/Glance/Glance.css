@@ -1,0 +1,78 @@
+/* .eventPage1-glance {
+    text-align: center;
+    background-color: #000;
+    color: #F56E8F;
+    height: 40rem;
+    border-radius: 10px;
+  }
+  
+  .title1-glance {
+    font-size: 4.5rem;
+  margin-bottom: 20px;
+  line-height: 65px;
+  font-weight: lighter;
+  }
+  
+  .cards-glance {
+    display: flex;
+    justify-content: center;
+    gap: 110px;
+  }
+  
+  .card-glance {
+    width: 260px;        
+    height: 280px;       
+    transform: skew(20deg); 
+    background-color: #000;
+    
+  }
+  
+  .data-glance {
+    background-color: #F56E8F;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+    width: 200px;
+    color: #000;
+  } 
+  
+  .card-glance img {
+    width: 100%;        
+    height: 100%;      
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  .card-glance p {
+    background-color: #F56E8F;
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    height: 120px;
+  }
+  
+  .folder-glance {
+    position: relative;
+    color: #fff;
+    width: 300px; 
+    height: 100px; 
+    background-color: #F56E8F; 
+    border: 2px solid #F56E8F; 
+    border-radius: 10px;
+    transform : skew(-20deg);
+  }
+  
+  .folder-glance::before {
+    content: '';
+    position: absolute;
+    top: -20px; 
+    left: 0;
+    width: 60%;
+    height: 20px;
+    background-color: #F56E8F; 
+    border-bottom: 2px solid #F56E8F;
+    border-radius: 5px 5px 0 0; 
+    transform: skew(-20deg); 
+    transform-origin: left bottom; 
+  }
+   */

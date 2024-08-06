@@ -18,10 +18,10 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        "service_a5rxnoh",
-        "template_eny2ccs",
+        "service_cs9xuj8",
+        "template_s08pgdx",
         form.current,
-        "qQ1xR7DJ4-QB-OWoz"
+        "yZ8YwzkCuzMBdjOlH"
       )
       .then(
         (result) => {
@@ -127,6 +127,6 @@ const StyledContactForm = styled.div`
       background: rgb(249, 105, 14);
       color: white;
       border: none;
-    }
+    }   
   }
 `;

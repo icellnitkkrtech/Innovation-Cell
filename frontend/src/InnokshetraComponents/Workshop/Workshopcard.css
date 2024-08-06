@@ -1,0 +1,114 @@
+.imgcard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: green;
+    height: 100%;
+    width: 290px;
+    margin: 0;
+    gap: 0px;
+    position: relative;
+}
+
+.imgcard > img{
+    z-index: 1;
+    position: absolute;
+    border: 2px solid white;
+    top: 0px;
+    width: 40%;
+    height: 70%;
+    object-fit: cover;
+    border-radius: 80px;
+}
+
+.title-workshopcard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    background-color: #F56E8F;
+    color: white;
+    font-size: 18px;
+    height: 35%;
+    width: 100%;
+    font-weight: 900;
+    text-align: center;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 40vh;
+}
+
+.description{
+    margin-right: 80px;
+    box-sizing: border-box;
+    padding: 20px;
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35vw;
+    height: 100%;
+    font-size: 20px;
+    font-weight: 400;
+    background-color: #E79997;
+}
+
+.main_reverse{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 40vh;
+}
+
+.description_reverse{
+    margin-left: 80px;
+    box-sizing: border-box;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35vw;
+    height: 100%;
+    font-size: 20px;
+    font-weight: 400;
+    background-color: #E79997;
+}
+
+.design{
+    height: 100%;
+    width: 200px;
+}
+
+@media only screen and (orientation : portrait){
+
+    .design{
+        display: none;
+    }
+
+    .description{
+        font-size: 2.9vw;
+        margin-right: 0px;
+        width: fit-content;
+    }
+
+    .description_reverse{
+        font-size: 2.9vw;
+        margin-left: 0px;
+        width: fit-content;
+    }
+    
+    .title-workshopcard{
+        font-size: 4vw;
+        font-weight: 200;
+    }
+
+}

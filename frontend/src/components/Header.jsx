@@ -2,8 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 import Logo from './Logo';
 import { gsap } from 'gsap';
+import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
+  const navigate= useNavigate()
   const [nav, setNav] = useState(false);
   const [socialIconColor, setSocialIconColor] = useState('#fff');
 
@@ -74,7 +76,7 @@ const Navbar = () => {
   ];
 
   return (
-    <div className='  w-full navbar bg-black flex justify-between items-center h-20 mx-auto px-8 m text-white z-999 '>
+    <div className='  w-full  bg-black flex justify-between items-center h-20 mx-auto px-8 m text-white z-999 '>
       <Logo />
       {/* { <h1 className='w-full text-3xl font-bold Capitalize'>Innovation Cell</h1> } */}
 
@@ -85,6 +87,9 @@ const Navbar = () => {
             <span onClick={() => scrollToSection(item.sectionId)}>{item.text}</span>
           </li>
         ))}
+        <li className='p-4 cursor-pointer hover:text-lg transition-transform duration-300 transform hover:scale-110 transition-all duration-300'>
+          <span onClick={()=> navigate("/innokshetra")}>Innokshetra</span>
+        </li>
       </ul>
 
       {/* Social Icons */}
@@ -126,7 +131,11 @@ const Navbar = () => {
         >
           <span>{item.text}</span>
         </li>
+        
       ))}
+      <li className='bg-black p-4 border-b rounded-xl hover:bg-[#c5973c] duration-300 hover:text-black cursor-pointer border-gray-600'>
+          <span onClick={()=> navigate("/innokshetra")}>Innokshetra</span>
+        </li>
       </ul>
     </div>
   );

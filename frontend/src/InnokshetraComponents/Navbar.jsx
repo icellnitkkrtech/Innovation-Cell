@@ -26,7 +26,7 @@ const Navbar = () => {
     { id: 4, text: 'SPEAKERS', sectionId: 'speakers' },
     { id: 5, text: 'WORKSHOPS', sectionId: 'workshops' },
     { id: 6, text: 'RULES', sectionId: 'rules' },
-    { id: 7, text: 'SPONSORS', sectionId: 'sponsors' },
+    // { id: 7, text: 'SPONSORS', sectionId: 'sponsors' },
     { id: 8, text: 'FAQs', sectionId: 'faqs' },
     { id: 9, text: 'CONTACT', sectionId: 'contact' },
   ];
@@ -80,7 +80,7 @@ const Navbar = () => {
   ];
 
   return (
-    <div className='  w-full  flex justify-between items-center h-20 mx-auto  text-white z-50 fixed bg-black'>
+    <div className='  w-full  flex justify-between md:justify-evenly items-center h-20 mx-auto  text-white z-50 fixed bg-black'>
    
       <Logo />
       {/* Desktop Navigation */}

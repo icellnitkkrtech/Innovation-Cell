@@ -46,7 +46,8 @@ function Faq() {
     setVisibleFAQs(prevVisibleFAQs=>prevVisibleFAQs-2)
   };
   return (
-    <div className="App">
+
+    <div className="App" id="faqs">
       <style>{`
         // body, html {
         //   margin: 0;

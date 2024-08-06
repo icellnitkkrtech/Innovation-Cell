@@ -2,6 +2,7 @@ import React from 'react';
 
 function Glance() {
   return (
+    <section id="glance">
     <div className="bg-black min-h-screen w-full py-2">
       <h1 className="text-5xl md:text-7xl text-[#fe7189ea] text-center font-light leading-tight mb-10">INNOKSHETRA AT A GLANCE</h1>
       <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
@@ -29,6 +30,7 @@ function Glance() {
         
       </div>
     </div>
+    </section>
   );
 }
 

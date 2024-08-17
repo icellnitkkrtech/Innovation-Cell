@@ -44,7 +44,7 @@ function Innokshetra() {
       );
   }, []);
   return (
-    <div className="h-[60vh] min-w-400:h-[65vh] sm:h-[85vh] md:h-screen w-full flex items-center justify-center">
+    <div className="Homepage h-[60vh] min-w-400:h-[65vh] sm:h-[85vh] md:h-screen w-full flex items-center justify-center">
       <div
         className="relative w-[95vw] h-full bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: 'url("/website-icell.png")' }}

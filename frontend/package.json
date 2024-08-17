@@ -24,7 +24,8 @@
     "react-slick": "^0.30.2",
     "react-toastify": "^10.0.5",
     "slick-carousel": "^1.8.1",
-    "styled-components": "^6.1.8"
+    "styled-components": "^6.1.8",
+    "use-scramble": "^2.2.15"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",

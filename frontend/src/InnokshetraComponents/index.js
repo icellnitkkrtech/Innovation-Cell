@@ -9,6 +9,6 @@ import Speakers from "./Speakers"
 import Sponsors from "./Sponsors"
 import Workshops from "./Workshop/Worskshop"
 import EventTimeline from "./EventTimeline"
+import VerticalTimeline from "./Timeline/VerticalTimeline.jsx"
 
-
-export {About,Faq,Footer,Hero,Navbar,Rules,Speakers, Sponsors,Workshops,Glance,EventTimeline}
+export {About,VerticalTimeline,Faq,Footer,Hero,Navbar,Rules,Speakers, Sponsors,Workshops,Glance,EventTimeline}

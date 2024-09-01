@@ -3,7 +3,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: green;
     height: 100%;
     width: 290px;
     margin: 0;
@@ -17,7 +16,7 @@
     border: 2px solid white;
     top: 0px;
     width: 40%;
-    height: 70%;
+    height: 100%;
     object-fit: cover;
     border-radius: 80px;
 }
@@ -28,10 +27,8 @@
     align-items: center;
     position: absolute;
     bottom: 0;
-    background-color: #F56E8F;
-    color: white;
-    font-size: 18px;
-    height: 35%;
+    font-size: 2rem;
+    height: 30%;
     width: 100%;
     font-weight: 900;
     text-align: center;
@@ -42,22 +39,23 @@
     justify-content: center;
     align-items: center;
     width: 70%;
-    height: 40vh;
+    height: max-content;
 }
 
 .description{
-    margin-right: 80px;
+    margin-left: 10px;
     box-sizing: border-box;
-    padding: 20px;
+    padding: 2.5%;
     padding-top: 30px;
     display: flex;
     justify-content: center;
-    align-items: center;
-    width: 35vw;
-    height: 100%;
-    font-size: 20px;
-    font-weight: 400;
-    background-color: #E79997;
+    text-align: justify;
+    width: fit-content;
+    height: max-content;
+    font-size: 1.3rem;
+    font-weight: 500;
+    border-radius: 1rem;
+    background-image: linear-gradient(-60deg, #ec4899, #a855f7);
 }
 
 .main_reverse{
@@ -66,21 +64,22 @@
     justify-content: center;
     align-items: center;
     width: 70%;
-    height: 40vh;
+    height: max-content;
 }
 
 .description_reverse{
-    margin-left: 80px;
+    margin-right: 20px;
     box-sizing: border-box;
-    padding: 20px;
+    padding: 2.5%;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 35vw;
-    height: 100%;
-    font-size: 20px;
-    font-weight: 400;
-    background-color: #E79997;
+    justify-content: center;    
+    text-align:justify;
+    width: fit-content;
+    height: max-content;
+    font-size: 1.3rem;
+    font-weight: 500;
+    border-radius: 1rem;
+    background-image: linear-gradient(-60deg, #ec4899, #a855f7);
 }
 
 .design{
@@ -88,7 +87,18 @@
     width: 200px;
 }
 
-@media only screen and (orientation : portrait){
+
+@media only screen and (max-width: 768px){
+
+    .main{
+        margin-top: 50px;
+        flex-direction: column;
+    }
+
+    .main_reverse{
+        margin-top: 25px;
+        flex-direction: column;
+    }
 
     .design{
         display: none;
@@ -96,19 +106,24 @@
 
     .description{
         font-size: 2.9vw;
-        margin-right: 0px;
+        margin-top: 10px;
+        margin-left: 0px;
+        padding-top: 10px;
         width: fit-content;
     }
 
     .description_reverse{
         font-size: 2.9vw;
-        margin-left: 0px;
+        margin-top: 10px;
+        margin-right: 0px;
+        padding-top: 10px;
         width: fit-content;
     }
     
     .title-workshopcard{
         font-size: 4vw;
-        font-weight: 200;
+        width: 100%;
+        height: fit-content;
     }
 
 }

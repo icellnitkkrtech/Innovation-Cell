@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { About, Faq, Footer, Hero, Navbar, Rules, Speakers, Sponsors, Workshops, Glance, EventTimeline } from "../InnokshetraComponents/index.js";
+import { About, Faq, Footer, Hero, Navbar, Rules, Speakers, Sponsors, Workshops, Glance, EventTimeline, VerticalTimeline } from "../InnokshetraComponents/index.js";
 function InnokshetraPage() {
   return (
     <>
@@ -10,7 +10,10 @@ function InnokshetraPage() {
       <Glance />
       <Speakers />
       <Workshops />
-      <EventTimeline />
+      {/* <EventTimeline /> */}
+      <div id="bg-timeline">
+      <VerticalTimeline />
+    </div>
       <Rules />
       {/* <Sponsors /> */}
       <Faq />

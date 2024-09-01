@@ -8,7 +8,7 @@ function Workshop() {
   return (
     <div className='workshop'>
     <h1 className='heading-workshop'>WORKSHOPS</h1>
-    <div className='card1'>
+    <div className='card2'>
       < Workshopcard name = 'FINANCE WORKSHOP' description = 'This workshop demystifies key   terms, exchange functions, & investment types. Explore financial and technical analysis using statements,   ratios, charts, & indicators. We will guide you on choosing a brokerage executing trades and building a   portfolio.' image = '\src\assets\image16.png' />
     </div>
     <br />

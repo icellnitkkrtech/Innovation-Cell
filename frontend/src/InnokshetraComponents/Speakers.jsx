@@ -51,7 +51,7 @@ const Speaker = () => {
 
   return (
     <section id="speakers">
-    <div className='bg-black min-h-screen w-full my-5 '>
+    <div className='bg-black min-h-screen w-full  '>
       <div className='text-5xl md:text-7xl text-[#fe7189ea] text-center font-extralight leading-[65px]'>SPEAKERS</div>
       <div className='slider-container w-[280px] md:w-[650px] lg:w-full'>
       <Slider {...settings}>

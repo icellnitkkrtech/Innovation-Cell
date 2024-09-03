@@ -105,7 +105,7 @@ function Innokshetra() {
 
         {/* Register Buttons */}
         <div className="absolute left-1/2 transform -translate-x-1/2 bottom-20 sm:bottom-24 md:bottom-32 flex flex-wrap w-full max-w-[17rem] sm:max-w-[25rem] min-w-400:max-w-[20rem] md:max-w-[30rem] justify-between">
-          <button
+          <a href="http://linktr.ee/icellnitkkr"><button
             className="h-10 w-28 min-w-400:h-10 min-w-400:w-32 sm:h-11 sm:w-36 md:h-12 md:w-40 border-2
                              border-pink-500 rounded-full bg-pink-600 bg-opacity-20 sm:text-lg text-sm"
             style={{
@@ -121,7 +121,7 @@ function Innokshetra() {
             }}
           >
             REGISTER NOW
-          </button>
+          </button></a>
 
           {/* Visit Buttons */}
           <button

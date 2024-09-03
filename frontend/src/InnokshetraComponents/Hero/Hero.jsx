@@ -10,7 +10,7 @@ const Hero = () => {
             <h1 className='big'>INNOKSHETRA</h1>
         </div>
         <div className='button'>
-            <button>REGISTER</button>
+            <a href='http://linktr.ee/icellnitkkr'><button>REGISTER</button></a>
         </div>
       </div>
     </div>

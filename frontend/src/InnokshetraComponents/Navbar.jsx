@@ -82,7 +82,7 @@ const Navbar = () => {
   return (
     <div className='  w-full  flex justify-between md:justify-evenly items-center h-20 mx-auto  text-white z-50 fixed bg-black'>
    
-      <Logo />
+      <div ><button onClick={() => navigate("/")}><Logo /></button></div>
       {/* Desktop Navigation */}
       <ul className='hidden md:flex gap-9 items-center'>
       <li className=' cursor-pointer hover:text-lg transition-transform duration-300 transform hover:scale-110 transition-all duration-300 '>|</li>

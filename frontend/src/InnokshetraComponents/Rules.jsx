@@ -1,83 +1,61 @@
 import React from "react";
-function Rules() {
+
+const Rules = () => {
+  const rules = [
+    {
+      title: "Team Composition",
+      description:
+        "Each team must have 2-4 members. Cross-college and interdisciplinary teams are allowed.",
+    },
+    {
+      title: "Originality",
+      description:
+        "All submissions must be original and developed during the hackathon. Plagiarism will lead to disqualification.",
+    },
+    {
+      title: "Problem Statement",
+      description:
+        "Participants are required to define their own problem statement. There are no predefined themes or problem statements provided.",
+    },
+    {
+      title: "Software & Hardware Innovations",
+      description:
+        "Both software and hardware solutions are accepted. Ensure your project is relevant to innovation in these areas.",
+    },
+    {
+      title: "Use of Existing Tools",
+      description:
+        "Pre-existing libraries, frameworks, or APIs can be used, but the core solution must be developed during the hackathon.",
+    },
+    {
+      title: "Ethical Standards",
+      description:
+        "All participants must adhere to ethical guidelines. Solutions should be fair, respectful, and not infringe on any rights.",
+    },
+  ];
+
   return (
-    <section id="rules">
-    <div style={{backgroundColor:'black'}}>
-      
-     <div className=""
-        style={{
-          fontSize: "4rem",
-          textAlign: "center",
-          color: "#FF69B4",
-          fontWeight: "lighter",
-        }
-        
-
-      }
-      >
-        RULES AND REGULATIONS
+    <div className="max-w-6xl mx-auto p-8 bg-slate-900 rounded-xl shadow-2xl">
+      <div className="flex items-center justify-center mb-8">
+        <h2 className="text-4xl font-extrabold text-center text-white">
+          Hackathon Rules
+        </h2>
       </div>
-      
-      <div className="flex flex-wrap justify-center gap-3"
-      style={{marginTop:'100px',paddingBottom:'100px'}}>
-
-        {/* left side  */}
-        <div className="border-5 border-red-700"
-        >
-          {/* card 1 */}
-          <div className="  flex "
+      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        {rules.map((rule, index) => (
+          <div
+            key={index}
+            className="bg-gray-800 p-6 rounded-lg shadow-lg border border-cyan-700 transition-all duration-300 hover:shadow-cyan-700/30 hover:-translate-y-1 text-pretty mx-auto"
           >
-            <img src="./Images/rule1.png" alt="" />
+            <h3 className="text-xl font-bold mb-3 text-cyan-400 ">
+              {rule.title}
+            </h3>
+            <p className="text-gray-300 leading-relaxed">{rule.description}</p>
           </div>
-
-          
-        
-          {/* card2 */}
-          <div className=" flex justify-end"
-          >
-            <img src="./Images/rule2.png" alt="" />
-          </div>
-
-          
-        
-       {/* card3 */}
-          <div className=" flex justify-end"
-          >
-            <img src="./Images/rule3.png" alt="" />
-          </div>
-          
-        </div>
-      
-      
-      {/* right side  */}
-
-      <div className="border-5 border-red-700"
-       >
-
-              {/* card1 */}
-          <div className="  flex "
-          >
-            <img src="./Images/rule4.png" alt="" />
-          </div>
-
-          {/* card2 */}
-
-          <div className=" flex "
-          >
-            <img src="./Images/rule5.png" alt="" />
-          </div>
-
-          {/* card3 */}
-          <div className="  flex "
-          >
-            <img src="./Images/rule6.png" alt="" />
-          </div>
+        ))}
       </div>
-      
     </div>
-    </div>
-    </section>
   );
-}
+};
 
 export default Rules;

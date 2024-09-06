@@ -17,8 +17,8 @@ const Footer = () => {
         <div className='info-footer'>
             <h3 className='h3-footer'>INNOVATION CELL</h3>
             <h3 className='h3-footer'>NIT KURUKSHETRA</h3>
-            <h3 className='h3-footer'>ICELL@NIT.AC.IN</h3>
-            <h3 className='h3-footer'>7418529630</h3>
+            <h3 className='h3-footer'>inno_incub@nitkkr.ac.in</h3>
+            <h3 className='h3-footer'>9050614615</h3>
         </div>
         <div className='logo-footer'>
           <img src='./footerhero/logo.jpeg'></img>

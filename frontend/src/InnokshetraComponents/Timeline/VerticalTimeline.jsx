@@ -9,21 +9,21 @@ import RINGS from "vanta/dist/vanta.rings.min";
 import { useEffect } from "react";
 const events = [
   {
-    title: "HACKATHON (ROUND-1)",
-    time: "9AM - 4PM",
-    day: "Wed,Apr 04",
+    title: "Workshop",
+    time: "10AM - 12PM",
+    day: "14th SEP 2024",
     backgroundColor: "#FFDDC1",
     number: "1st",
     imgSrc: hack,
     description:
-      "Kick-off the hackathon with Round-1. Teams will brainstorm and start coding their innovative projects.",
+      "FEST INTRO + IDEATION WORKSHOP",
     classD: "leftContainer",
     arrow: "leftContainerArray",
   },
   {
-    title: "WORKSHOP 1",
-    time: "4PM - 6PM",
-    day: "Wed,Apr 04",
+    title: "HACKATHON",
+    time: "4PM - 12AM",
+    day: "14th SEP 2024",
     backgroundColor: "#FFABAB",
     number: "2nd",
     imgSrc: wk,

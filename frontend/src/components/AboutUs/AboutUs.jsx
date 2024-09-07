@@ -32,15 +32,10 @@ const AboutUs = () => {
 const Header = () => {
   return (
     <section className='pt-10'>
-      <div className='p-4 pb-2 '>
-        <a className='font-extrabold text-orange-500 lg:text-5xl md:text-4xl sm:text-3xl text-2xl' href='#'>
-          About Us
-        </a>
-        <hr className='sm:border-t-2 ml-48 md:ml-72 lg:ml-96 sm:ml-64 md:border-t-3 '/>
-        <a className='font-extrabold text-white lg:text-4xl md:text-3xl sm:text-2xl text-xl' href='#'>
-          Innovation Cell
-        </a>
-      </div>
+        <div className="about pl-4 py-6">
+            <h1 className='font-extrabold text-orange-500 lg:text-5xl md:text-4xl sm:text-3xl text-3xl'>About Us</h1>
+            <hr className ='sm:border-t-2 ml-48 md:ml-72 lg:ml-96 sm:ml-64 md:border-t-3 ' />
+        </div>
     </section>
   );
 };

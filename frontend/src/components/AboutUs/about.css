@@ -11,3 +11,23 @@
   opacity: 1;
   visibility: visible;
 }
+
+.about {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  align-items: center;
+  margin: 0;
+}
+
+.about hr {
+  margin: 0 10px;
+  border: 0;
+  height: 2px;
+  background-color: white;
+  flex-grow: 1;
+
+  @media only screen and (max-width: 768px) {
+      height: 1px;
+  }
+}

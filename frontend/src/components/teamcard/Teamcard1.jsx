@@ -52,8 +52,7 @@ function Teamcard1() {
     
       <div className="text-above-slider">
           
-          <p > <SmallerHeading title="Our Team"/></p>
-          <p><Heading title="Meet our people" /></p>
+          <p><Heading title="Meet Our Team" /></p>
         </div>
       
        

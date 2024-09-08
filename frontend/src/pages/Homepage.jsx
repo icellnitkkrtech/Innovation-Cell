@@ -18,9 +18,9 @@ const Homepage = () => {
       <Navbar />
       <Hero />
       <Innokshetra />
-      <EventCard />
-      <Teamcard1 />
       <About />
+      <Teamcard1 />
+      <EventCard /> 
       <ContactSection />
       <Footer />
     </div>

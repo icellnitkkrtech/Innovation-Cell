@@ -76,18 +76,18 @@ const Navbar = () => {
   ];
 
   return (
-    <div className='  w-full  bg-black flex justify-between items-center h-20 mx-auto px-8 m text-white z-999 '>
+    <div className='fixed top-0 left-0 w-full border-b border-blue-200 opacity-100 bg-black flex justify-between items-center h-20 mx-auto px-8 m text-white z-50'>
       <Logo />
       {/* { <h1 className='w-full text-3xl font-bold Capitalize'>Innovation Cell</h1> } */}
 
       {/* Desktop Navigation */}
       <ul className='hidden md:flex gap-2'>
         {navItems.map(item => (
-          <li key={item.id} className='p-4 cursor-pointer hover:text-lg transition-transform duration-300 transform hover:scale-110 transition-all duration-300'>
+          <li key={item.id} className='px-4 py-2 hover:bg-gradient-to-b hover:bg-gradient-to-t from-gray-700 to-black rounded-md cursor-pointer transition-transform duration-300 transform hover:scale-95 transition-all duration-300'>
             <span onClick={() => scrollToSection(item.sectionId)}>{item.text}</span>
           </li>
         ))}
-        <li className='p-4 cursor-pointer hover:text-lg transition-transform duration-300 transform hover:scale-110 transition-all duration-300'>
+        <li className='px-4 py-2 hover:bg-gradient-to-b hover:bg-gradient-to-t from-gray-700 to-black rounded-md cursor-pointer transition-transform duration-300 transform hover:scale-95 transition-all duration-300'>
           <span onClick={()=> navigate("/innokshetra")}>Innokshetra</span>
         </li>
       </ul>

@@ -2,8 +2,8 @@ import React from 'react'
 
 const Hero = () => {
     return (
-        <div className=' mb-16  grid px-8 mt-8 lg:px-20 lg:py-16  lg:grid-cols-2'>
-            <div className='w-100 mt-10'>
+        <div className=' mb-16 pt-24 md:pt-32 grid px-8 mt-8 lg:px-20 lg:py-16  lg:grid-cols-2'>
+            <div className='w-100 mt-10  md:pt-24'>
                 <h4 className='text-base'>NIT KURUKSHETRA</h4>
                 <h1 className='text-5xl lg:text-7xl  '>WELCOME TO </h1>
                 <h1 className='text-5xl text-orange-600 mb-6'>INNOVATION CELL</h1>
@@ -58,7 +58,7 @@ const Hero = () => {
                 </div>
             </div>
 
-            <div className='hidden lg:block'>
+            <div className='hidden  md:pt-24 lg:block'>
                 <img src="\bulb.png" alt="bulb" />
             </div>
         </div>

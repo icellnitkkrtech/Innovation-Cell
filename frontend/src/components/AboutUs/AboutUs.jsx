@@ -1,140 +1,201 @@
 import React, { useRef, useState, useEffect } from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import "./about.css";
+import './about.css'; 
 
-function About() {
+const AboutUs = () => {
+  const [showMore, setShowMore] = useState(false);
+  const sectionRef = useRef(null);
 
-    const features = [
-        {
-            title: 'Vision',
-            description: 'Our vision at the Innovation Cell is to be the driving force behind a vibrant ecosystem of creativity, entrepreneurship, and financial literacy. We aim to inspire and empower students to innovate, launch startups, and excel in their chosen fields. We strive to create a dynamic community that fosters growth, collaboration, and sustainable success through robust financial knowledge'
-        },
-        {
-            title: 'Values',
-            description: 'At Innovation Cell, our values shape our community and drive our mission. We stand for innovation, fostering creativity and embracing new ideas. Entrepreneurship is at our core, encouraging initiative and risk-taking. We believe in collaboration, promoting teamwork and shared learning. Lastly, we value financial literacy, providing education and resources for informed decision-making.'
-        },
-        {
-            title: 'Activities',
-            description: 'Innovation Cell engages in a variety of activities to foster innovation and entrepreneurship. We conduct workshops on startup fundamentals, financial literacy, and portfolio management. Our events include networking sessions with industry experts and hackathons to promote teamwork. Collaborative projects and industrial visits offer hands-on experience, while pitch contests inspire creativity and confidence.'
-        },
-    ];
+  const handleToggleShowMore = () => {
+    setShowMore(prevState => !prevState);
 
-    function Paragraph() {
-        return (
-            <div>
-                Welcome to the Innovation Cell, the epicenter of creativity and entrepreneurship at National Institute of Technology,Kurukshetra.
-                Established under the aegis of the Ministry of Education, our society is dedicated to fostering a culture of innovation, entrepreneurship, and financial literacy among students.
-                <br />
-                Our mission is to inspire and support students who are interested in finance, startups, innovation, and entrepreneurship.
-                We believe in nurturing the next generation of thinkers, innovators, and leaders who will shape the future.
-                Through a variety of events, workshops, and mentorship programs, we aim to provide our members with the tools and resources they need to turn their ideas into reality.
-                <br />
-                Join us to explore new ideas, meet like-minded individuals, and take your first steps toward building a successful business. Whether you're interested in finance,
-                technology, product development, or social entrepreneurship, there's a place for you at the Innovation Cell.
-                Together, let's innovate, create, and make a difference.
-            </div>
-        )
+    if (!showMore) {
+      sectionRef.current?.scrollIntoView({ behavior: "smooth" });
+    } else {
+      window.scrollTo({ behavior: "smooth" });
+    }
+  };
+
+  return (
+    <div id="about" className="pt-12">
+      <Header />
+      <HeroSection showMore={showMore} onToggleShowMore={handleToggleShowMore} />
+      <div ref={sectionRef} className={`transition-section ${showMore ? "open" : ""}`}>
+        <Whatsection />
+      </div>
+      <Joinsection />
+    </div>
+  );
+};
+
+const Header = () => (
+  <section className="pt-10">
+    <div className="about pl-4 py-6">
+      <h1 className="font-extrabold text-orange-500 lg:text-5xl md:text-4xl sm:text-3xl text-3xl">About Us</h1>
+      <hr className="sm:border-t-2 ml-48 md:ml-72 lg:ml-96 sm:ml-64 md:border-t-3 " />
+    </div>
+  </section>
+);
+
+const HeroSection = ({ showMore, onToggleShowMore }) => (
+  <section className="lg:bg-gradient-to-b bg-gradient-to-b from-red-400 to-purple-400 text-white">
+    <div className="">
+      <div className="flex flex-col lg:flex-row items-center">
+        <div className="lg:w-1/2 p-8">
+          <h1 className="lg:text-5xl md:text-4xl sm:text-4xl text-4xl font-bold text-gray-900">Innovation Cell,</h1>
+          <p className="lg:text-xl md:text-lg sm:text-md text-gray-900 text-justify">The epicenter of creativity and entrepreneurship at</p>
+          <h1 className="lg:text-5xl md:text-4xl sm:text-4xl text-4xl font-bold text-gray-900">NIT KURUKSHETRA</h1>
+          <p className="lg:text-xl md:text-lg sm:text-md text-justify text-white mt-14 md:mt-20">
+            Established under the aegis of the Ministry of Education, our society is dedicated to fostering a culture of innovation, entrepreneurship, and financial literacy among students.
+          </p>
+          <button
+            onClick={onToggleShowMore}
+            className="mt-12 px-5 py-3 bg-gray-900 text-white font-semibold rounded hover:bg-white flex transition duration-300 ease-out-in transform hover:scale-95 hover:text-indigo-600"
+          >
+            {showMore ? "See less" : "Know more about us"}
+          </button>
+        </div>
+        <div className="lg:w-1/2 mt-10 lg:mt-0 relative">
+          <img src="/about.png" alt="About" className="w-full border" />
+          <div className="absolute inset-0 lg:bg-gradient-to-l bg-gradient-to-t from-black via-transparent to-transparent opacity-90 lg:opacity-70 "></div>
+        </div>
+      </div>
+    </div>
+  </section>
+);
+
+const Whatsection = () => (
+  <section className="py-6 bg-white text-black">
+    <div className="container mx-auto md:px-12 lg:px-32 px-2">
+      <div className="gap-2 mt-6">
+        <WhatCard 
+          title="What's our motive?"
+          description="Our aim is to inspire and support students passionate about finance, startups, innovation, and entrepreneurship. We nurture the next generation of thinkers and leaders by providing events, workshops, and mentorship to help turn ideas into reality."
+        />
+        <WhatCard 
+          title="What do we offer?"
+          description="A platform for aspiring entrepreneurs to connect, collaborate, and learn through hackathons, pitch events, industry talks, and networking with business leaders. We also provide guidance on business planning, fundraising, and market research to help members launch and grow their startups."
+        />
+      </div>
+    </div>
+  </section>
+);
+
+const WhatCard = ({ title, description }) => (
+  <div className="text-center">
+    <h4 className="lg:text-2xl md:text-xl sm:text-xl text-xl xl:text-3xl font-semibold">{title}</h4>
+    <p className="mt-2 lg:text-lg pb-10 md:text-md sm:text-sm text-md xl:text-xl text-justify">{description}</p>
+  </div>
+);
+
+const TypingText = ({ text, speed = 150, startTyping }) => {
+  const [displayedText, setDisplayedText] = useState('');
+  const [isTyping, setIsTyping] = useState(false);
+  const audioRef = useRef(null);
+
+  // Function to reset the typing text
+  const resetTyping = () => {
+    setDisplayedText('');
+    setIsTyping(false);
+  };
+
+  useEffect(() => {
+    const playAudio = () => {
+      if (audioRef.current) {
+        audioRef.current.loop = true;
+        audioRef.current.play().catch((e) => {
+          console.log("Audio playback prevented by browser policy: ", e);
+        });
+      }
+    };
+
+    const stopAudio = () => {
+      if (audioRef.current) {
+        audioRef.current.pause();
+        audioRef.current.currentTime = 0; // Reset sound
+      }
+    };
+
+    let index = 1;
+
+    if (startTyping) {
+      setIsTyping(true);
+      playAudio(); // Start the typing sound
+
+      const typingInterval = setInterval(() => {
+        if (index < text.length) {
+          setDisplayedText((prev) => prev + text[index - 1]);
+          index++;
+        } else {
+          setIsTyping(false); // Stop typing
+          stopAudio(); // Stop sound
+          clearInterval(typingInterval);
+        }
+      }, speed);
+
+      return () => {
+        clearInterval(typingInterval);
+        stopAudio(); // Ensure sound stops on cleanup
+      };
+    } else {
+      resetTyping(); // Reset typing when user scrolls out
+    }
+  }, [text, speed, startTyping]);
+
+  return (
+    <div className="flex items-center justify-center text-center font-bold text-white text-2xl xl:text-4xl">
+      <p>
+        <span>{displayedText}</span>
+        <span className={`ml-1 border-r-2 border-white ${isTyping ? 'animate-blink' : ''}`}>|</span>
+      </p>
+      <audio ref={audioRef} src="/keyboardsound.mp3" preload="auto"></audio>
+    </div>
+  );
+};
+
+const Joinsection = () => {
+  const sectionRef = useRef(null);
+  const [startTyping, setStartTyping] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setStartTyping(true); // Start typing animation when the section is in view
+        } else {
+          setStartTyping(false); // Stop typing animation when the section is out of view
+        }
+      },
+      { threshold: 0.5 } // Trigger when 50% of the section is in view
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
     }
 
-    const paragraphRef = useRef(null);
-    const imageRef = useRef(null);
-    const sliderRef = useRef(null);
-    const [activeIndex, setActiveIndex] = useState(0);
-    const [paragraphHeight, setParagraphHeight] = useState("auto");
-
-    useEffect(() => {
-        const handleResize = () => {
-            if (imageRef.current && paragraphRef.current) {
-                const imageHeight = imageRef.current.clientHeight;
-                setParagraphHeight(imageHeight);
-            }
-        };
-
-        handleResize();
-        window.addEventListener("resize", handleResize);
-        return () => window.removeEventListener("resize", handleResize);
-    }, []);
-
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 350,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        afterChange: (index) => setActiveIndex(index)
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
     };
+  }, []);
 
-    const scrollToFeature = (index) => {
-        if (sliderRef.current) {
-            sliderRef.current.slickGoTo(index);
-        }
-    };
+  return (
+    <section ref={sectionRef} className="bg-black text-white py-2">
+      <div className="container mx-auto py-4 md:py-8 md:px-12 lg:px-16 sm:px-6 px-3">
+        <p className="lg:text-lg md:text-md sm:text-md text-sm xl:text-xl text-center text-gray-400">
+          Join us to explore new ideas, meet like-minded individuals, and take your first steps toward building a successful business. Whether you're interested in finance, technology, product development, or social entrepreneurship, there's a place for you at the Innovation Cell.
+        </p>
 
-    const scrollToParagraph = () => {
-        if (paragraphRef.current) {
-            paragraphRef.current.scrollIntoView({ behavior: 'smooth' });
-        }
-    };
+        {/* Use the TypingText component for the animated text */}
+        <div className="pt-8 text-center justify-center pb-4">
+          <TypingText text="TTogether, Let's Innovate and make a difference.." speed={150} startTyping={startTyping} />
+        </div>
+
+        <hr className="mt-10 sm:border-t-2 md:border-t-3" />
+      </div>
+    </section>
+  );
+};
 
 
-    return (
-        <>
-            <section id="about" className='md:mt-42  lg:px-12 lg:py-16 lg:pb-4 '>
-                <div className='p-4 pb-0'>
-                    <a className='font-extrabold text-orange-500 lg:text-5xl md:text-4xl sm:text-3xl text-2xl hover:cursor-pointer hover:text-orange-400' onClick={scrollToParagraph}>About Us</a>
-                    <hr className='sm:border-t-2 ml-48 md:ml-72 lg:ml-96 sm:ml-64 md:border-t-3 border-orange-500 ' />
-                    <a className='font-extrabold text-white lg:text-4xl md:text-3xl sm:text-2xl text-xl' href="#">Innovation Cell</a>
-                </div>
-                <section className='m-2 mt-8 justify-evenly border rounded-xl md:flex sm:flex lg:flex'>
-                    <div className='m-2 md:w-2/5 lg:w-2/5 sm:w-2/5'>
-                        <div className='shadow-lg w-full p-2 border-zinc-300 hover:opacity-95 transition duration-300 ease-out-in transform hover:scale-100' ref={imageRef}>
-                            <img className="rounded-lg hover:border-white"
-                                src="/AboutUs.png"
-                                alt='About Image'
-                                style={{
-                                    width: '100%',
-                                    height: 'auto',
-                                    aspectRatio: '1 / 1',
-                                    display: 'block'
-                                }}
-                            />
-                        </div>
-                    </div>
-                    <div ref={paragraphRef} className='text-white p-6 md:ps-0 md:w-3/5 lg:w-3/5 sm:w-3/5 lg:text-xl md:text-md sm:text-sm text-justify overflow-y-scroll' 
-                    style={{ maxHeight: paragraphHeight}}>
-                        <p><Paragraph /></p>
-                    </div>
-                </section>
-                <nav>
-                    <div className="text-white flex justify-center gap-8 mt-8">
-                        {features.map((feature, index) => (
-                            <div key={index} className="text-xl  hover:cursor-pointer" style={{ margin: '0 8px' }}>
-                                <a onClick={() => scrollToFeature(index)} style={{ color: activeIndex === index ? 'orange' : 'white', fontWeight: activeIndex === index ? 'bold' : 'light' }}>{feature.title}</a>
-                            </div>
-                        ))}
-                    </div>
-                </nav>
-                <section className="p-8 py-3">
-                    <div className="lg:w-1/2 p-8 md:w-3/5 sm:w-3/4 mx-auto">
-                        <Slider ref={sliderRef} {...settings} >
-                            {features.map((feature, index) => (
-                                <div key={index} className="p-6 border border-opacity-25 border-blue-200 bg-gradient-to-b relative hover:shadow-sm hover:shadow-white z-0 rounded-lg border-orange-300 flex transition duration-300 ease-out-in transform hover:scale-95 border">
-                                    <div id={`feature-${index}`} className="lg:text-2xl md:text-xl text-lg font-bold text-center text-sky-200 mb-3">
-                                        {feature.title}
-                                    </div>
-                                    <p className="text-white text-justify lg:text-lg md:text-md text-sm opacity-80 hover:opacity-100">
-                                        {feature.description}
-                                    </p>
-                                </div>
-                            ))}
-                        </Slider>
-                    </div>
-                </section>
-            </section>
-        </>
-    );
-}
-
-export default About;
+export default AboutUs;

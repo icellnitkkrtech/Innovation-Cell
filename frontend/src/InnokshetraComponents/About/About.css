@@ -1,48 +1,43 @@
 .about-section {
   display: flex;
-  flex-direction: row;
+  flex-direction: column; /* Changed to column to stack content vertically */
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   padding: 5%;
-  padding-top: 1%;
-  background-color: #000;
-  color: #fff;
-  flex-wrap: nowrap;
+  background-color: #0f172a; /* Updated background to slate-900 */
+  color: #e2e8f0; /* Updated text color to light gray */
   width: 100vw;
+  box-sizing: border-box; /* Ensure padding does not affect width */
 }
 
 .content-container {
-  flex: 1;
+  width: 100%;
+  max-width: 800px; /* Increased max-width to fill more space */
   padding: 20px;
-  max-width: 550px;
 }
 
 .heading-about {
-  font-size: 4.5rem;
+  font-size: 4rem; /* Adjusted for better fit */
   margin-bottom: 20px;
-  line-height: 65px;
-  font-weight: lighter;
+  line-height: 1.2;
+  font-weight: bold;
+  color: #0ea5e9; /* Cyan for headings */
 }
 
 .highlight {
-  color: #fe7189ea;
+  color: #0ea5e9; /* Cyan for highlighting */
 }
+
 .highlight1 {
-  color: #fe7189ea;
-  text-align: right;
-  display: block;
+  color: #0ea5e9;
+  text-align: center; /* Centered text for better alignment */
 }
 
 .text-container-about {
   font-size: 1.2rem;
-  line-height: 1.8;
-  text-align: left;
-  word-spacing: 0.4em;
-}
-
-.video-container-about {
-  flex: 1;
-  display: block;
+  line-height: 1.6; /* Adjusted line-height for better readability */
+  text-align: center; /* Centered text for better alignment */
+  color: #94a3b8; /* Gray text */
 }
 
 @media (max-width: 768px) {
@@ -50,14 +45,11 @@
     flex-direction: column;
   }
   
-  .video-container-about {
-    display: none;
-  }
-
   .content-container {
     width: 100%;
   }
-  .heading-about{
+
+  .heading-about {
     font-size: 3rem;
   }
 }

@@ -17,8 +17,7 @@ function AKTeamCard() {
     <div className="w-100 m-auto">
       <div className="mt-20">
         <div className="text-above-slider">
-          <p style={{ fontSize: "18px" }}> our team</p>
-          <h2 style={{ color: "orange" }}>Meet our people</h2>
+          <h2 style={{ color: "orange" }}>Meet Our Team</h2>
         </div>
 
         <div className="slider-container ">

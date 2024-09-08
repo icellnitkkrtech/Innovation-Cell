@@ -17,7 +17,7 @@ const AboutUs = () => {
   };
 
   return (
-    <div sectionId = "about">
+    <div  id = "about" className='pt-12'>
       <Header />
       <HeroSection showMore={showMore} onToggleShowMore={handleToggleShowMore} />
       {/* Add ref to the transition wrapper */}
@@ -108,7 +108,7 @@ const Joinsection = () => {
   return (
     <section className="bg-black text-white py-2">
       <div className="container mx-auto py-4 md:py-8 md:px-12 lg:px-16 sm:px-6 px-3">
-        <p className="lg:text-lg md:text-md sm:text-md text-sm xl:text-xl text-center text-white">Join us to explore new ideas, meet like-minded individuals, and take your first steps toward building a successful business. Whether you're interested in finance, technology, product development, or social entrepreneurship, there's a place for you at the Innovation Cell.</p>
+        <p className="lg:text-lg md:text-md sm:text-md text-sm xl:text-xl text-center text-gray-400">Join us to explore new ideas, meet like-minded individuals, and take your first steps toward building a successful business. Whether you're interested in finance, technology, product development, or social entrepreneurship, there's a place for you at the Innovation Cell.</p>
         <h1 className="lg:text-3xl md:text-3xl sm:text-2xl text-2xl xl:text-4xl text-center font-bold pt-8 pb-4 text-white">
           Together, Let's Innovate <br />and make a difference.
         </h1>

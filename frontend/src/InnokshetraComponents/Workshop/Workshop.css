@@ -1,41 +1,30 @@
-.workshop{
+.workshop {
   background-color: black;
+  padding: 40px 0;
 }
 
-.heading-workshop{
+.heading-workshop {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  box-sizing: border-box;
+  padding: 20px;
   font-style: normal;
- 
- 
-  color: #fe7189ea;
+  color: cyan;
   font-size: 4.5rem;
   margin-bottom: 20px;
   line-height: 65px;
   font-weight: lighter;
 }
 
-
-.card1{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.card2{
+.card2 {
   display: flex;
   justify-content: center;
   align-items: center;
   padding-bottom: 40px;
 }
 
-@media only screen and (max-width: 768px){
-
-  .heading-workshop{
+@media only screen and (max-width: 768px) {
+  .heading-workshop {
     font-size: 7vw;
   }
 }

@@ -140,16 +140,8 @@ const VerticalTimeline = () => {
   return (
     <>
     
-    <div className=""
-        style={{
-          fontSize: "4rem",
-          textAlign: "center",
-          color: "#FF69B4",
-          fontWeight: "lighter",
-        }
-        
-
-      }
+    <div className="text-5xl md:text-7xl text-cyan-400 text-center font-extrabold leading-tight mb-12"
+       
       >
         Event Timeline
       </div>

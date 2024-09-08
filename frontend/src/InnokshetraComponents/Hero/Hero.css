@@ -1,6 +1,6 @@
 .hero-container {
     z-index: 0;
-    background-image: url(https://images.hdqwalls.com/wallpapers/gta-6-palms-trees-5b.jpg);
+    background-image: url(https://img.freepik.com/free-photo/digital-art-inmersive-exhibition_23-2151428542.jpg?uid=R104855026&ga=GA1.1.2062392418.1721451223&semt=ais_hybrid);
     background-repeat: no-repeat;
     background-size: cover; /* Cover ensures the image covers the full container */
     width: 100vw; /* Full width of the viewport */
@@ -10,53 +10,59 @@
     align-items: center;
     justify-content: center;
 }
-.hero-text{
+
+.hero-text {
     display: flex;
     flex-direction: column;
     text-align: center;
-    color: white;
+    color: white; /* Keep the text white */
     padding: 25px;
     margin-top: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background */
+    border-radius: 10px; /* Rounded corners for a clean look */
 }
-.small1{
-    margin: 2px;
-    font-size: 30px;
-    color: white;
-}
-.small2{
-    margin: 2px;
-    font-size: 30px;
-    color: white;
 
+.small1, .small2 {
+    margin: 2px;
+    font-size: 30px;
+    color: white; /* Keep the text white */
 }
-.big{
+
+.big {
     font-size: 110px;
 }
-.button{
+
+.button {
     margin-bottom: 20px;
-    padding-bottom:20px ;
+    padding-bottom: 20px;
     color: white;
-   
+    
 }
-.button button{
+
+.button button {
     background-color: transparent;
     color: white;
     margin: 15px;
-    padding: 10px;
-    border: 5px solid white ;
+    padding: 15px; /* Adjusted for consistent spacing */
+    border: 5px solid white;
     cursor: pointer;
     border-radius: 50px;
     font-size: 1.5rem;
+    transition: 0.3s ease-in-out; /* Smooth transition for hover effects */
 }
 
-@media only screen and (max-width: 768px){
-    .big{
+@media only screen and (max-width: 768px) {
+    .big {
         font-size: 40px;
     }
-} 
-.button button:hover{
-    padding:6px;
-    font-size:30px;
-    transition: 0.5s;
+    
+    .button button {
+        font-size: 1rem; /* Smaller buttons for mobile */
+        padding: 10px;
+    }
+}
+
+.button button:hover {
+    font-size: 1.6rem; /* Slight increase for hover */
     box-shadow: 5px 5px 10px black;
 }

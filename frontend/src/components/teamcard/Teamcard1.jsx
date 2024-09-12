@@ -97,24 +97,24 @@ const data = [
     post: 'President',
     desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit`
   },
-  // {
-  //   name: `Alok Mishra`,
-  //   img:  `Alok Mishra _ Vice President.jpg`,
-  //   post: 'Vice-president',
-  //   desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit,.`
-  // },
-  // {
-  //   name: `Tanmay Mathur`,
-  //   img:  `Tanmay Mathur _ Secretary.jpg`,
-  //   post: 'Secretary',
-  //   desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit,a.`
-  // },
-  // {
-  //   name: `Saket Jethwani`,
-  //   img:  `Saket Jethwani _ Additional Secretary.jpg`,
-  //   post: 'Additional Secretary',
-  //   desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.`
-  // },
+  {
+    name: `Alok Mishra`,
+    img:  `Alok Mishra _ Vice President.jpg`,
+    post: 'Vice-president',
+    desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit,.`
+  },
+  {
+    name: `Tanmay Mathur`,
+    img:  `Tanmay Mathur _ Secretary.jpg`,
+    post: 'Secretary',
+    desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit,a.`
+  },
+  {
+    name: `Saket Jethwani`,
+    img:  `Saket Jethwani _ Additional Secretary.jpg`,
+    post: 'Additional Secretary',
+    desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.`
+  },
   {
     name: `Suryansh Singh`,
     img:  `Suryansh Singh _ Treasurer.jpg`,

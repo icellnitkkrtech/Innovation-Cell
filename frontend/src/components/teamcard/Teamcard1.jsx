@@ -11,21 +11,21 @@ const teamData = [
     img: `Deepanshu Chauhan _ President.jpg`,
     post: 'President',
   },
-  {
-    name: `Alok Mishra`,
-    img:  `Alok Mishra _ Vice President.jpg`,
-    post: 'Vice-president',
-  },
-  {
-    name: `Tanmay Mathur`,
-    img:  `Tanmay Mathur _ Secretary.jpg`,
-    post: 'Secretary',
-  },
-  {
-    name: `Saket Jethwani`,
-    img:  `Saket Jethwani _ Additional Secretary.jpg`,
-    post: 'Additional Secretary',
-  },
+  // {
+  //   name: `Alok Mishra`,
+  //   img:  `Alok Mishra _ Vice President.jpg`,
+  //   post: 'Vice-president',
+  // },
+  // {
+  //   name: `Tanmay Mathur`,
+  //   img:  `Tanmay Mathur _ Secretary.jpg`,
+  //   post: 'Secretary',
+  // },
+  // {
+  //   name: `Saket Jethwani`,
+  //   img:  `Saket Jethwani _ Additional Secretary.jpg`,
+  //   post: 'Additional Secretary',
+  // },
   {
     name: `Suryansh Singh`,
     img:  `Suryansh Singh _ Treasurer.jpg`,

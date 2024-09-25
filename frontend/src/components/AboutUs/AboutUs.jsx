@@ -7,12 +7,13 @@ const AboutUs = () => {
 
   const handleToggleShowMore = () => {
     setShowMore(prevState => !prevState);
-
+  /*
     if (!showMore) {
-      sectionRef.current?.scrollIntoView({ behavior: "smooth" });
+      sectionRef.current?.scrollIntoView({ behavior:"smooth" });
     } else {
       window.scrollTo({ behavior: "smooth" });
     }
+   */
   };
 
   return (
@@ -64,7 +65,7 @@ const HeroSection = ({ showMore, onToggleShowMore }) => (
 );
 
 const Whatsection = () => (
-  <section className="py-6 bg-white text-black">
+  <section className="py-6 bg-white text-black pt-12">
     <div className="container mx-auto md:px-12 lg:px-32 px-2">
       <div className="gap-2 mt-6">
         <WhatCard 
@@ -119,7 +120,9 @@ const TypingText = ({ text, speed = 150, startTyping }) => {
 
     if (startTyping) {
       setIsTyping(true);
+      /*
       playAudio(); // Start the typing sound
+      */
 
       const typingInterval = setInterval(() => {
         if (index < text.length) {
@@ -145,7 +148,7 @@ const TypingText = ({ text, speed = 150, startTyping }) => {
     <div className="flex items-center justify-center text-center font-bold text-white text-2xl xl:text-4xl">
       <p>
         <span>{displayedText}</span>
-        <span className={`ml-1 border-r-2 border-white ${isTyping ? 'animate-blink' : ''}`}>|</span>
+        <span className={`ml-1 border-r-2 border-white ${!isTyping ? 'animate-blink' : ''}`}>|</span>
       </p>
       <audio ref={audioRef} src="/keyboardsound.mp3" preload="auto"></audio>
     </div>
@@ -188,7 +191,7 @@ const Joinsection = () => {
 
         {/* Use the TypingText component for the animated text */}
         <div className="pt-8 text-center justify-center pb-4">
-          <TypingText text="TTogether, Let's Innovate and make a difference.." speed={150} startTyping={startTyping} />
+          <TypingText text="TTogether, Let's Innovate and make a difference.." speed={100} startTyping={startTyping} />
         </div>
 
         <hr className="mt-10 sm:border-t-2 md:border-t-3" />

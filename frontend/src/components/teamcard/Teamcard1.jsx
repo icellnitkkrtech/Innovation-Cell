@@ -11,21 +11,21 @@ const teamData = [
     img: `Deepanshu Chauhan _ President.jpg`,
     post: 'President',
   },
-  // {
-  //   name: `Alok Mishra`,
-  //   img:  `Alok Mishra _ Vice President.jpg`,
-  //   post: 'Vice-president',
-  // },
-  // {
-  //   name: `Tanmay Mathur`,
-  //   img:  `Tanmay Mathur _ Secretary.jpg`,
-  //   post: 'Secretary',
-  // },
-  // {
-  //   name: `Saket Jethwani`,
-  //   img:  `Saket Jethwani _ Additional Secretary.jpg`,
-  //   post: 'Additional Secretary',
-  // },
+  {
+    name: `Alok Mishra`,
+    img:  `Alok Mishra _ Vice President.jpg`,
+    post: 'Vice-president',
+  },
+  {
+    name: `Tanmay Mathur`,
+    img:  `Tanmay Mathur _ Secretary.jpg`,
+    post: 'Secretary',
+  },
+  {
+    name: `Saket Jethwani`,
+    img:  `Saket Jethwani _ Additional Secretary.jpg`,
+    post: 'Additional Secretary',
+  },
   {
     name: `Suryansh Singh`,
     img:  `Suryansh Singh _ Treasurer.jpg`,
@@ -138,7 +138,7 @@ const TeamCard = () => {
   };
 
   return (
-    <div id="team" className="team-section mb-12 w-11/12  mx-auto py-12">
+    <div id="team" className="team-section mb-12 w-11/12  md:px-12 mx-auto py-12">
       <div className="text-center mb-8">
         <Heading title="Meet Our Team" />
         <p className="text-gray-500 md:text-xl text-lg mt-4">

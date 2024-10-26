@@ -11,11 +11,7 @@ const teamData = [
     img: `Deepanshu Chauhan _ President.jpg`,
     post: 'President',
   },
-  {
-    name: `Alok Mishra`,
-    img:  `Alok Mishra _ Vice President.jpg`,
-    post: 'Vice-president',
-  },
+  
   {
     name: `Tanmay Mathur`,
     img:  `Tanmay Mathur _ Secretary.jpg`,

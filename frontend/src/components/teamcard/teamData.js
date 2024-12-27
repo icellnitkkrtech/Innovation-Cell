@@ -7,7 +7,7 @@ const data = [
   },
   {
     name: `Ankit Matwa`,
-    img:  `Alok Mishra _ Vice President.jpg`,
+    img:  `WhatsApp Image 2024-12-26 at 20.30.08_6ca1b054.jpg`,
     post: 'Vice-president',
     desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit,.`
   },

@@ -11,7 +11,11 @@ const teamData = [
     img: `Deepanshu Chauhan _ President.jpg`,
     post: 'President',
   },
-  
+  {
+    name: `Ankit Matwa`,
+    img:  `WhatsApp Image 2024-12-26 at 20.30.08_6ca1b054.jpg`,
+    post: 'Vice-president',
+  }
   {
     name: `Tanmay Mathur`,
     img:  `Tanmay Mathur _ Secretary.jpg`,

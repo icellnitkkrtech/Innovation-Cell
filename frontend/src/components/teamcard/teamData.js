@@ -5,12 +5,12 @@ const data = [
     post: 'President',
     desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit`
   },
-  // {
-  //   name: `Alok Mishra`,
-  //   img:  `Alok Mishra _ Vice President.jpg`,
-  //   post: 'Vice-president',
-  //   desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit,.`
-  // },
+  {
+    name: `Ankit Matwa`,
+    img:  `Alok Mishra _ Vice President.jpg`,
+    post: 'Vice-president',
+    desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit,.`
+  },
   // {
   //   name: `Tanmay Mathur`,
   //   img:  `Tanmay Mathur _ Secretary.jpg`,

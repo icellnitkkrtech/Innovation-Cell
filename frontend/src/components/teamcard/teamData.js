@@ -104,3 +104,47 @@ const data = [
  
 ];
 
+// Define the team members data
+const teamMembers = [
+  {
+    id: 1,
+    name: "John Doe",
+    role: "Faculty Advisor",
+    image: "/team/member1.jpg",
+    bio: "Professor with 15+ years of experience in Computer Science.",
+    social: {
+      linkedin: "https://linkedin.com/in/johndoe",
+      twitter: "https://twitter.com/johndoe",
+      github: "https://github.com/johndoe"
+    }
+  },
+  {
+    id: 2,
+    name: "Jane Smith",
+    role: "President",
+    image: "/team/member2.jpg",
+    bio: "Final year Computer Science student with a passion for AI and machine learning.",
+    social: {
+      linkedin: "https://linkedin.com/in/janesmith",
+      twitter: "https://twitter.com/janesmith",
+      github: "https://github.com/janesmith"
+    }
+  },
+  {
+    id: 3,
+    name: "Alex Johnson",
+    role: "Vice President",
+    image: "/team/member3.jpg",
+    bio: "Third year Electronics student specializing in IoT and embedded systems.",
+    social: {
+      linkedin: "https://linkedin.com/in/alexjohnson",
+      twitter: "https://twitter.com/alexjohnson",
+      github: "https://github.com/alexjohnson"
+    }
+  },
+  // Add more team members as needed
+];
+
+// Export the team members array
+export { teamMembers };
+

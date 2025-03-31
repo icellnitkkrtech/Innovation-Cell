@@ -17,14 +17,12 @@ const AboutUs = () => {
   };
 
   return (
-    <div id="about" className="pt-12">
-      <Header />
-      <HeroSection showMore={showMore} onToggleShowMore={handleToggleShowMore} />
-      <div ref={sectionRef} className={`transition-section ${showMore ? "open" : ""}`}>
-        <Whatsection />
+    <section id="about" className="py-16 bg-gray-900">
+      <div className="container mx-auto px-4">
+        <HeroSection showMore={showMore} onToggleShowMore={handleToggleShowMore} />
+        {showMore && <MoreContent />}
       </div>
-      <Joinsection />
-    </div>
+    </section>
   );
 };
 
@@ -38,53 +36,91 @@ const Header = () => (
 );
 
 const HeroSection = ({ showMore, onToggleShowMore }) => (
-  <section className="lg:bg-gradient-to-b bg-gradient-to-b from-red-400 to-purple-400 text-white">
-    <div className="">
+  <section className="bg-gray-800 text-white rounded-xl overflow-hidden shadow-xl">
+    <div className="container mx-auto">
       <div className="flex flex-col lg:flex-row items-center">
-        <div className="lg:w-1/2 p-8">
-          <h1 className="lg:text-5xl md:text-4xl sm:text-4xl text-4xl font-bold text-gray-900">Innovation Cell,</h1>
-          <p className="lg:text-xl md:text-lg sm:text-md text-gray-900 text-justify">The epicenter of creativity and entrepreneurship at</p>
-          <h1 className="lg:text-5xl md:text-4xl sm:text-4xl text-4xl font-bold text-gray-900">NIT KURUKSHETRA</h1>
-          <p className="lg:text-xl md:text-lg sm:text-md text-justify text-white mt-14 md:mt-20">
+        <div className="lg:w-1/2 p-8 lg:p-12">
+          <div className="inline-block px-3 py-1 bg-amber-500/20 text-amber-500 rounded-full text-sm font-semibold mb-6">
+            About Us
+          </div>
+          <h1 className="lg:text-5xl md:text-4xl sm:text-4xl text-4xl font-bold text-white mb-2">Innovation Cell,</h1>
+          <p className="lg:text-xl md:text-lg sm:text-md text-gray-300">The epicenter of creativity and entrepreneurship at</p>
+          <h1 className="lg:text-5xl md:text-4xl sm:text-4xl text-4xl font-bold text-amber-500 mt-1 mb-6">NIT KURUKSHETRA</h1>
+          <p className="lg:text-xl md:text-lg sm:text-md text-gray-300 mt-8 leading-relaxed">
             Established under the aegis of the Ministry of Education, our society is dedicated to fostering a culture of innovation, entrepreneurship, and financial literacy among students.
           </p>
           <button
             onClick={onToggleShowMore}
-            className="mt-12 px-5 py-3 bg-gray-900 text-white font-semibold rounded hover:bg-white flex transition duration-300 ease-out-in transform hover:scale-95 hover:text-indigo-600"
+            className="mt-8 px-6 py-3 bg-gradient-to-r from-amber-500 to-orange-500 text-white font-semibold rounded-full hover:opacity-90 flex items-center transition duration-300 ease-in-out transform hover:scale-95"
           >
             {showMore ? "See less" : "Know more about us"}
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5 ml-2">
+              <path strokeLinecap="round" strokeLinejoin="round" d={showMore ? "M4.5 15.75l7.5-7.5 7.5 7.5" : "M19.5 8.25l-7.5 7.5-7.5-7.5"} />
+            </svg>
           </button>
         </div>
         <div className="lg:w-1/2 mt-10 lg:mt-0 relative">
-          <img src="/about.png" alt="About" className="w-full border" />
-          <div className="absolute inset-0 lg:bg-gradient-to-l bg-gradient-to-t from-black via-transparent to-transparent opacity-90 lg:opacity-70 "></div>
+          <div className="relative h-full">
+            <img src="/about.png" alt="About" className="w-full h-full object-cover" />
+            <div className="absolute inset-0 bg-gradient-to-l from-gray-900/90 via-gray-900/60 to-transparent"></div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 );
 
-const Whatsection = () => (
-  <section className="py-6 bg-white text-black pt-12">
-    <div className="container mx-auto md:px-12 lg:px-32 px-2">
-      <div className="gap-2 mt-6">
-        <WhatCard 
-          title="What's our motive?"
-          description="Our aim is to inspire and support students passionate about finance, startups, innovation, and entrepreneurship. We nurture the next generation of thinkers and leaders by providing events, workshops, and mentorship to help turn ideas into reality."
-        />
-        <WhatCard 
-          title="What do we offer?"
-          description="A platform for aspiring entrepreneurs to connect, collaborate, and learn through hackathons, pitch events, industry talks, and networking with business leaders. We also provide guidance on business planning, fundraising, and market research to help members launch and grow their startups."
-        />
+const MoreContent = () => (
+  <div className="bg-gray-800 text-white p-8 rounded-xl mt-8 shadow-lg border border-gray-700">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div>
+        <h2 className="text-2xl font-bold mb-4 text-amber-500">Our Mission</h2>
+        <p className="text-gray-300 mb-6">
+          To create a vibrant ecosystem that nurtures innovation and entrepreneurship among students, enabling them to develop solutions for real-world problems and contribute to the nation's growth.
+        </p>
+        
+        <h2 className="text-2xl font-bold mb-4 text-amber-500">Our Vision</h2>
+        <p className="text-gray-300">
+          To be the premier student-led innovation hub that transforms creative ideas into impactful solutions, fostering a generation of innovators and entrepreneurs who drive positive change in society.
+        </p>
+      </div>
+      
+      <div>
+        <h2 className="text-2xl font-bold mb-4 text-amber-500">What We Do</h2>
+        <ul className="space-y-3 text-gray-300">
+          <li className="flex items-start">
+            <svg className="h-6 w-6 text-amber-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <span>Organize workshops, hackathons, and ideathons</span>
+          </li>
+          <li className="flex items-start">
+            <svg className="h-6 w-6 text-amber-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <span>Provide mentorship for student startups</span>
+          </li>
+          <li className="flex items-start">
+            <svg className="h-6 w-6 text-amber-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <span>Conduct sessions on financial literacy</span>
+          </li>
+          <li className="flex items-start">
+            <svg className="h-6 w-6 text-amber-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <span>Facilitate industry-academia collaborations</span>
+          </li>
+          <li className="flex items-start">
+            <svg className="h-6 w-6 text-amber-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <span>Host our annual flagship event - Innokshetra</span>
+          </li>
+        </ul>
       </div>
     </div>
-  </section>
-);
-
-const WhatCard = ({ title, description }) => (
-  <div className="text-center">
-    <h4 className="lg:text-2xl md:text-xl sm:text-xl text-xl xl:text-3xl font-semibold">{title}</h4>
-    <p className="mt-2 lg:text-lg pb-10 md:text-md sm:text-sm text-md xl:text-xl text-justify">{description}</p>
   </div>
 );
 

@@ -9,5 +9,8 @@
 import react from '@vitejs/plugin-react';
 
 export default {
-  plugins: [react()],
+  plugins: [react({
+    // This allows JSX in .js files
+    include: '**/*.{jsx,js,tsx,ts}',
+  })],
 };

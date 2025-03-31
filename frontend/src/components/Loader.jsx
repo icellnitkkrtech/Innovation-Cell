@@ -23,14 +23,15 @@ const Loader = () => {
         };
     }, []);
 
-    // Conditional styles for background color
-    const backgroundColor = isOff ? '#2F3235' : '#FFB80D';
+    // Improved background gradient
+    const backgroundStyle = isOff 
+        ? 'bg-gradient-to-r from-gray-900 to-gray-800' 
+        : 'bg-gradient-to-r from-amber-500 to-orange-500';
 
     return (
         <div
-            style={{ background: backgroundColor, zIndex: 9999 }}
-            className='fixed top-0 left-0 w-full h-full flex items-center justify-center'>
-            <div className='w-80'>
+            className={`fixed top-0 left-0 w-full h-full flex items-center justify-center ${backgroundStyle} transition-all duration-500 z-50`}>
+            <div className='w-80 transform transition-transform duration-300 hover:scale-105'>
                 <Lottie animationData={Logo} />
             </div>
         </div>

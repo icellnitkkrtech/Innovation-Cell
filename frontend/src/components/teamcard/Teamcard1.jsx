@@ -7,33 +7,33 @@ import Heading from "../Heading";
 
 const teamData = [
   {
-    name: `Shobhit Sharma`,
-    img: `Shobhit Sharma_President.jpg`,
+    name: `Deepanshu Chauhan`,
+    img: `Deepanshu Chauhan _ President.jpg`,
     post: 'President',
   },
   {
-    name: `Suryansh Singh`,
-    img:  `Suryansh Singh_Vice President.jpg`,
+    name: `Ankit Matwa`,
+    img:  `WhatsApp Image 2024-12-26 at 20.30.08_6ca1b054.jpg`,
     post: 'Vice-president',
   },
   {
-    name: `Suhani Singh`,
-    img:  `Suhani Singh_Secretary.jpg`,
+    name: `Tanmay Mathur`,
+    img:  `Tanmay Mathur _ Secretary.jpg`,
     post: 'Secretary',
   },
   {
-    name: `Divanshu Agarwal`,
-    img:  `Divanshu Agarwal_Joint Secretary.jpg`,
+    name: `Saket Jethwani`,
+    img:  `Saket Jethwani _ Additional Secretary.jpg`,
     post: 'Additional Secretary',
   },
   {
-    name: `Shreyas Srivastava`,
-    img:  `Shreyas Srivastava_Treasurer.jpg`,
+    name: `Suryansh Singh`,
+    img:  `Suryansh Singh _ Treasurer.jpg`,
     post: 'Treasurer',
   },
   {
-    name: `Aditya Raj`,
-    img:  `Aditya Raj_Ideation.jpg`,
+    name: `Prashant Gautam`,
+    img:  `Prashant Gautam _ Ideation Team Head.jpg`,
     post: 'Ideation Team Head',
   },
   // {
@@ -43,8 +43,8 @@ const teamData = [
   //   desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, s`
   // },
   {
-    name: `Dhruv Dhankhar`,
-    img:  `Dhruv Dhankhar_Finance.jpg`,
+    name: `Divyanshu Yadav`,
+    img:  `Divyanshu Yadav _ Finance Team Head.jpg`,
     post: 'Finance Team Head',
   },
   // {
@@ -54,8 +54,8 @@ const teamData = [
   //   desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, s`
   // },
   {
-    name: `Shobhit Sharma`,
-    img:  `Shobhit Sharma_Outreach.jpg`,
+    name: `Dhriti`,
+    img:  `Dhriti _ Outreach Team Head.jpg`,
     post: 'Outreach Team Head',
   },
   // {
@@ -65,8 +65,8 @@ const teamData = [
   //   desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, s`
   // },
   {
-    name: `Dev Varshney`,
-    img:  `Dev Varshney_Tech .jpg`,
+    name: `Akarshit`,
+    img:  `Akarshit _ Tech Team Head.jpg`,
     post: 'Tech Team Head',
   },
   // {
@@ -76,8 +76,8 @@ const teamData = [
   //   desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, s`
   // },
   {
-    name: `Deepanshu Bharadwaj`,
-    img:  `Deepanshu Bharadwaj_Management.jpg`,
+    name: `Sarthak`,
+    img:  `Sarthak _ Management Head.jpg`,
     post: 'Management Head',
   },
   // {
@@ -87,8 +87,8 @@ const teamData = [
   //   desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, s`
   // },
   {
-    name: `Siddhi Jadhav`,
-    img:  `Siddhi Jadhav_D&C.jpg`,
+    name: `Vivek`,
+    img:  `Vivek _ D&C Team Head.jpg`,
     post: 'D&C Team Head',
   },
   // {

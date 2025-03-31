@@ -79,9 +79,21 @@ exports.loginUser = async (email, password) => {
   const token = user.getSignedJwtToken();
 
   // Remove password from response
-  user.password = undefined;
+  const userResponse = {
+    _id: user._id,
+    name: user.name,
+    email: user.email,
+    role: user.role,
+    bio: user.bio,
+    skills: user.skills,
+    graduationYear: user.graduationYear,
+    company: user.company,
+    position: user.position,
+    profilePicture: user.profilePicture,
+    isVerified: user.isVerified
+  };
 
-  return { token, user };
+  return { token, user: userResponse };
 };
 
 // Verify email

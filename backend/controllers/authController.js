@@ -25,17 +25,23 @@ exports.login = async (req, res) => {
     
     const { token, user } = await authService.loginUser(email, password);
     
+    // Log the user object to verify role is included
+    console.log('User object from login:', user);
+    
     // Set token in HTTP-only cookie
-    const cookieOptions = {
-      expires: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000), // 30 days
+    res.cookie('token', token, {
       httpOnly: true,
       secure: process.env.NODE_ENV === 'production', // Use secure cookies in production
-      sameSite: 'strict'
-    };
+      maxAge: 30 * 24 * 60 * 60 * 1000, // 30 days
+      sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'lax' // Needed for cross-site cookies
+    });
     
-    res.cookie('token', token, cookieOptions);
+    if (!user.role) {
+      console.error('User role missing:', user);
+      return res.status(500).json({ msg: 'Server Error: User role not specified' });
+    }
     
-    res.json({ token, user });
+    res.json(user);
   } catch (err) {
     console.error(err.message);
     if (
@@ -46,6 +52,16 @@ exports.login = async (req, res) => {
     }
     res.status(500).json({ msg: 'Server Error' });
   }
+};
+
+// Logout user
+exports.logout = (req, res) => {
+  res.cookie('token', 'none', {
+    expires: new Date(Date.now() + 10 * 1000), // Expires in 10 seconds
+    httpOnly: true
+  });
+  
+  res.status(200).json({ msg: 'User logged out successfully' });
 };
 
 // Get current user

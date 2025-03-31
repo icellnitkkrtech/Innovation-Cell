@@ -1,19 +1,42 @@
 const express = require('express');
 const router = express.Router();
-const { auth, adminAuth } = require('../middleware/auth');
-const eventController = require('../controllers/eventController');
+const { auth } = require('../middleware/auth');
+const Event = require('../models/Event');
 
-// Public routes
-router.get('/', eventController.getPublishedEvents);
-router.get('/upcoming', eventController.getUpcomingEvents);
+// Get all published events
+router.get('/', async (req, res) => {
+  try {
+    const events = await Event.find({ isPublished: true })
+      .sort({ date: 1 })
+      .populate('createdBy', 'name');
+    
+    res.json(events);
+  } catch (error) {
+    console.error('Error getting events:', error);
+    res.status(500).json({ msg: 'Server Error' });
+  }
+});
 
-// Private routes
-router.post('/:id/register', auth, eventController.registerForEvent);
+// Get event by ID
+router.get('/:id', async (req, res) => {
+  try {
+    const event = await Event.findById(req.params.id)
+      .populate('createdBy', 'name');
+    
+    if (!event) {
+      return res.status(404).json({ msg: 'Event not found' });
+    }
+    
+    // Only return published events to non-admin users
+    if (!event.isPublished) {
+      return res.status(404).json({ msg: 'Event not found' });
+    }
+    
+    res.json(event);
+  } catch (error) {
+    console.error('Error getting event:', error);
+    res.status(500).json({ msg: 'Server Error' });
+  }
+});
 
-// Admin routes
-router.get('/admin', [auth, adminAuth], eventController.getAllEvents);
-router.post('/admin', [auth, adminAuth], eventController.createEvent);
-router.put('/admin/:id', [auth, adminAuth], eventController.updateEvent);
-router.delete('/admin/:id', [auth, adminAuth], eventController.deleteEvent);
-
-module.exports = router; 
+module.exports = router;

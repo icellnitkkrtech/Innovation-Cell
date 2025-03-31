@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 import { toast } from 'react-toastify';
+import { adminAPI } from '../../services/api';
 
 const EventManagement = () => {
   const [events, setEvents] = useState([]);
@@ -26,7 +26,7 @@ const EventManagement = () => {
   const fetchEvents = async () => {
     try {
       setLoading(true);
-      const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/admin/events`);
+      const res = await adminAPI.getAllEvents();
       setEvents(res.data);
     } catch (error) {
       console.error('Error fetching events:', error);
@@ -80,10 +80,10 @@ const EventManagement = () => {
       setLoading(true);
       
       if (showAddModal) {
-        await axios.post(`${import.meta.env.VITE_API_URL}/api/admin/events`, formData);
+        await adminAPI.createEvent(formData);
         toast.success('Event created successfully');
       } else {
-        await axios.put(`${import.meta.env.VITE_API_URL}/api/admin/events/${selectedEvent._id}`, formData);
+        await adminAPI.updateEvent(selectedEvent._id, formData);
         toast.success('Event updated successfully');
       }
       
@@ -92,25 +92,22 @@ const EventManagement = () => {
       fetchEvents();
     } catch (error) {
       console.error('Error saving event:', error);
-      toast.error(error.response?.data?.message || 'Failed to save event');
+      toast.error('Failed to save event');
     } finally {
       setLoading(false);
     }
   };
 
   const handleDeleteEvent = async (eventId) => {
-    if (!window.confirm('Are you sure you want to delete this event?')) return;
-    
-    try {
-      setLoading(true);
-      await axios.delete(`${import.meta.env.VITE_API_URL}/api/admin/events/${eventId}`);
-      toast.success('Event deleted successfully');
-      fetchEvents();
-    } catch (error) {
-      console.error('Error deleting event:', error);
-      toast.error('Failed to delete event');
-    } finally {
-      setLoading(false);
+    if (window.confirm('Are you sure you want to delete this event?')) {
+      try {
+        await adminAPI.deleteEvent(eventId);
+        toast.success('Event deleted successfully');
+        fetchEvents();
+      } catch (error) {
+        console.error('Error deleting event:', error);
+        toast.error('Failed to delete event');
+      }
     }
   };
 
@@ -184,27 +181,27 @@ const EventManagement = () => {
                   <div className="mt-2">
                     <p className="text-sm text-gray-400 line-clamp-2">{event.description}</p>
                   </div>
-                  <div className="mt-2 sm:flex sm:justify-between">
-                    <div className="sm:flex">
-                      <p className="flex items-center text-sm text-gray-400">
-                        <svg className="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                          <path fillRule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clipRule="evenodd" />
+                  <div className="mt-2 flex items-center text-xs text-gray-500">
+                    <svg className="flex-shrink-0 mr-1.5 h-4 w-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    </svg>
+                    <span>{event.date ? formatDate(event.date) : 'Date not set'}</span>
+                    {event.time && (
+                      <>
+                        <span className="mx-1">•</span>
+                        <span>{event.time}</span>
+                      </>
+                    )}
+                    {event.location && (
+                      <>
+                        <span className="mx-1">•</span>
+                        <svg className="flex-shrink-0 mr-1.5 h-4 w-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                         </svg>
-                        {formatDate(event.date)}
-                        {event.time && ` at ${event.time}`}
-                      </p>
-                      <p className="mt-2 flex items-center text-sm text-gray-400 sm:mt-0 sm:ml-6">
-                        <svg className="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                          <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
-                        </svg>
-                        {event.location || 'Online'}
-                      </p>
-                    </div>
-                    <div className="mt-2 flex items-center text-sm text-gray-400 sm:mt-0">
-                      <p>
-                        {event.attendees?.length || 0} registered
-                      </p>
-                    </div>
+                        <span>{event.location}</span>
+                      </>
+                    )}
                   </div>
                 </div>
               </li>
@@ -326,7 +323,6 @@ const EventManagement = () => {
                             value={formData.location}
                             onChange={handleChange}
                             className="mt-1 block w-full rounded-md border-gray-700 bg-gray-700 text-white focus:ring-amber-500 focus:border-amber-500"
-                            placeholder="Online or physical location"
                           />
                         </div>
                         
@@ -343,25 +339,23 @@ const EventManagement = () => {
                           >
                             <option value="webinar">Webinar</option>
                             <option value="workshop">Workshop</option>
-                            <option value="meetup">Meetup</option>
                             <option value="conference">Conference</option>
-                            <option value="hackathon">Hackathon</option>
+                            <option value="meetup">Meetup</option>
                             <option value="other">Other</option>
                           </select>
                         </div>
                         
                         <div>
                           <label htmlFor="registrationLink" className="block text-sm font-medium text-gray-400">
-                            Registration Link (Optional)
+                            Registration Link (optional)
                           </label>
                           <input
-                            type="text"
+                            type="url"
                             name="registrationLink"
                             id="registrationLink"
                             value={formData.registrationLink}
                             onChange={handleChange}
                             className="mt-1 block w-full rounded-md border-gray-700 bg-gray-700 text-white focus:ring-amber-500 focus:border-amber-500"
-                            placeholder="https://..."
                           />
                         </div>
                         

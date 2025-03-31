@@ -22,23 +22,42 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setLoading(true);
+    
+    // Add validation
+    if (!email || !password) {
+      toast.error('Please provide both email and password');
+      return;
+    }
     
     try {
-      await login(email, password);
+      setLoading(true);
+      
+      // Log the data being sent to help debug
+      console.log('Submitting login data:', { email, password });
+      
+      const userData = await login({ email, password });
+      
+      // Log the user data received
+      console.log('User data after login:', userData);
+      
       toast.success('Login successful!');
-      navigate('/profile');
+      
+      // Redirect based on user role
+      if (userData.role === 'admin') {
+        navigate('/admin/dashboard');
+      } else if (userData.role === 'student') {
+        navigate('/student/dashboard');
+      } else {
+        navigate('/alumni/dashboard');
+      }
     } catch (error) {
       console.error('Login error:', error);
       
-      // Check if the error is about email verification
-      if (error.msg === 'Please verify your email to login') {
+      // Check if verification is needed
+      if (error.msg === 'Please verify your email before logging in') {
         setVerificationNeeded(true);
-        toast.warning('Please verify your email before logging in');
-      } else if (error.msg) {
-        toast.error(error.msg);
       } else {
-        toast.error('Login failed. Please check your credentials.');
+        toast.error(error.msg || 'Login failed. Please check your credentials.');
       }
     } finally {
       setLoading(false);

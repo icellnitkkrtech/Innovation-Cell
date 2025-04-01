@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
 // Set the base URL for all axios requests
-axios.defaults.baseURL = import.meta.env.VITE_API_URL || 'http://localhost:3002';
+axios.defaults.baseURL = import.meta.env.VITE_API_URL;
 axios.defaults.withCredentials = true;
 
 // Create the context

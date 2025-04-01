@@ -9,7 +9,11 @@ dotenv.config();
 
 const app = express();
 app.use(cors({
-    origin: 'http://localhost:5173', // Your frontend URL
+  origin: [
+    'http://localhost:5173',  // Development frontend
+    'https://www.icellnitkkr.com',
+    'https://iic-website-beta.vercel.app',
+  ],
     credentials: true
   }));
 // Middleware

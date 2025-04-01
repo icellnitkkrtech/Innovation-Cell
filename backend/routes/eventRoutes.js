@@ -3,17 +3,29 @@ const router = express.Router();
 const { auth } = require('../middleware/auth');
 const Event = require('../models/Event');
 
-// Get all published events
+// Get all events
 router.get('/', async (req, res) => {
   try {
-    const events = await Event.find({ isPublished: true })
-      .sort({ date: 1 })
-      .populate('createdBy', 'name');
+    const events = await Event.find().sort({ date: 1 });
+    res.json(events);
+  } catch (err) {
+    console.error('Error getting events:', err);
+    res.status(500).json({ msg: 'Server error' });
+  }
+});
+
+// Get upcoming events
+router.get('/upcoming', async (req, res) => {
+  try {
+    const currentDate = new Date();
+    const events = await Event.find({ 
+      date: { $gte: currentDate } 
+    }).sort({ date: 1 }).limit(5);
     
     res.json(events);
-  } catch (error) {
-    console.error('Error getting events:', error);
-    res.status(500).json({ msg: 'Server Error' });
+  } catch (err) {
+    console.error('Error getting upcoming events:', err);
+    res.status(500).json({ msg: 'Server error' });
   }
 });
 

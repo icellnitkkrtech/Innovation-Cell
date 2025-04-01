@@ -9,6 +9,7 @@ router.post('/login', authController.login);
 router.get('/verify-email/:token', authController.verifyEmail);
 router.post('/forgot-password', authController.forgotPassword);
 router.put('/reset-password/:token', authController.resetPassword);
+router.post('/logout', auth, authController.logout); // Add this route
 
 // Private routes
 router.get('/me', auth, authController.getCurrentUser);

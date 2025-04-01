@@ -48,7 +48,7 @@ const Login = () => {
       } else if (userData.role === 'student') {
         navigate('/student/dashboard');
       } else {
-        navigate('/alumni/dashboard');
+        navigate('/alumni');
       }
     } catch (error) {
       console.error('Login error:', error);

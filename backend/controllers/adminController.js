@@ -153,4 +153,124 @@ exports.updateSettings = async (req, res) => {
     console.error('Update settings controller error:', error);
     res.status(500).json({ msg: error.message || 'Server Error' });
   }
+};
+
+// Project management controllers
+exports.getAllProjects = async (req, res) => {
+  try {
+    const projects = await adminService.getAllProjects();
+    res.json(projects);
+  } catch (error) {
+    console.error('Get all projects controller error:', error);
+    res.status(500).json({ msg: error.message || 'Server Error' });
+  }
+};
+
+exports.getProjectById = async (req, res) => {
+  try {
+    const project = await adminService.getProjectById(req.params.id);
+    res.json(project);
+  } catch (error) {
+    console.error('Get project by ID controller error:', error);
+    if (error.message === 'Project not found') {
+      return res.status(404).json({ msg: error.message });
+    }
+    res.status(500).json({ msg: 'Server Error' });
+  }
+};
+
+exports.createProject = async (req, res) => {
+  try {
+    const project = await adminService.createProject(req.body, req.user.id);
+    res.status(201).json(project);
+  } catch (error) {
+    console.error('Create project controller error:', error);
+    res.status(500).json({ msg: error.message || 'Server Error' });
+  }
+};
+
+exports.updateProject = async (req, res) => {
+  try {
+    const project = await adminService.updateProject(req.params.id, req.body);
+    res.json(project);
+  } catch (error) {
+    console.error('Update project controller error:', error);
+    if (error.message === 'Project not found') {
+      return res.status(404).json({ msg: error.message });
+    }
+    res.status(500).json({ msg: 'Server Error' });
+  }
+};
+
+exports.deleteProject = async (req, res) => {
+  try {
+    await adminService.deleteProject(req.params.id);
+    res.json({ msg: 'Project deleted successfully' });
+  } catch (error) {
+    console.error('Delete project controller error:', error);
+    if (error.message === 'Project not found') {
+      return res.status(404).json({ msg: error.message });
+    }
+    res.status(500).json({ msg: 'Server Error' });
+  }
+};
+
+// Payment management controllers
+exports.getAllPayments = async (req, res) => {
+  try {
+    const payments = await adminService.getAllPayments();
+    res.json(payments);
+  } catch (error) {
+    console.error('Get all payments controller error:', error);
+    res.status(500).json({ msg: error.message || 'Server Error' });
+  }
+};
+
+exports.getPaymentById = async (req, res) => {
+  try {
+    const payment = await adminService.getPaymentById(req.params.id);
+    res.json(payment);
+  } catch (error) {
+    console.error('Get payment by ID controller error:', error);
+    if (error.message === 'Payment not found') {
+      return res.status(404).json({ msg: error.message });
+    }
+    res.status(500).json({ msg: 'Server Error' });
+  }
+};
+
+exports.createPayment = async (req, res) => {
+  try {
+    const payment = await adminService.createPayment(req.body);
+    res.status(201).json(payment);
+  } catch (error) {
+    console.error('Create payment controller error:', error);
+    res.status(500).json({ msg: error.message || 'Server Error' });
+  }
+};
+
+exports.updatePayment = async (req, res) => {
+  try {
+    const payment = await adminService.updatePayment(req.params.id, req.body);
+    res.json(payment);
+  } catch (error) {
+    console.error('Update payment controller error:', error);
+    if (error.message === 'Payment not found') {
+      return res.status(404).json({ msg: error.message });
+    }
+    res.status(500).json({ msg: 'Server Error' });
+  }
+};
+
+exports.deletePayment = async (req, res) => {
+  try {
+    await adminService.deletePayment(req.params.id);
+    res.json({ msg: 'Payment deleted successfully' });
+  } catch (error) {
+    console.error('Delete payment controller error:', error);
+    if (error.message === 'Payment not found') {
+      return res.status(404).json({ msg: error.message });
+    }
+    res.status(500).json({ msg: 'Server Error' });
+  }
 }; 

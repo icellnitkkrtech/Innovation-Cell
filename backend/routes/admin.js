@@ -27,4 +27,18 @@ router.delete('/events/:id', adminController.deleteEvent);
 router.get('/settings', adminController.getSettings);
 router.put('/settings', adminController.updateSettings);
 
+// Project management routes
+router.get('/projects', adminController.getAllProjects);
+router.get('/projects/:id', adminController.getProjectById);
+router.post('/projects', adminController.createProject);
+router.put('/projects/:id', adminController.updateProject);
+router.delete('/projects/:id', adminController.deleteProject);
+
+// Payment management routes
+router.get('/payments', adminController.getAllPayments);
+router.get('/payments/:id', adminController.getPaymentById);
+router.post('/payments', adminController.createPayment);
+router.put('/payments/:id', adminController.updatePayment);
+router.delete('/payments/:id', adminController.deletePayment);
+
 module.exports = router; 

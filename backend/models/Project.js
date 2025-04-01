@@ -3,40 +3,43 @@ const mongoose = require('mongoose');
 const ProjectSchema = new mongoose.Schema({
   title: {
     type: String,
-    required: true
+    required: true,
+    trim: true
   },
   description: {
     type: String,
     required: true
   },
-  clientName: {
+  objectives: {
     type: String,
     required: true
   },
-  clientEmail: {
+  skills: [{
     type: String,
-    required: true
-  },
-  budget: {
+    trim: true
+  }],
+  timeline: {
     type: String
   },
-  deadline: {
-    type: Date
-  },
-  attachments: [{
-    name: String,
-    url: String
-  }],
   status: {
     type: String,
-    enum: ['pending', 'approved', 'rejected', 'in_progress', 'completed'],
-    default: 'pending'
+    enum: ['Planning', 'In Progress', 'Completed', 'On Hold'],
+    default: 'Planning'
   },
-  assignedTo: {
+  createdBy: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User',
+    required: true
+  },
+  collaborators: [{
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User'
-  },
+  }],
   createdAt: {
+    type: Date,
+    default: Date.now
+  },
+  updatedAt: {
     type: Date,
     default: Date.now
   }

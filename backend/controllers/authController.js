@@ -55,13 +55,28 @@ exports.login = async (req, res) => {
 };
 
 // Logout user
-exports.logout = (req, res) => {
-  res.cookie('token', 'none', {
-    expires: new Date(Date.now() + 10 * 1000), // Expires in 10 seconds
-    httpOnly: true
-  });
-  
-  res.status(200).json({ msg: 'User logged out successfully' });
+// Logout user
+exports.logout = async (req, res) => {
+  try {
+    // Clear the JWT cookie
+    res.cookie('token', 'none', {
+      expires: new Date(Date.now() + 10 * 1000), // Expires in 10 seconds
+      httpOnly: true,
+      secure: process.env.NODE_ENV === 'production',
+      sameSite: 'strict'
+    });
+
+    res.status(200).json({
+      success: true,
+      message: 'User logged out successfully'
+    });
+  } catch (error) {
+    console.error('Logout error:', error);
+    res.status(500).json({
+      success: false,
+      message: 'Server error'
+    });
+  }
 };
 
 // Get current user

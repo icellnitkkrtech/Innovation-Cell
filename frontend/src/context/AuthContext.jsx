@@ -1,5 +1,6 @@
 import React, { createContext, useState, useContext, useEffect } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 // Set the base URL for all axios requests
 axios.defaults.baseURL = 'http://localhost:3002'; // Your backend server URL
@@ -20,7 +21,7 @@ export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
-  
+  const navigate = useNavigate();
   // Load user on initial render
   useEffect(() => {
     loadUser();
@@ -96,12 +97,19 @@ export const AuthProvider = ({ children }) => {
   // Logout user
   const logout = async () => {
     try {
+      setLoading(true);
       await axios.post('/api/auth/logout');
-      
       setUser(null);
-      setIsAuthenticated(false);
+      navigate('/login');
+      toast.success('Logged out successfully');
     } catch (error) {
       console.error('Logout error:', error);
+      // Even if the server request fails, we should still clear the user state
+      setUser(null);
+      navigate('/login');
+      toast.info('You have been logged out');
+    } finally {
+      setLoading(false);
     }
   };
 

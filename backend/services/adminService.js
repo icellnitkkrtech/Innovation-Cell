@@ -1,6 +1,8 @@
 const User = require('../models/User');
 const Event = require('../models/Event');
 const Setting = require('../models/Setting');
+const Project = require('../models/Project');
+const Payment = require('../models/Payment');
 
 // Get dashboard stats
 exports.getDashboardStats = async () => {
@@ -236,5 +238,173 @@ exports.updateSettings = async (settingsData) => {
   } catch (error) {
     console.error('Error updating settings:', error);
     throw new Error('Failed to update settings');
+  }
+};
+
+// Project management services
+exports.getAllProjects = async () => {
+  try {
+    return await Project.find()
+      .populate('createdBy', 'name')
+      .populate('leadMember', 'name')
+      .populate('teamMembers', 'name')
+      .sort({ createdAt: -1 });
+  } catch (error) {
+    console.error('Error getting all projects:', error);
+    throw new Error('Failed to get projects');
+  }
+};
+
+exports.getProjectById = async (projectId) => {
+  try {
+    const project = await Project.findById(projectId)
+      .populate('createdBy', 'name')
+      .populate('leadMember', 'name')
+      .populate('teamMembers', 'name');
+    
+    if (!project) {
+      throw new Error('Project not found');
+    }
+    return project;
+  } catch (error) {
+    console.error('Error getting project by ID:', error);
+    throw error;
+  }
+};
+
+exports.createProject = async (projectData, userId) => {
+  try {
+    const project = new Project({
+      ...projectData,
+      createdBy: userId
+    });
+    
+    await project.save();
+    return project;
+  } catch (error) {
+    console.error('Error creating project:', error);
+    throw error;
+  }
+};
+
+exports.updateProject = async (projectId, projectData) => {
+  try {
+    const project = await Project.findById(projectId);
+    if (!project) {
+      throw new Error('Project not found');
+    }
+    
+    // Update project fields
+    const allowedFields = [
+      'title', 'description', 'startDate', 'endDate', 
+      'status', 'budget', 'teamMembers', 'leadMember', 'documents'
+    ];
+    
+    for (const [key, value] of Object.entries(projectData)) {
+      if (allowedFields.includes(key)) {
+        project[key] = value;
+      }
+    }
+    
+    await project.save();
+    return project;
+  } catch (error) {
+    console.error('Error updating project:', error);
+    throw error;
+  }
+};
+
+exports.deleteProject = async (projectId) => {
+  try {
+    const project = await Project.findById(projectId);
+    if (!project) {
+      throw new Error('Project not found');
+    }
+    
+    await project.remove();
+    return { success: true };
+  } catch (error) {
+    console.error('Error deleting project:', error);
+    throw error;
+  }
+};
+
+// Payment management services
+exports.getAllPayments = async () => {
+  try {
+    return await Payment.find()
+      .populate('user', 'name email')
+      .sort({ paymentDate: -1 });
+  } catch (error) {
+    console.error('Error getting all payments:', error);
+    throw new Error('Failed to get payments');
+  }
+};
+
+exports.getPaymentById = async (paymentId) => {
+  try {
+    const payment = await Payment.findById(paymentId)
+      .populate('user', 'name email');
+    
+    if (!payment) {
+      throw new Error('Payment not found');
+    }
+    return payment;
+  } catch (error) {
+    console.error('Error getting payment by ID:', error);
+    throw error;
+  }
+};
+
+exports.createPayment = async (paymentData) => {
+  try {
+    const payment = new Payment(paymentData);
+    await payment.save();
+    return payment;
+  } catch (error) {
+    console.error('Error creating payment:', error);
+    throw error;
+  }
+};
+
+exports.updatePayment = async (paymentId, paymentData) => {
+  try {
+    const payment = await Payment.findById(paymentId);
+    if (!payment) {
+      throw new Error('Payment not found');
+    }
+    
+    // Update payment fields
+    const allowedFields = [
+      'amount', 'currency', 'paymentMethod', 'status', 
+      'description', 'paymentDate', 'receiptUrl'
+    ];
+    
+    for (const [key, value] of Object.entries(paymentData)) {
+      if (allowedFields.includes(key)) {
+        payment[key] = value;
+      }
+    }
+    
+    await payment.save();
+    return payment;
+  } catch (error) {
+    console.error('Error updating payment:', error);
+    throw error;
+  }
+};
+
+exports.deletePayment = async (paymentId) => {
+  try {
+    const payment = await Payment.findById(paymentId);
+    if (!payment) {
+      throw new Error('Payment not found');
+    }
+    
+    await payment.remove();
+    return { success: true };
+  } catch (error) {
+    console.error('Error deleting payment:', error);
+    throw error;
   }
 }; 

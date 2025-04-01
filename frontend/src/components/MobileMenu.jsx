@@ -3,129 +3,176 @@ import { useNavigate } from 'react-router-dom';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 
 const MobileMenu = ({ navItems, socialIcons }) => {
-  const [nav, setNav] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef(null);
+  const toggleButtonRef = useRef(null);
   const navigate = useNavigate();
 
-  const handleNav = () => {
-    setNav(!nav);
-    // Toggle body scroll when menu is open/closed
-    document.body.style.overflow = nav ? 'auto' : 'hidden';
+  // Toggle menu open/closed
+  const toggleMenu = () => {
+    setIsOpen(prevState => !prevState);
   };
 
-  const scrollToSection = (sectionId) => {
+  // Handle navigation item click
+  const handleNavItemClick = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setNav(false);
-      document.body.style.overflow = 'auto';
+      // Close menu first
+      setIsOpen(false);
+      
+      // Small delay to allow menu to close before scrolling
+      setTimeout(() => {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
     }
   };
 
-  // Close menu when clicking outside
+  // Handle Innokshetra navigation
+  const handleInnokshetraClick = () => {
+    setIsOpen(false);
+    
+    // Small delay to allow menu to close before navigation
+    setTimeout(() => {
+      navigate('/innokshetra');
+    }, 100);
+  };
+
+  // Control body scroll when menu opens/closes
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    
+    // Cleanup function to ensure body scroll is restored
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isOpen]);
+
+  // Handle clicks outside the menu to close it
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (menuRef.current && !menuRef.current.contains(event.target) && nav) {
-        setNav(false);
-        document.body.style.overflow = 'auto';
+      // Don't close if clicking the toggle button
+      if (toggleButtonRef.current && toggleButtonRef.current.contains(event.target)) {
+        return;
+      }
+      
+      // Close if menu is open and click is outside menu
+      if (isOpen && menuRef.current && !menuRef.current.contains(event.target)) {
+        setIsOpen(false);
       }
     };
 
-    document.addEventListener('mousedown', handleClickOutside);
+    // Add event listener with capture phase to ensure it runs before other handlers
+    document.addEventListener('mousedown', handleClickOutside, true);
+    document.addEventListener('touchstart', handleClickOutside, true);
+    
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-      document.body.style.overflow = 'auto';
+      document.removeEventListener('mousedown', handleClickOutside, true);
+      document.removeEventListener('touchstart', handleClickOutside, true);
     };
-  }, [nav]);
+  }, [isOpen]);
+
+  // Handle escape key to close menu
+  useEffect(() => {
+    const handleEscKey = (event) => {
+      if (event.key === 'Escape' && isOpen) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener('keydown', handleEscKey);
+    
+    return () => {
+      document.removeEventListener('keydown', handleEscKey);
+    };
+  }, [isOpen]);
 
   return (
     <div className="md:hidden flex items-center z-50">
-      {/* Hamburger Icon */}
-      <div onClick={handleNav} className="cursor-pointer">
-        <AiOutlineMenu size={25} className="text-white hover:text-amber-500 transition-colors" />
-      </div>
-
-      {/* Mobile Menu Overlay */}
-      <div
-        className={
-          nav
-            ? 'fixed left-0 top-0 w-full h-full bg-black/70 backdrop-blur-sm z-50 transition-all duration-300 ease-in-out'
-            : 'fixed left-[-100%] top-0 w-full h-full z-50 transition-all duration-300 ease-in-out'
-        }
+      {/* Menu Toggle Button */}
+      <button
+        ref={toggleButtonRef}
+        onClick={toggleMenu}
+        className="p-2 focus:outline-none"
+        aria-label={isOpen ? "Close menu" : "Open menu"}
       >
-        {/* Menu Content */}
+        <AiOutlineMenu size={25} className="text-white hover:text-amber-500 transition-colors" />
+      </button>
+
+      {/* Menu Overlay - Fixed position with transform for better performance */}
+      <div 
+        className={`fixed inset-0 bg-black/70 backdrop-blur-sm z-[9999] transition-opacity duration-300 ${
+          isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+        }`}
+        aria-hidden={!isOpen}
+        style={{ top: 0, left: 0, right: 0, bottom: 0 }}
+      >
+        {/* Menu Container */}
         <div
           ref={menuRef}
-          className={
-            nav
-              ? 'fixed left-0 top-0 w-[75%] sm:w-[60%] h-full bg-gradient-to-b from-gray-900 to-gray-800 p-6 ease-in duration-300'
-              : 'fixed left-[-100%] top-0 p-6 ease-in duration-300'
-          }
+          className={`fixed top-0 left-0 h-full w-[80%] max-w-sm bg-gray-900 shadow-lg transform transition-transform duration-300 ease-in-out overflow-y-auto ${
+            isOpen ? 'translate-x-0' : '-translate-x-full'
+          }`}
+          style={{ height: '100vh' }}
         >
-          {/* Menu Header */}
-          <div className="flex justify-between items-center mb-8">
-            <div className="w-32">
-              <img src="/IIC_Logo.png" alt="Innovation Cell Logo" />
-            </div>
-            <div
-              onClick={handleNav}
-              className="p-3 rounded-full bg-gray-800 cursor-pointer hover:bg-gray-700 transition-colors"
+          {/* Header with close button */}
+          <div className="sticky top-0 bg-gray-900 z-10 flex justify-between items-center p-5 border-b border-gray-800">
+            <h2 className="text-xl font-bold text-white">
+              <span className="text-amber-500">Innovation</span> Cell
+            </h2>
+            <button
+              onClick={toggleMenu}
+              className="p-2 rounded-full bg-gray-800 hover:bg-gray-700 transition-colors focus:outline-none"
+              aria-label="Close menu"
             >
               <AiOutlineClose size={20} className="text-white" />
-            </div>
-          </div>
-
-          {/* Menu Description */}
-          <div className="border-b border-gray-700 pb-4 mb-6">
-            <p className="text-white/80 text-sm">
-              Innovation Cell - The official technical society of NIT Kurukshetra
-            </p>
+            </button>
           </div>
 
           {/* Navigation Items */}
-          <nav>
-            <ul className="space-y-4">
+          <nav className="p-5">
+            <ul className="space-y-3">
               {navItems.map((item) => (
-                <li
-                  key={item.id}
-                  onClick={() => scrollToSection(item.sectionId)}
-                  className="py-3 pl-4 border-l-4 border-transparent hover:border-amber-500 hover:bg-gray-800/50 rounded-r-lg transition-all duration-300 cursor-pointer"
-                >
-                  <span className="text-white hover:text-amber-500 transition-colors font-medium">
-                    {item.text}
-                  </span>
+                <li key={item.id}>
+                  <button
+                    onClick={() => handleNavItemClick(item.sectionId)}
+                    className="w-full text-left py-3 pl-4 border-l-4 border-transparent hover:border-amber-500 hover:bg-gray-800/50 rounded-r-lg transition-all duration-200 focus:outline-none"
+                  >
+                    <span className="text-white hover:text-amber-500 transition-colors font-medium block">
+                      {item.text}
+                    </span>
+                  </button>
                 </li>
               ))}
-              <li
-                onClick={() => {
-                  navigate('/innokshetra');
-                  setNav(false);
-                  document.body.style.overflow = 'auto';
-                }}
-                className="py-3 pl-4 border-l-4 border-amber-500 bg-gray-800/50 rounded-r-lg transition-all duration-300 cursor-pointer"
-              >
-                <span className="text-amber-500 font-medium">Innokshetra</span>
+              <li>
+                <button
+                  onClick={handleInnokshetraClick}
+                  className="w-full text-left py-3 pl-4 border-l-4 border-amber-500 bg-gray-800/50 rounded-r-lg transition-all duration-200 focus:outline-none"
+                >
+                  <span className="text-amber-500 font-medium block">Innokshetra</span>
+                </button>
               </li>
             </ul>
           </nav>
 
           {/* Social Icons */}
-          <div className="absolute bottom-6 left-0 w-full px-6">
-            <div className="border-t border-gray-700 pt-6">
-              <p className="text-white/80 text-sm mb-4">Connect with us:</p>
-              <div className="flex space-x-4">
-                {socialIcons.map((iconObj) => (
-                  <a
-                    key={iconObj.id}
-                    href={iconObj.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-2 bg-gray-800 rounded-full hover:bg-amber-500 transition-colors duration-300 text-white"
-                  >
-                    {iconObj.icon}
-                  </a>
-                ))}
-              </div>
+          <div className="p-5 mt-8 border-t border-gray-800">
+            <p className="text-white/80 text-sm mb-4">Connect with us:</p>
+            <div className="flex flex-wrap gap-3">
+              {socialIcons.map((iconObj) => (
+                <a
+                  key={iconObj.id}
+                  href={iconObj.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2 bg-gray-800 rounded-full hover:bg-amber-500 transition-colors duration-200 text-white focus:outline-none focus:ring-2 focus:ring-amber-500"
+                >
+                  {iconObj.icon}
+                </a>
+              ))}
             </div>
           </div>
         </div>

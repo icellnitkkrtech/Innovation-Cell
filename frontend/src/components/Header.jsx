@@ -54,37 +54,37 @@ const Header = () => {
     <div
       className={`fixed w-full z-40 transition-all duration-300 ${
         scrolled
-          ? 'bg-gray-900/95 backdrop-blur-md shadow-lg py-2'
-          : 'bg-transparent py-4'
+          ? 'bg-gray-900/95 backdrop-blur-md shadow-lg py-1 sm:py-2'
+          : 'bg-transparent py-2 sm:py-4'
       }`}
     >
-      <div className='flex justify-between items-center h-16 max-w-[1240px] mx-auto px-4 text-white'>
-        {/* Logo */}
-        <div className="cursor-pointer" onClick={() => scrollToSection('home')}>
+      <div className='flex justify-between items-center h-14 sm:h-16 max-w-[1240px] mx-auto px-4 text-white'>
+        {/* Logo - smaller on mobile */}
+        <div className="cursor-pointer scale-90 sm:scale-100" onClick={() => scrollToSection('home')}>
           <Logo />
         </div>
 
         {/* Desktop Navigation */}
-        <ul className='hidden md:flex gap-3'>
+        <ul className='hidden md:flex gap-2 lg:gap-3'>
           {navItems.map(item => (
             <li 
               key={item.id} 
-              className='px-4 py-2 hover:bg-gradient-to-r from-amber-500 to-orange-500 rounded-md cursor-pointer transition-all duration-300 transform hover:scale-95 hover:text-black'
+              className='px-2 lg:px-4 py-2 hover:bg-gradient-to-r from-amber-500 to-orange-500 rounded-md cursor-pointer transition-all duration-300 transform hover:scale-95 hover:text-black text-sm lg:text-base'
             >
               <span onClick={() => scrollToSection(item.sectionId)}>{item.text}</span>
             </li>
           ))}
-          <li className='px-4 py-2 bg-gradient-to-r from-amber-500 to-orange-500 text-black rounded-md cursor-pointer transition-all duration-300 transform hover:scale-95 hover:opacity-90'>
+          <li className='px-2 lg:px-4 py-2 bg-gradient-to-r from-amber-500 to-orange-500 text-black rounded-md cursor-pointer transition-all duration-300 transform hover:scale-95 hover:opacity-90 text-sm lg:text-base'>
             <span onClick={()=> navigate("/innokshetra")}>Innokshetra</span>
           </li>
         </ul>
 
-        {/* Social Icons - Desktop */}
-        <ul className='hidden md:flex items-center gap-2 social-icons'>
-          {socialIcons.map(iconObj => (
+        {/* Social Icons - Desktop - fewer icons on smaller screens */}
+        <ul className='hidden md:flex items-center gap-1 lg:gap-2 social-icons'>
+          {socialIcons.slice(0, window.innerWidth < 1024 ? 3 : 5).map(iconObj => (
             <li
               key={iconObj.id}
-              className='p-2 cursor-pointer hover:text-amber-500 transition-colors duration-300'
+              className='p-1.5 lg:p-2 cursor-pointer hover:text-amber-500 transition-colors duration-300'
             >
               <a href={iconObj.link} target="_blank" rel="noopener noreferrer">
                 {iconObj.icon}

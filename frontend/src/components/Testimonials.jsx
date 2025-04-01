@@ -26,46 +26,46 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <section id="testimonials" className="py-16 bg-gray-800">
+    <section id="testimonials" className="py-12 sm:py-16 bg-gray-800">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4 text-white">What Students Say</h2>
-          <p className="text-gray-300 max-w-2xl mx-auto">
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4 text-white">What Students Say</h2>
+          <p className="text-gray-300 max-w-2xl mx-auto text-sm sm:text-base px-2">
             Hear from students who have been part of our innovation journey.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {testimonials.map((testimonial) => (
             <div 
               key={testimonial.id}
-              className="bg-gray-700 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+              className="bg-gray-700 p-4 sm:p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
             >
               <div className="flex items-center mb-4">
                 <img 
                   src={testimonial.image} 
                   alt={testimonial.name}
-                  className="w-16 h-16 rounded-full object-cover mr-4"
+                  className="w-12 h-12 sm:w-16 sm:h-16 rounded-full object-cover mr-3 sm:mr-4"
                   onError={(e) => {
                     e.target.src = 'https://via.placeholder.com/150';
                   }}
                 />
                 <div>
-                  <h3 className="text-xl font-bold text-white">{testimonial.name}</h3>
-                  <p className="text-amber-500">{testimonial.role}</p>
+                  <h3 className="text-lg sm:text-xl font-bold text-white">{testimonial.name}</h3>
+                  <p className="text-amber-500 text-sm sm:text-base">{testimonial.role}</p>
                 </div>
               </div>
-              <div className="mb-6">
-                <svg className="w-10 h-10 text-amber-500/50 mb-2" fill="currentColor" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+              <div className="mb-4 sm:mb-6">
+                <svg className="w-8 h-8 sm:w-10 sm:h-10 text-amber-500/50 mb-2" fill="currentColor" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
                   <path d="M10 8c-4.4 0-8 3.6-8 8s3.6 8 8 8h.5c-.3-1-.5-2-.5-3 0-5.5 4.5-10 10-10V8h-10zm20 0h-10v3c5.5 0 10 4.5 10 10 0 1-.2 2-.5 3h.5c4.4 0 8-3.6 8-8s-3.6-8-8-8z" />
                 </svg>
-                <p className="text-gray-300 italic">{testimonial.quote}</p>
+                <p className="text-gray-300 italic text-sm sm:text-base">{testimonial.quote}</p>
               </div>
               <div className="flex">
                 {[1, 2, 3, 4, 5].map((star) => (
                   <svg
                     key={star}
-                    className="w-5 h-5 text-amber-500"
+                    className="w-4 h-4 sm:w-5 sm:h-5 text-amber-500"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"

@@ -27,6 +27,7 @@
     "slick-carousel": "^1.8.1",
     "styled-components": "^6.1.8",
     "three": "^0.168.0",
+    "typed.js": "^2.1.0",
     "use-scramble": "^2.2.15",
     "vanta": "^0.5.24"
   },

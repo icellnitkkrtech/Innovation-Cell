@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react';
 import Typed from 'typed.js';
-
 const Hero = () => {
   const typedRef = useRef(null);
 

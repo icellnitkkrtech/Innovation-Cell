@@ -3,7 +3,8 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
 // Set the base URL for all axios requests
-axios.defaults.baseURL = 'http://localhost:3002'; // Your backend server URL
+axios.defaults.baseURL = import.meta.env.VITE_API_URL || 'http://localhost:3002';
+axios.defaults.withCredentials = true;
 
 // Create the context
 const AuthContext = createContext();
@@ -26,9 +27,6 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => {
     loadUser();
   }, []);
-
-  // Set axios defaults
-  axios.defaults.withCredentials = true;
 
   // Load user from token
   const loadUser = async () => {

@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Your custom styles below */
+
 body{
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;

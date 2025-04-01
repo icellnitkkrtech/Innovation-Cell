@@ -147,84 +147,56 @@ div.card-container:hover div.card-content {
 }
 
 .card-container .card-content .card-back {
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(31, 41, 55, 0.95);
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    flex-wrap: wrap;
-    z-index: 1;
+    transform: translateY(100%);
+    transition: transform 0.5s ease-in-out;
+    padding: 20px;
 }
 
 .card-container .card-content .card-back .content {
-    height: 100%;
-    width: 100%;
-    padding: 20px;
+    color: white;
     text-align: center;
-    transform: translateY(-90px);
-    opacity: 0;
-    transition: 0.9s;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 20px;
-    @media only screen and (max-width: 768px) {
-        opacity : 1 ; 
-        transform: translateY(0px);
-    }
-}
-
-.card-container:hover .card-content .card-back .content {
-    transform: translateY(0px);
-    opacity: 1;
+    padding: 20px;
+    max-width: 100%;
 }
 
 .card-container .card-content .card-back .content h3 {
-    font-size: 3rem;
-    z-index: 10;
-    color : black ; 
-
-    @media only screen and (max-width: 768px) {
-        font-size: 1.4rem ; 
-        font-weight: 600;
-    }
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #f59e0b;
 }
 
 .card-container .card-content .card-back .content p {
-    font-size: 1rem;
-    z-index: 1;
-    font-weight: 300;
-    color : black ; 
-
-    @media only screen and (max-width: 768px) {
-        font-size: 0.6rem ; 
-    }
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: rgba(255, 255, 255, 0.9);
 }
 
-
- .card-container .card-content .card-back .content button {
-    position: relative;
-    display: inline-block;
-    width: 50%;
-    margin: 0 auto;
-    padding: 8px 20px;
-    margin-top: 15px;
-    background-color: rgb(0, 0, 0);
+.card-container .card-content .card-back .content button {
+    background: linear-gradient(to right, #f59e0b, #ea580c);
     color: white;
-    font-size: 1rem;
-    border-radius: 20px;
-    text-decoration: none;
-    font-weight: 500;
-    box-shadow: 0 5px 15px rgb(0, 0, 0, 0.5);
-
-    @media only screen and (max-width: 768px) {
-        width: 80%;
-        padding: 5px 10px;
-        margin-top: 10px;
-        font-size : 0.8rem ; 
-    }
-} 
+    border: none;
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    align-self: center;
+    box-shadow: 0 4px 15px rgba(234, 88, 12, 0.3);
+}
 
 .eventTitle{
     margin-left: auto;

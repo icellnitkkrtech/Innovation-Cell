@@ -1,0 +1,84 @@
+/* Slider container styling */
+.slider-container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Card styling */
+.team-card {
+  background-color: #1f2937;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+/* Image container */
+.team-image-container {
+  position: relative;
+  overflow: hidden;
+  height: 300px;
+}
+
+.team-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+/* Hover effects */
+.team-card:hover .team-image {
+  transform: scale(1.1);
+}
+
+.team-card:hover .team-info {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Slider dots styling */
+.slick-dots li button:before {
+  color: #f59e0b !important;
+  opacity: 0.5;
+}
+
+.slick-dots li.slick-active button:before {
+  opacity: 1;
+  color: #f59e0b !important;
+}
+
+/* Arrow styling */
+.slick-prev:before, 
+.slick-next:before {
+  color: #f59e0b !important;
+  font-size: 24px;
+}
+
+.slick-prev {
+  left: -30px;
+}
+
+.slick-next {
+  right: -30px;
+}
+
+/* Add hover effect for social icons */
+.team-social-icon {
+  transition: all 0.2s ease-in-out;
+}
+
+.team-social-icon:hover {
+  transform: translateY(-3px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .slick-prev {
+    left: -15px;
+  }
+  
+  .slick-next {
+    right: -15px;
+  }
+} 

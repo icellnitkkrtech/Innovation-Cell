@@ -1,68 +1,121 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react';
+import Typed from 'typed.js';
 
 const Hero = () => {
-    return (
-        <div className=' mb-16 pt-24 md:pt-32 grid px-8 mt-8 lg:px-20 lg:py-16  lg:grid-cols-2'>
-            <div className='w-100 mt-10  md:pt-24'>
-                <h4 className='text-base'>NIT KURUKSHETRA</h4>
-                <h1 className='text-5xl lg:text-7xl  '>WELCOME TO </h1>
-                <h1 className='text-5xl text-orange-600 mb-6'>INNOVATION CELL</h1>
-                <p className='text-md mb-12'>Innovation Cell is a student-driven official technical society of NIT Kurukshetra, affiliated with the Institute's Innovation Council (IIC), an initiative by the Ministry of Education (MoE) to foster a vibrant innovation ecosystem within our college.
-                    We, at Innovation Cell aim to
-                </p>
+  const typedRef = useRef(null);
 
-                <ul class="list-none">
-                    <li><div className='flex mb-1'>
-                        <svg style={{
-                            marginTop: "0.1rem",
-                            marginRight: "0.5rem",
-                        }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#63e5ff" class="w-6 h-6">
-                            <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clip-rule="evenodd" />
-                        </svg>
+  useEffect(() => {
+    const options = {
+      strings: [
+        'Innovation',
+        'Creativity',
+        'Entrepreneurship',
+        'Technology',
+        'Leadership'
+      ],
+      typeSpeed: 100,
+      backSpeed: 50,
+      loop: true,
+      cursorChar: '|',
+    };
 
-                        Ignite the spark of creativity and innovation in our student body.
+    const typed = new Typed(typedRef.current, options);
 
-                    </div>  </li>
-                    <li><div className='flex mb-1'>
-                        <svg style={{
-                            marginTop: "0.1rem",
-                            marginRight: "0.5rem",
-                        }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#63e5ff" class="w-6 h-6">
-                            <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clip-rule="evenodd" />
-                        </svg>
+    return () => {
+      typed.destroy();
+    };
+  }, []);
 
-
-                        Provide a platform for students to develop their ideas and turn them into reality.
-                    </div> </li>
-                    <li><div className='flex mb-1'>
-                    <svg style={{
-                            marginTop: "0.1rem",
-                            marginRight: "0.5rem",
-                        }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#63e5ff" class="w-8 h-8">
-                            <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clip-rule="evenodd" />
-                        </svg>
-
-                        Nurture a culture of entrepreneurship and equip students with the skills needed to launch successful startups.
-                    </div> </li>
-                </ul>
-
-                <div className='mt-8 ml-8 lg:mt-10 lg:ml-10'>
-                    <button className='border p-2 pl-3 lg:p-3 lg:pl-5 lg:pr-4 rounded-full hover:bg-amber-500 '> <div className='flex'>
-                        Learn More
-                        <div className='ml-8 '>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-                            </svg>
-                        </div>
-                    </div></button>
-                </div>
-            </div>
-
-            <div className='hidden  md:pt-24 lg:block'>
-                <img src="\bulb.png" alt="bulb" />
-            </div>
+  return (
+    <div id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gray-900">
+      {/* Background with gradient overlay for better visibility */}
+      <div className="absolute inset-0 bg-gradient-to-r from-black via-gray-900/90 to-black z-10"></div>
+      
+      {/* Background video with reduced opacity */}
+      <video
+        className="absolute w-full h-full object-cover opacity-50"
+        autoPlay
+        loop
+        muted
+        playsInline
+      >
+        <source src="/hero.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      
+      {/* Content */}
+      <div className="container mx-auto px-4 relative z-20 flex flex-col md:flex-row items-center">
+        {/* Text content */}
+        <div className="md:w-3/5 text-left mb-10 md:mb-0">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
+            Welcome to <span className="text-amber-500">Innovation Cell</span>
+          </h1>
+          <h2 className="text-2xl md:text-4xl font-semibold text-white mb-6">
+            Where <span ref={typedRef} className="text-amber-500"></span>
+          </h2>
+          <p className="text-lg md:text-xl text-gray-200 max-w-2xl mb-8 leading-relaxed">
+            The official technical society of NIT Kurukshetra dedicated to fostering innovation, 
+            entrepreneurship, and creative problem-solving among students.
+          </p>
+          <div className="flex flex-wrap gap-4">
+            <a
+              href="#about"
+              className="px-8 py-4 bg-gradient-to-r from-amber-500 to-orange-500 text-white font-bold rounded-full shadow-lg hover:shadow-amber-500/20 transition-all duration-300 transform hover:scale-105"
+            >
+              Explore More
+            </a>
+            <a
+              href="#contact"
+              className="px-8 py-4 bg-amber-400 text-black font-bold rounded-full shadow-lg hover:bg-amber-300 transition-all duration-300 transform hover:scale-105"
+            >
+              Contact Us
+            </a>
+          </div>
         </div>
-    )
-}
+        
+        {/* Image */}
+        <div className="md:w-2/5 relative">
+          <div className="relative z-10 transform hover:scale-105 transition-transform duration-500">
+            <img 
+              src="/hero-image.png" 
+              alt="Innovation Cell" 
+              className="max-w-full h-auto rounded-lg shadow-2xl"
+              onError={(e) => {
+                e.target.src = '/IIC_Logo.png'; // Fallback to logo if image doesn't exist
+                e.target.className = "max-w-xs mx-auto";
+              }}
+            />
+            <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-amber-500 rounded-full opacity-70 blur-xl"></div>
+            <div className="absolute -top-4 -left-4 w-32 h-32 bg-orange-500 rounded-full opacity-60 blur-xl"></div>
+          </div>
+        </div>
+      </div>
+      
+      {/* Decorative elements */}
+      <div className="absolute top-20 left-10 w-20 h-20 border-t-4 border-l-4 border-amber-500 opacity-30"></div>
+      <div className="absolute bottom-20 right-10 w-20 h-20 border-b-4 border-r-4 border-amber-500 opacity-30"></div>
+      
+      {/* Scroll down indicator */}
+      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-20 animate-bounce">
+        <a href="#about" className="text-white hover:text-amber-500 transition-colors duration-300">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-10 w-10"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M19 14l-7 7m0 0l-7-7m7 7V3"
+            />
+          </svg>
+        </a>
+      </div>
+    </div>
+  );
+};
 
-export default Hero
+export default Hero;

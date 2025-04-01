@@ -1,35 +1,52 @@
-
-body{
-  
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #f8f9fa;
+  color: #212529;
+  overflow-x: hidden;
 }
 
 .heading1 {
-    font-size: 20px;
-    font-family: Arial;
-    position: relative;
-    overflow: hidden;
-    margin-right: 10rem;
-    margin-left: 10rem;
-  }
-  
-  
-  .heading1:after {
-    display: inline-block;
-    content: "";
-    height: 4px;
-    background: rgb(253, 194, 0);
-    position: absolute;
-    width: 100%;
-    top: 50%;
-    margin-top: -2px;
-    margin-left: 10px;
-  }
-
-  .slick-slide > div {
-    margin:0 10px
+  font-size: 2.5rem;
+  font-weight: 700;
+  position: relative;
+  overflow: hidden;
+  margin-right: 10rem;
+  margin-left: 10rem;
 }
 
+.heading1:after {
+  display: inline-block;
+  content: "";
+  height: 4px;
+  background: linear-gradient(90deg, rgb(253, 194, 0), rgb(255, 153, 0));
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  margin-top: -2px;
+  margin-left: 10px;
+  border-radius: 2px;
+}
+
+.slick-slide > div {
+  margin: 0 15px;
+}
+
+/* Add modern scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c5973c;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ab5c00;
+}

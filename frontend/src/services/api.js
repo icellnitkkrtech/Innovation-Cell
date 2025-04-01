@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // Set base URL from environment variable
-axios.defaults.baseURL = import.meta.env.VITE_API_URL || 'http://localhost:3002';
+axios.defaults.baseURL = import.meta.env.VITE_API_URL ;
 axios.defaults.withCredentials = true; // Important for sending cookies
 
 // Request interceptor to handle errors
